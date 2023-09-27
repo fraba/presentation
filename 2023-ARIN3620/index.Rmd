@@ -1,0 +1,171 @@
+---
+title: "ARIN3620</br>Researching Digital Cultures"
+subtitle: "Week 09</br>Studying platforms"
+author: "Francesco Bailo"
+institute: "The University of Sydney"
+date: "Semester 2, 2023 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+    self_contained: false # if true, fonts will be stored locally
+    seal: true # show a title slide with YAML information
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
+    nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '4:3' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: false # disable slide transitions by scrolling
+---
+
+background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
+background-size: 95%
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+```
+
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+---
+
+## Me
+	
+Francesco Bailo (francesco.bailo@sydney.edu.au)
+
+I am a Lecturer in the School of Social and Political Sciences (SSPS), University of Sydney. I am interested in researching forms of political engagement and political talk on social media. I researched the emergence and dynamics of online communities, the role between news organisations and social media, and the interdependence between social media activists and news organisations. I have engaged with and applied quantitative research methods developing expertise in quantitative text analysis (NLP) and network analysis.
+
+In SSPS of I am teaching GOVT6139 Research Design, SSPS4102 Data Analytics in the Social Sciences, and SSPS6006 Data Analytics for Social Research.
+
+---
+class: segue-red
+
+# Key concepts and definitions
+
+---
+class: segue-yellow
+
+## Publics
+
+---
+## From one Public Sphere to many Publics
+
+### What is the Public Sphere?
+
+> The term often connotes the realm of media, politics, and opinion processes ... 
+
+> ... the public sphere rests upon the idea of universality, the norm that it must be accessible to all citizens of society. ...
+
+> The public sphere is predicated on interaction between citizens ... and this interaction is of course shaped by social hierarchies, economics, work circumstances, welfare, and education. [1]
+
+.footnote[
+[1] Dahlgren, P. (2001). The Public Sphere and the Net: Structure, Space and Communication. In W. L. Bennett & R. M. Entman (Eds.), *Mediated politics: Communication in the future of democracy* (pp. 33–55). Cambridge University Press.]
+
+---
+## From one Public Sphere to many Publics
+
+### From Public Sphere to Public Spheres
+
+> The Internet not only offers its users vast communicative spaces in which to travel, visit, and participate, but also allows them to collectively generate new spaces, by launching Web sites, news groups, chat rooms, networks, action groups, and so on. ...
+
+> Many of the separate public spheres in the form of news groups and chat rooms remain very separate. They become spaces for bonding among like-minded individuals ... [1]
+
+.footnote[
+[1] Dahlgren, P. (2001). The Public Sphere and the Net: Structure, Space and Communication. In W. L. Bennett & R. M. Entman (Eds.), *Mediated politics: Communication in the future of democracy* (pp. 33–55). Cambridge University Press.
+]
+
+---
+## From one Public Sphere to many Publics
+
+### What do we mean by Publics?
+
+> We understand ‘publics’ as emergent sociopolitical assemblages with shared or interlocking concerns who know themselves as, and act as, publics through media and communication [1]
+
+.footnote[
+
+[1] Burgess, J., & Matamoros-Fernández, A. (2016). Mapping sociocultural controversies across digital media platforms: One week of #gamergate on Twitter, YouTube, and Tumblr. *Communication Research and Practice*, 2(1), 79–96. https://doi.org/10.1080/22041451.2016.1155338
+]
+
+---
+## From one Public Sphere to many Publics
+### Are Publics public? 
+
+Not, necessarily.  
+
+> ... publics can mobilise in private, that they need not be explicitly co-present, and – crucially for the issue mapping method – may be called into being by the mere implication that others are engaging with the same media, cultural, or social experiences as we are, rather than through direct discursive interactions. [1]
+
+So, **publics**,
+
+* Can be *private* (e.g. Whatsapp);
+
+* Are not defined by direct engagement, but
+
+* by engaging with the same experience.  
+
+.footnote[
+[1] Burgess, J., & Matamoros-Fernández, A. (2016). Mapping sociocultural controversies across digital media platforms: One week of #gamergate on Twitter, YouTube, and Tumblr. *Communication Research and Practice*, 2(1), 79–96. https://doi.org/10.1080/22041451.2016.1155338
+]
+
+---
+class: segue-yellow
+
+## Platforms
+
+
+---
+## What do we mean by Platforms?
+
+> A platform may be defined as a standards-based technical-economic system that may simultaneously distribute interfaces into that system through their remote coordination and centralizes their integrated control through that same coordination [1]
+
+Wait, what?
+
+> ... we defined a platform as a programmable architecture designed to organize interactions between users.
+
+> Many people think of platforms simply as technological tools that allow them to do things online ... But these online activities hide a system whose logic and logistics are about more than facilitating: they actually shape the way we live and how society is organized. [2]
+
+
+.footnote[
+[1] Bratton, B. H. (2016). The Stack: On software and sovereignty. MIT Press. 
+[2] Dijck, J. van, Poell, T., & Waal, M. de. (2018). The platform society. Oxford University Press.
+]
+
+---
+background-image: url("assets/dijck-2018.png")
+background-position: 100% 50%
+background-size: 100% 90%
+
+.footnote[Dijck, J. van, Poell, T., & Waal, M. de. (2018). *The platform society*. Oxford University Press.
+]
+---
+class: segue-yellow
+
+## Interfaces
+
+---
+
+## What do we mean by (user) interfaces? 
+
+>  is an interactive visual diagram that presents a visually coherent image of otherwise discontiguous and opaque processes and flows. [1]
+
+.footnote[
+[1] Bratton, B. H. (2016). The Stack: On software and sovereignty. MIT Press. 
+
+]
+
+---
+class: segue-yellow
+
+## Affordances
+
+---
