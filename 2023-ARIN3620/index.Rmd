@@ -35,12 +35,34 @@ require(fontawesome)
 ```
 
 ---
+class: sydney-blue
+
+## Primer
+
+### Key Concepts
+
+1. Publics 
+
+2. Platforms
+
+3. Interfaces
+
+4. Affordances (What they are and what they are) not
+
+### Platform research in practice
+
+1. Studying publics across platforms
+
+2. Studying publics within a single platform
+
+---
 
 ## Acknowledgement of Country
 
 I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
 
 ---
+
 
 ## Me
 	
@@ -299,7 +321,7 @@ Bailo, F., Johns, A., & Rizoiu, M.-A. (2023). Riding information crises: The per
 
 * How do you study **publics** within a platform?
 
-* Methods: Qualitative -> Quantitative + Quantitative (Network & Text analysis)
+* Methods: Qualitative -> Qualitative + Quantitative (Network & Text analysis)
 
 * RQ1: Did far-right accounts overperform within Twitter?
 
