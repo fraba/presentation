@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Measuring Information Disorder</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Francesco Bailo" />
+    <script src="libs/header-attrs-2.23/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+    <script src="libs/viz-1.8.2/viz.js"></script>
+    <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+    <script src="libs/grViz-binding-1.0.9/grViz.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Measuring Information Disorder
+]
+.author[
+### Francesco Bailo
+]
+.institute[
+### University of Sydney
+]
+.date[
+### updated: 2023-11-27<br><br>Australian Social Network Analysis Conference<br>University of New South Wales<br>27–28 November, 2023
+]
+
+---
+
+
+background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
+background-size: 95%
+
+---
+
+class: inverse, center, middle
+
+# Information disorder
+
+---
+
+## Why we need a practical definition of information disorder?
+
+The battle against misinformation is fundamentally impossible to control and win.
+
+1. Content distribution platforms (i.e. social media) are 
+
+    * geared to increase volumes, not to foster quality. With limited exceptions, news media play by the same rules.
+    
+    * not resilient to *epistemic gaps* -- which are regularly occurring as we always experience a gap between events (e.g. COVID-19) and knowledge (e.g. interpretations and explanations) about the events.
+
+2. *Information chaos* is a well-defined and recurrently used political and geopolitical tactic. Information chaos is not about misinformation/disinformation but about the diffusion into an information space of more information than people can navigate. This result in generalised mistrust.    
+
+3. Recent advances in LLM have provided new sophisticated functionality in creating even more credible content (text, video, audio).  
+
+---
+
+class: inverse, center, middle
+
+# What is information?
+
+---
+
+#### Information as truth: Floridi, L. (2010). *Information: A very short introduction*. Oxford University Press.
+
+
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-5702870d59e60cbcbc59" style="width:60%;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-5702870d59e60cbcbc59">{"x":{"diagram":"\ndigraph {\n\n  # graph attributes\n  graph [overlap = true]\n\n  # node attributes\n  node [shape = box,\n        fontname = Helvetica,\n        color = black]\n\n  # edge attributes\n  edge [color = gray]\n\n  # node statements\n  A [label = \"data\n(unstructured)\"]; \n  B [label = \"environmental\"]; \n  C [label = \"semantic\n(content)\"]; \n  D [label = \"instructional\"];\n  E [label = \"factual\"];\n  F [label = \"untrue\"];\n  G [label = \"true\n(information)\", style = filled, fillcolor = \"orange\"]\n  H [label = \"knowledge\"]\n  I [label = \"unintentional\n(misinformation)\"]\n  J [label = \"intentional\n(disinformation)\"]\n\n  # edge statements\n  A->B; A->C; C->D; C->E;\n  E->F; E->G; G->H;\n  F->I; F->J;\n  \n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+
+
+---
+
+#### But ...
+
+Information as truth is problematic, especially when it comes to social media content.  
+
+* Truth is difficult/impossible to ascertain (e.g. fact-checking is laborious and available only hours or even days after the content has been distributed);
+
+* Truth might not be available for lack of scientific consensus (e.g. onset of the Covid-19 pandemic)
+
+---
+
+## A practical definition of information
+
+**Information** is content that is meaningful in a semantic sense (i.e. we can understand its meaning). 
+
+So this is **not information**: 010101110001010101010100101
+
+But this is **information**, no matter where you stand on the connection vaccine-autism:
+
+.center[&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Sr CDC vaccine scientist: Thimerosal in flu shots given to pregnant mothers &amp;quot;causes autism-like features&amp;quot; in children&lt;br&gt;http://t.co/OBCOnDAoKV&lt;/p&gt;&amp;mdash; Robert F. Kennedy Jr (@RobertKennedyJr) &lt;a href="https://twitter.com/RobertKennedyJr/status/531912864555347968?ref_src=twsrc%5Etfw"&gt;November 10, 2014&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;]
+
+---
+
+## A practical definition of information
+
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-944474421fcbef021782" style="width:504px;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-944474421fcbef021782">{"x":{"diagram":"\ndigraph {\n\n  # graph attributes\n  graph [overlap = true]\n\n  # node attributes\n  node [shape = box,\n        fontname = Helvetica,\n        color = black]\n\n  # edge attributes\n  edge [color = gray]\n\n  # node statements\n  A [label = \"data\n(unstructured)\"]; \n  B [label = \"environmental\"]; \n  C [label = \"semantic\n(content)\n(information)\", style = filled, fillcolor = \"orange\"]; \n  D [label = \"instructional\"];\n  E [label = \"factual\"];\n  F [label = \"untrue\"];\n  G [label = \"true\"]\n  H [label = \"knowledge\"]\n  I [label = \"unintentional\n(misinformation)\"]\n  J [label = \"intentional\n(disinformation)\"]\n\n  # edge statements\n  A->B; A->C; C->D; C->E;\n  E->F; E->G; G->H;\n  F->I; F->J;\n  \n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+
+---
+
+## A practical definition of information disorder
+
+* As information, Information disorder is *agnostic to knowledge* (true belief).
+
+So, information (dis)order is 
+
+&gt; The likelihood of encountering (in)consistent information to solve a sense-making problem.
+
+In other words, information (dis)order is a measure of the overall *coherence* of an information flow. 
+
+For example,
+
+* Do I need to wear a mask? 
+
+* Do I need to vaccinate my kids?
+
+* Do I need to evacuate?
+
+---
+
+class: inverse, center, middle
+
+# How to measure information disorder
+
+---
+
+### How to measure information disorder: A network approach
+
+Information coherence is measured from a *multilayer network*, where nodes (actors) are *statements* related by four types of edges. 
+
+.center[&lt;img src = 'https://i.stack.imgur.com/PYn3i.png' width = '80%'&gt;&lt;/img&gt;]
+
+
+Statements are linked: 
+
+1. if they agree (first layer); 
+
+2. if they disagree (second layer); 
+
+3. if they are equivalent/redundant (third layer); 
+
+4. and finally, if they offer to the same external source (URLs) (fourth layer).
+
+---
+
+
+
+
+#### How to measure information disorder: A network approach
+
+.center[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-4-1.svg" width="80%" /&gt;
+
+]
+
+---
+
+### How to measure information disorder: A network approach
+
+#### Order vs Disorder
+
+We can calculate the *density* `\(D\)` of each graph, then solve for this:
+
+`$$(D_{Agreement} - D_{Disagrement}) + D_{Redundancy} + D_{ExternalSource}$$`
+
+
+---
+
+### How to measure information disorder: A network approach
+
+#### Pluralism vs Singularism
+
+`$$Agreement + Redundancy + ExternalSource$$`
+
+
+I can flatten these three graphs to get a more comphrensive agreement graph (including *redundacy* and shared *external sources*).
+
+---
+
+### How to measure information disorder: A network approach
+
+#### Pluralism vs Singularism
+
+.center[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-5-1.svg" width="50%" /&gt;
+
+]
+
+A pluralism vs singularism index can be measured as the normalised number of communities in the flatten agreement graph
+
+---
+
+### The order vs disorder / singularism vs pluralism chart
+
+.center[&lt;img src = 'img/measuring-information-disorder-schema.png'&gt;&lt;/img&gt;]
+
+---
+
+class: inverse, center, middle
+
+# How to measure information disorder (in practice)
+
+---
+
+## 1. Define an information space
+
+For example, I am currently working on the conversation around mask use during the COVID-19 epidemic (Feb 2020 - Jan 2021) on the English version of Wikipedia
+
+
+
+
+## 2. Define time intervals
+
+For example, I am using 24-hour intervals. That is, I am producing an estimate of **Information Pluralism** and **Information Disorder** for each 24-hour window.
+
+## 3. Sample content from each interval 
+
+How much content will depend on the classification capabilities. Nodes (i.e. "content") can be a sentence, a social media post or an article. With Wikipedia I am selecting sentences. 
+
+---
+
+## 4. Code the relationships among nodes using LLM (e.g. ChatGPT): *Agreement*, *Disagreement*, *Redundancy* graphs
+
+
+&gt; prompt = f"Responding with one word, the information that is possible to extract from the two texts appears to be in 'agreement', 'disagreement' or equivalent' (please respond using only one of these four labels: agreement, disagreement, equivalent, none)\n'text 1: '{node_x}'\ntext 2: '{node_y}'"
+
+
+
+## 5. Extract and compare URL from content: *ExternalSource* graph
+
+---
+
+## Critical normative questions we can answer with information from this measurement:
+
+1. Where should conversations be? (More or less tollerance for pluralism/disorder depending on the topic), and
+
+2. How should conversations evolve?
+
+.center[&lt;img src = 'img/measuring-information-disorder-schema-dots.svg' width = '50%'&gt;&lt;/img&gt;]
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
