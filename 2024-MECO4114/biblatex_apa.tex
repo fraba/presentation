@@ -1,0 +1,101 @@
+%% Bibliography - Start %%
+
+% Set the values for the bibliography
+\usepackage[
+    style=apa,
+    indexing,
+    backend=biber,
+    isbn=false,
+    url=true,
+    doi=true,
+    eprint=false,
+    hyperref=true,
+    backref=false,
+    firstinits=false,
+    natbib  
+]{biblatex}
+
+% Recommended by biblatex
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{xpatch}
+
+% Remove series & edition
+\AtEveryBibitem{
+  \clearfield{series}
+  \clearfield{edition}
+}
+
+% Remove month and day only for journal article
+\AtEveryBibitem{%
+  \ifboolexpr{test {\ifentrytype{article}} and (not test {\iffieldundef{number}} or not test {\iffieldundef{volume}})}
+    {\clearfield{month}
+     \clearfield{day}
+     \clearfield{url}
+     \clearfield{urldate}}
+     {}%
+}
+
+% Remove month for books
+\AtEveryBibitem{%
+  \ifentrytype{book}{%
+    \clearfield{month}%
+    \clearfield{day}%
+  }{%
+  }%
+}
+
+% Remove url for 
+\AtEveryBibitem{%
+  \ifentrytype{book}{%
+    \clearfield{month}%
+    \clearfield{day}%
+  }{%
+  }%
+}
+
+% Suppress urldate and url for all items except misc. In biblatex option url need to be set to true 
+% \savebibmacro{url+urldate} \renewbibmacro*{url+urldate}
+% {\ifentrytype{misc}{\restorebibmacro{url+urldate}\usebibmacro{url+urldate}}{}}
+
+% Add "reprinted from" at the end of the reference
+\renewbibmacro*{related:reprintfrom}[1]{%
+  \entrydata*{#1}{%
+    \printtext{\mkbibemph{\printfield[apacase]{booktitle}}}%
+    \setunit{\bibpagespunct}%
+    \printfield{pages}%
+    \setunit{\addcomma\addspace}%
+    \bibstring{byauthor}\addspace
+    \printnames[apanames][-\value{listtotal}]{editor}%
+    \ifnameundef{editor}
+      {}
+      {\addcomma\addspace
+       \usebibmacro{apaeditorstrg}{editor}}
+    \printnames[apanames][-\value{listtotal}]{author}%
+    \setunit{\addcomma\addspace}%
+    \usebibmacro{date}%
+    \setunit{\addcomma\addspace}%
+    \usebibmacro{location+publisher}%
+    \newunit\newblock
+    \usebibmacro{related}}}
+
+\DefineBibliographyStrings{british}{
+  reprintfrom = {Reprinted from}
+}
+
+% Remove origin date if reprint
+\renewbibmacro*{origyear}{%
+  \ifboolexpr{not test {\iffieldundef{labelyear}} and not test {\iffieldsequal{labelyear}{origyear}} and not test {\iffieldequalstr{relatedtype}{reprintfrom}}}
+    {\printfield{origyear}}
+    {}}
+
+% Set language and quotes
+\usepackage{csquotes}
+\usepackage[british]{babel}
+\DeclareLanguageMapping{british}{british-apa}
+
+
+%Point to the bibliography db
+\addbibresource{bibliography.bib}
+
+%% = Bibliography - End = %%
