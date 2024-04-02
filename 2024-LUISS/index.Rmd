@@ -1,0 +1,82 @@
+---
+title: "Affording Fragmented Audiences<br>Multi-Platform Deliberation Within the
+Five Star Movement"
+subtitle: ""
+author: "Francesco Bailo"
+institute: "The University of Sydney"
+date: "5 April 2024"
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+    self_contained: false # if true, fonts will be stored locally
+    seal: true # show a title slide with YAML information
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
+    nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: false # disable slide transitions by scrolling
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+require(fontawesome)
+
+```
+
+
+---
+
+
+- This paper is co-authored with Francesco Marolla (Università degli Studi di Milano), Marilù Miotto (Erasmus University Rotterdam) and Giovanni Cassani (Tilburg University). 
+
+- The paper is currently under peer-review. It was accepted for presentation at 2024 Annual Conference of the International Communication Association (Political Communication division). 
+
+---
+
+# Introduction
+
+Briefly introduce the subject matter.
+
+Importance of multi-platform analysis for understanding political movements.
+
+Introduce the Five Star Movement as a case study.
+
+---
+
+## Abstract
+
+- Political movements' online ecosystems extend beyond a single Internet platform.
+- Adoption of multiple platforms is driven by the unique user affordances they offer and the organizational outcomes they enable.
+
+### Findings
+
+- **Structural Differences**: Identified within the multi-platform ecosystem of M5S.
+- **Visibility and Associability**: Different platforms offer varying degrees of these, affecting organizational outcomes.
+  - Meetup.com and the Forum: Higher local visibility and associability.
+  - The Blog and Facebook.com: Higher global visibility and associability.
+- **Influence on Voting**: Platforms' boundaries influence cross-platform activity and intra-platform communication.
+  - Network centrality within Meetup.com and the Forum had a stronger predictive power for the 2012 online primaries results.
+
+---
+
+### Research Questions
+
+
+---
+
+```{r, echo=FALSE, results='asis'}
+xfun::file_string('affordances-outcomes-table.html')
+```
+
+
+
+
