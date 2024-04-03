@@ -195,17 +195,22 @@ Associability is the property allowing users to associate themself within a soci
 ---
 
 
-```{r echo = F}
+```{r echo = F, dev = 'svg'}
 require(igraph)
 require(visNetwork)
 g <- 
-  igraph::sample_gnp(10, 5/20, directed=TRUE) %du% 
-  igraph::sample_gnp(10, 5/20, directed=TRUE) %du% 
-  igraph::sample_gnp(10, 5/20, directed=TRUE)
+  igraph::sample_gnp(15, 5/20, directed=TRUE) %du% 
+  igraph::sample_gnp(15, 5/20, directed=TRUE) %du% 
+  igraph::sample_gnp(15, 5/20, directed=TRUE)
 
-g <- add_edges(g, c(1,11, 2,12, 6,25, 21, 15))
+g <- add_edges(g, c(1,11, 2,12, 6,25, 21, 32, 35, 8))
 
-visIgraph(g)
+g %>%
+  igraph::set_vertex_attr(name = 'group', index = V(g), value = 'A') %>%
+  visIgraph() %>%
+  visGroups(groupname = "A", shape = "icon", 
+            icon = list(code = "f007")) %>%
+  addFontAwesome()
 
 ```
 
