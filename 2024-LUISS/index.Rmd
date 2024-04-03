@@ -158,7 +158,41 @@ Skeptical on whether incorporating digital technologies in politics leads to dec
 
 ---
 
-## Social Media Affordances: Visibility and Associability
+## Social Media Affordances
+
+
+.pull-left[
+
+.center[
+## Visibility 
+<img src = 'assets/visibility.webp' width = '95%'>]]
+
+.pull-left[
+
+.center[
+## Associability
+<img src = 'assets/associability.webp' width = '95%'>]]
+
+---
+
+## Visibility 
+
+.content-box-yellow[
+Visibility is the property that allows users and their content to see and be seen within a social media platform.
+]
+
+.center[<img src = 'assets/visibility.webp' width = '45%'>]
+
+---
+
+## Associability 
+
+.content-box-yellow[
+Associability is the property allowing users to associate themself within a social media platform with other users and with content (e.g. news, stories, photos)]
+
+.center[<img src = 'assets/associability.webp' width = '45%'>]
+
+
 
 ---
 
