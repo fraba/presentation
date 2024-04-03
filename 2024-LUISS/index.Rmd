@@ -192,6 +192,15 @@ Associability is the property allowing users to associate themself within a soci
 
 .center[<img src = 'assets/associability.webp' width = '45%'>]
 
+---
+
+```{r}
+require(igraph)
+g <- make_full_graph(10, directed = T) %du% 
+  make_full_graph(10, directed = T) %du% 
+  make_full_graph(10, directed = T)
+g <- add_edges(g, c(1,6, 2,7, 1,11, 6, 11)*2)
+```
 
 
 ---
