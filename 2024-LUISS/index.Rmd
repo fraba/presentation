@@ -194,14 +194,20 @@ Associability is the property allowing users to associate themself within a soci
 
 ---
 
-```{r}
-require(igraph)
-g <- make_full_graph(10, directed = T) %du% 
-  make_full_graph(10, directed = T) %du% 
-  make_full_graph(10, directed = T)
-g <- add_edges(g, c(1,6, 2,7, 1,11, 6, 11)*2)
-```
 
+```{r echo = F}
+require(igraph)
+require(visNetwork)
+g <- 
+  igraph::sample_gnp(10, 5/20, directed=TRUE) %du% 
+  igraph::sample_gnp(10, 5/20, directed=TRUE) %du% 
+  igraph::sample_gnp(10, 5/20, directed=TRUE)
+
+g <- add_edges(g, c(1,11, 2,12, 6,25, 21, 15))
+
+visIgraph(g)
+
+```
 
 ---
 
