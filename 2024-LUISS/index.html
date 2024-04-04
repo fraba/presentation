@@ -8,10 +8,9 @@
     <script src="index_files/header-attrs-2.25/header-attrs.js"></script>
     <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <script src="index_files/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-    <link href="index_files/vis-9.1.0/vis-network.min.css" rel="stylesheet" />
-    <script src="index_files/vis-9.1.0/vis-network.min.js"></script>
-    <script src="index_files/visNetwork-binding-2.1.2/visNetwork.js"></script>
-    <link href="index_files/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="index_files/viz-1.8.2/viz.js"></script>
+    <link href="index_files/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+    <script src="index_files/grViz-binding-1.0.11/grViz.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -49,6 +48,11 @@ class: center, middle, inverse, title-slide
 
 
 
+---
+
+## How does this paper fit in my research agenda.
+
+
 
 ---
 
@@ -58,6 +62,7 @@ class: center, middle, inverse, title-slide
 - The paper is currently under peer-review. 
 
 - It was accepted for presentation at 2024 Annual Conference of the **International Communication Association** (*Political Communication* division). 
+
 
 ---
 
@@ -70,8 +75,6 @@ class: center, middle, inverse, title-slide
 - Yet, we know little about what adopting **multiple Internet platforms** by the same political organization means for its **community's cohesion** and **intra-party dynamics**.
 
 .center[&lt;img src = 'https://upload.wikimedia.org/wikipedia/commons/2/2c/MoVimento_5_Stelle_Logo_vettoriale.svg' width = "20%"&gt;]
-
-
 
 ---
 
@@ -97,7 +100,7 @@ class: center, middle, inverse, title-slide
 
 ---
 
-## Findings
+## Main findings
 
 - **Structural Differences**: Identified within the multi-platform ecosystem of M5S.
 
@@ -109,10 +112,26 @@ class: center, middle, inverse, title-slide
   - Network centrality within Meetup.com had a stronger predictive power for the 2012 online primaries results.
 
 ---
+class: segue-red
+
+# Theoretical Approach
+
+Centrifugal vs. Centripetal Theories in Digital Politics
+
+Social Media Affordances: Visibility and Associability
+
+Social Media Outcomes
+
+---
+class: segue-yellow
+
+# Centrifugal vs. Centripetal Theories in Digital Politics
+
+---
 
 ## Centrifugal vs. Centripetal Theories in Digital Politics
 
-- Different theories contend that digital technologies may either decentralize (**centrifugal**) or centralize (**centripetal**) political party operations.
+- Different theories contend that *digital technologies* may either decentralize (**centrifugal**) or centralize (**centripetal**) political party operations.
 
 .pull-left[&lt;img src = 'assets/centrifugal.webp'&gt;]
 
@@ -151,6 +170,11 @@ Skeptical on whether incorporating digital technologies in politics leads to dec
 3. The democratizing potential of digital tools can be undermined by attempts of party elites to control decision-making, paving the way for forms of 'reactive democracy' where members merely ratify top-down decisions (Deseriis, 2021; Gerbaudo, 2019).
 
 .center[&lt;img src = 'assets/centripetal.webp' width = '15%'&gt;]
+
+---
+class: segue-yellow
+
+# Social Media Affordances: Visibility and Associability
 
 ---
 
@@ -211,22 +235,405 @@ Associability is the property allowing users to associate themself within a soci
 
 ---
 
+### Platforms can Afford Local/Global Visibility and Associability
 
-<div class="visNetwork html-widget html-fill-item" id="htmlwidget-db88d20de4e18968da86" style="width:45%;height:504px;"></div>
-<script type="application/json" data-for="htmlwidget-db88d20de4e18968da86">{"x":{"nodes":{"id":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45],"group":["A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A"],"label":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45],"x":[0.7990731797347783,0.679531500873843,1,0.9434291955723422,0.7761953893831648,0.2128072185371375,0.8925924117998576,0.5834812418855229,0.5785822930771665,0.5834277176126847,0.6643053702419051,0.7255379949309368,0.8655517113074829,0.4569986389379632,0.7902935479962487,-0.5204504592392687,-0.6253369586445245,-0.7481572102114398,-0.9455427686020093,-0.7324409321770287,-0.5316157225187234,-1,-0.4050021391155807,-0.6095664117919717,-0.4350211821692708,-0.706687410152131,-0.8843311429816713,-0.8020515001458193,-0.66654551096139,-0.788280149500808,0.1873426412952455,0.01812031681342408,0.2106285443535825,0.292140528300407,0.3666629722189698,0.2408223196073134,0.4279852430181608,0.4045375547518015,0.5045501482710124,0.4566547373685312,0.3306985462638856,0.1315554108573447,0.2670907031499525,0.3449445960292103,0.552780322186267],"y":[-0.6186240626455841,-0.7951969799158817,-1,-0.859356660861648,-0.4966441673489109,-0.5232354859753752,-0.7036260551019468,-0.2440239305284878,-0.5675781278058939,-0.6464617212973278,-0.4537486840826825,-0.6374296708670592,-0.5963771753596588,-0.4331166101306358,-0.7574681910915708,-0.3216354668336223,-0.4168864143557597,-0.0456919598153428,-0.3675213319077774,-0.1753022829779792,-0.0209116680218131,-0.1592582010146447,-0.1481853913073601,-0.1655422439573871,-0.3755727362471476,-0.3086539550573975,-0.2206657760803865,-0.2750948763551037,-0.256528238572163,-0.1046518814825479,0.6964880286588919,0.3906165987273542,0.6131351037308914,0.5337832462191718,0.3680239948266304,0.7628241779305625,0.6689933504378474,0.7809607877947415,0.9664722154275907,0.5934632750530029,0.5795882713756328,0.8803037028250893,1,0.8120459779461922,0.5436062631985348]},"edges":{"from":[1,2,15,15,3,7,15,1,8,10,15,9,1,9,13,9,12,2,6,9,10,11,12,13,14,6,9,10,1,8,9,14,4,7,10,12,15,1,5,7,10,6,8,24,29,16,26,24,27,29,18,19,20,21,22,24,25,27,30,18,20,21,23,24,26,30,22,27,28,16,17,20,21,16,17,26,28,29,27,26,29,20,26,27,28,29,30,17,18,21,24,25,26,30,32,36,37,38,42,44,33,35,41,31,38,41,42,32,35,38,40,41,44,33,34,35,36,42,33,37,41,45,37,39,40,38,35,38,41,31,35,37,40,44,45,43,36,38,38,39,1,2,6,21,35],"to":[15,1,2,3,4,4,4,5,5,5,5,6,7,7,7,8,8,9,9,15,9,9,9,9,9,10,10,15,11,11,11,11,12,12,12,15,12,13,13,13,13,14,14,16,16,17,17,18,18,19,20,20,30,20,20,20,20,20,20,21,21,30,21,21,21,21,30,22,22,23,24,24,24,25,25,25,25,25,26,27,27,28,28,28,30,28,28,29,29,29,29,29,29,29,31,31,31,31,31,31,32,32,32,33,33,33,33,34,34,34,34,34,34,35,35,45,35,36,37,45,37,37,38,38,38,39,40,40,40,41,41,41,41,41,41,42,43,43,44,44,11,12,25,32,8]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"smooth":false,"arrows":"to"},"physics":{"stabilization":false},"groups":{"useDefaultGroups":true,"A":{"shape":"icon","icon":{"code":"f007","color":"#2B7CE9"}}}},"groups":["A"],"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"iconsRedraw":true},"evals":[],"jsHooks":[]}</script>
+
+.pull-left[
+
+.content-box-blue[
+
+**Local visibility and associability**, allowing communication among a relatively small but dense network of users, as well as 
+
+]
+
+&lt;img src="index_files/figure-html/unnamed-chunk-1-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+.content-box-yellow[
+
+**Global visibility and associability**, allowing a user to communicate with a relatively large but sparse network of users.
+
+]
+
+&lt;img src="index_files/figure-html/unnamed-chunk-2-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+class: segue-yellow
+
+# Social Media Outcomes
 
 ---
 
-### Comparison of Affordances and Outcomes Across M5S Digital Platforms
+# Social Media Outcomes
+
+## What outcomes can social media platforms produce for political organisations?
+
+1. Mobilization: Platforms can help coordinate the mobilization of the base
+
+2. Deliberation: Platforms can support decision-making processes (weak deliberation such as online discussions but also strong deliberation such as voting)
+
+3. Amplification: Platforms allow to use the network of users to amplify the message of the organisation.
+
+4. Validation: Platform can expose individuals to content that confirms beliefs, attitudes, or perceptions that are in line with the politics of the organisation and validates the political relevance of the organisation. 
+
+---
+
+class: segue-red
+
+# The M5S Digital Ecosystem
+
+---
+
+### The M5S and the Internet
+
+- The M5S, established in 2009, has significantly disrupted Italian politics by blending techno-utopian and populist ideologies to advocate for **direct democracy via online participation**, challenging traditional representative systems. 
+
+- It promoted the use of technology to empower ordinary citizens, emphasizing the Internet's role in **decentralizing authority** and believes in the **expertise of common citizens**, showcased through its innovative online-only primary elections in December 2012. 
+
+- The M5S pioneered the use of digital platforms for political activities, using Internet platforms to spread counter-narratives and foster participatory communication practices, aiming to decentralize political power and bridge resource disparities.
+
+---
+
+### Different platforms for different party functions
+
+- Beppe Grillo's personal **blog** served as both the voice of the party's central strategy and his personal commentary, establishing the party’s goals.
+- **Meetup.com** was crucial for mobilizing local grassroots groups and organizing events on national and local issues, acting as the hub for territorial engagement. 
+- The M5S **Forum** provided a space for members to engage in deliberations and propose ideas, fostering a community of online discussion. 
+- **Facebook** extended the reach of the party's messages and blog content to a broader audience, enhancing communication channels. 
+- The **e-voting platform** for the 2012 primaries was instrumental in the elite selection process within the M5S, showing the party's innovative approach to member participation and candidate selection.
+
+---
+
+- The varied functionalities of the M5S's digital platforms have significantly influenced the movement's internal dynamics.
+
+- We characterize the differences in terms of overall **communication orientation**, **affordances** and **outcomes** among the platforms under study. 
+
+- We expect two communication orientations: 
+
+  1. The **top-down** orientation of the Blog and Facebook.com is characterized by limited or absent bottom-up communication feedback and will result in a centripetal tendency with attention highly concentrated on the leadership. 
+  
+  2. The **horizontal** orientation of the Forum and Meetup.com will result in centrifugal tendencies with relatively low attention diffused across small communities of users.
+
+---
+
+### Expected Affordances and Outcomes Across M5S Digital Platforms
 
 &lt;table style="border-collapse:collapse;border-spacing:0" class="tg"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal" rowspan="3"&gt;M5S&lt;br&gt;Platform&lt;/th&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal" rowspan="3"&gt;Communication &lt;br&gt;Orientation&lt;/th&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal" colspan="4"&gt;Affordances&lt;/th&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal" colspan="4" rowspan="2"&gt;Outcomes&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal" colspan="2"&gt;Local&lt;/th&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal" colspan="2"&gt;Global&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;Visibility&lt;/th&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;Associability&lt;/th&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;Visibility&lt;/th&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;&lt;span style="font-weight:bold;font-style:normal"&gt;Associability&lt;/span&gt;&lt;/th&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;Mobilization&lt;/th&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;Deliberation&lt;/th&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;Amplification&lt;/th&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;Validation&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;Blog&lt;/td&gt;&lt;td style="background-color:#ffffb3;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;Top-down&lt;br&gt;Centripetal&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#fe0000;border-color:inherit;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;high&lt;/td&gt;&lt;td style="background-color:#fe0000;border-color:inherit;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;high&lt;/td&gt;&lt;td style="background-color:#fd6864;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;mid&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#fd6864;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;mid&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;color:#333333;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;&lt;a href="http://meetup.com/" target="_blank" rel="noopener noreferrer"&gt;&lt;span style="color:black"&gt;Meetup&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td style="background-color:#8dd3c7;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;Horizontal&lt;br&gt;Centrifugal&lt;/td&gt;&lt;td style="background-color:#fe0000;border-color:inherit;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;high&lt;/td&gt;&lt;td style="background-color:#fe0000;border-color:inherit;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;high&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#fe0000;border-color:inherit;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;high&lt;/td&gt;&lt;td style="background-color:#fd6864;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;mid&lt;/td&gt;&lt;td style="background-color:#fd6864;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;mid&lt;/td&gt;&lt;td style="background-color:#fe0000;border-color:inherit;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;high&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;Forum&lt;/td&gt;&lt;td style="background-color:#8dd3c7;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;Horizontal&lt;br&gt;Centrifugal&lt;/td&gt;&lt;td style="background-color:#fd6864;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;mid&lt;/td&gt;&lt;td style="background-color:#fd6864;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;mid&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#fe0000;border-color:inherit;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;high&lt;/td&gt;&lt;td style="background-color:#fd6864;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;mid&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#fd6864;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;mid&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;&lt;a href="http://facebook.com/" target="_blank" rel="noopener noreferrer"&gt;&lt;span style="color:black"&gt;Facebook&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td style="background-color:#ffffb3;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;Top-down&lt;br&gt;Centripetal&lt;/td&gt;&lt;td style="background-color:#fe0000;border-color:inherit;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;high&lt;/td&gt;&lt;td style="background-color:#fe0000;border-color:inherit;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;high&lt;/td&gt;&lt;td style="background-color:#fe0000;border-color:inherit;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;high&lt;/td&gt;&lt;td style="background-color:#fd6864;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;mid&lt;/td&gt;&lt;td style="background-color:#fd6864;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;mid&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#fe0000;border-color:inherit;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;high&lt;/td&gt;&lt;td style="background-color:#fe0000;border-color:inherit;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;high&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;E-voting&lt;br&gt;site&lt;/td&gt;&lt;td style="background-color:#bebada;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;Top-down  &amp;amp;&lt;br&gt;Bottom-up&lt;/td&gt;&lt;td style="background-color:#fd6864;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;mid&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#fe0000;border-color:inherit;border-style:solid;border-width:1px;color:#ffffff;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;high&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;td style="background-color:#ffccc9;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal"&gt;low&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
 
+---
+class: segue-red
+
+# Research design
+
+---
+
+## Hypotheses and research goals
+
+1. **Platform difference hypothesis**: Using key properties of the network of users interacting within each platform, we measure the platform affordances listed in the previous table to substantiate our *hypothesis of significant cross-platform differences*.
+
+2. **Platform fragmentation hypothesis**: We investigate the degree of cross-platform integration under the assumption that *platform boundaries limit cross-platform communication*.
+
+3. **Platform centrality hypothesis**: Using user metrics from different networks, we investigate whether the primary candidates' position and behavior within the four platforms can predict primary results under the hypothesis that platform centralities and proximity to the leadership might have helped candidates to obtain more preferences.
+
+---
+class: segue-red
+
+# Data
+
+
+---
+
+## Data
+
+- **E-voting Data**. The dataset, scraped from the e-voting platform used for the 2012 online primaries of the M5S, includes each candidate's personal and electoral details, combined with their historical electoral performance at various administrative levels in Italy from 2007 to 2012.
+
+- **Social Media Data**. Data was gathered by scraping the Blog and Forum, and through public APIs for Meetup.com and Facebook, focusing on M5S-related Meetup groups, Beppe Grillo's page, the Five Star Movement's page, and pages of 944 M5S leaders identified via snowball sampling.
 
 ---
 
 ### Activity frequency between 2010-2012 on the four target social media platforms
 
 ![](assets/post-timeseries.svg)
+
+---
+
+class: segue-red
+
+# Methods
+
+Platform Networks
+
+Measuring Affordances Using Network Analysis
+
+Topic Modelling
+
+Modelling Primary Results
+
+---
+
+class: segue-yellow
+
+
+# Platform Networks
+
+---
+
+### Platform Networks
+
+From the social media data, two network types were created: 
+
+1. a **user network**, based on replies among users for the Blog, Facebook, and the Forum, and an undirected network on Meetup.com for users attending the same event; and 
+
+2. a **content-based network**, utilizing topic modeling and entity recognition. 
+These networks were analyzed globally and individually, with communities identified through algorithms, and user mapping across platforms done through username matching.
+
+---
+
+class: segue-yellow
+
+# Measuring Affordances Using Network Analysis
+
+---
+
+### Measuring Affordances Using Network Analysis
+
+We propose to use *four network metrics*
+
+.content-box-yellow[
+
+1\. **Local visibility**: Link recirpocity ratio, or the proportion of mutual connections in a directed network
+
+]
+
+.pull-left[
+
+
+
+<div class="grViz html-widget html-fill-item" id="htmlwidget-21d77375e8b471f7ddb6" style="width:100%;height:144px;"></div>
+<script type="application/json" data-for="htmlwidget-21d77375e8b471f7ddb6">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\",\n       label = \"reciprocity = 1\",\n       labelloc = \"t\",\n       labeljust = \"c\",\n       fontname = \"Helvetica\",\n       fontcolor = \"gray30\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"Alice\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [label = \"Bob\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n\"1\"->\"2\" [label = \"replies to\"] \n\"2\"->\"1\" [label = \"replies to\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+]
+
+.pull-right[
+
+<div class="grViz html-widget html-fill-item" id="htmlwidget-573955f48ea1fad37fea" style="width:100%;height:216px;"></div>
+<script type="application/json" data-for="htmlwidget-573955f48ea1fad37fea">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\",\n       label = \"reciprocity = 0.3\",\n       labelloc = \"t\",\n       labeljust = \"c\",\n       fontname = \"Helvetica\",\n       fontcolor = \"gray30\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"Alice\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [label = \"Bob\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"3\" [label = \"Cat\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n\"1\"->\"2\" [label = \"replies to\"] \n\"2\"->\"1\" [label = \"replies to\"] \n\"1\"->\"3\" [label = \"replies to\"] \n\"3\"->\"2\" [label = \"replies to\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+
+]
+
+.content-box-blue[
+
+2\. **Global visibility**: Standard deviation of the in-degree distribution
+
+It tells how much a single user can have incoming links well above the average for that network. It captures the capacity (for some but not for all) to be seen by a large portion of the network. 
+
+]
+
+
+
+
+---
+
+### Measuring Affordances Using Network Analysis
+
+We propose to use *four network metrics*
+
+.content-box-yellow[
+
+3\. **Local associability**: Link transitivity ratio, it quantifies how many of the potential triangles in a network are actual triangles.
+
+]
+
+.pull-left[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-6-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-7-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+---
+
+### Measuring Affordances Using Network Analysis
+
+We propose to use *four network metrics*
+
+.content-box-blue[
+
+4\. **Global associability**: Mean node distance, or the average number of steps to traverse the network. 
+
+]
+
+.pull-left[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-8-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-9-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+
+---
+
+### How We Measure Visibility on Social Media Networks
+
+.pull-left[
+
+**Local**: Link *reciprocity* ratio
+
+.content-box-yellow[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-10-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+
+&lt;small&gt;&lt;small&gt;**High** local visibility: 0.6545&lt;/small&gt;&lt;/small&gt;
+
+]
+
+.content-box-blue[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-11-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+
+&lt;small&gt;&lt;small&gt;**Low** local visibility: 0.2727&lt;/small&gt;&lt;/small&gt;
+
+]
+
+]
+
+.pull-right[
+
+**Global**: SD of *in-degree distribution*
+
+.content-box-yellow[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-12-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+
+&lt;small&gt;&lt;small&gt;**High** global visibility: 12.4235&lt;/small&gt;&lt;/small&gt;
+
+]
+
+.content-box-blue[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-13-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+
+&lt;small&gt;&lt;small&gt;**Low** global visibility: 2.7231&lt;/small&gt;&lt;/small&gt;
+
+]
+
+]
+
+---
+
+
+### How We Measure Associability on Social Media Networks
+
+.pull-left[
+
+**Local**: Link *transitivity* ratio
+
+.content-box-yellow[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-14-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+
+&lt;small&gt;&lt;small&gt;**High** local associability: 0.8148&lt;/small&gt;&lt;/small&gt;
+
+]
+
+.content-box-blue[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-15-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+
+&lt;small&gt;&lt;small&gt;**Low** local associability: 0.2542&lt;/small&gt;&lt;/small&gt;
+
+]
+
+]
+
+.pull-right[
+
+**Global**: Mean *node distance*
+
+.content-box-yellow[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-16-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+
+&lt;small&gt;&lt;small&gt;**High** global associability: 1.9966&lt;/small&gt;&lt;/small&gt;
+
+]
+
+.content-box-blue[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-17-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+
+&lt;small&gt;&lt;small&gt;**Low** global associability: 5.4553&lt;/small&gt;&lt;/small&gt;
+
+]
+
+]
+
+
+---
+
+class: segue-yellow
+
+# Topic Modelling
+
+---
+
+### Topic Modelling
+
+
+- Two Contextualized Topic Models (CTM) were developed using an Italian sentence transformers model to analyze the posts on Beppe Grillo's blog and a sample of comments on those posts, aiming to differentiate between the language used by the leadership and the blog's audience. 
+
+- Each CTM generated 26 topics, which were then labeled by two independent coders based on the topics' 25 most representative words. Only topics with similar labels from both coders were considered for further analysis to ensure consistency and relevance.
+
+---
+
+class: segue-yellow
+
+# Modeling Primary Results
+
+---
+
+### Modeling Primary Results
+
+
+- To **model the ranking of candidates** in the 2012 online primaries (we didn't have access direct vote counts), we utilized data from the e-voting and social media platforms, including network centrality, network closeness to Beppe Grillo, topic heterogeneity, and the similarity between each candidate's and Grillo's topic distributions. 
+
+- Due to the high collinearity among predictors, random forests (RFs) were chosen for their ability to handle non-linear relationships and collinear variables by **randomly selecting a subset of predictors** for each decision tree. 
+
+- This approach allowed for the examination of **how different predictor sets impact** the model's ability to explain variance in candidates' normalized rankings across districts, with models iteratively refined by evaluating the contribution of new predictor sets.
+
+---
+class: segue-red
+
+# Results
+
+Cross-Platform Affordances
+
+Cross-Platform Integration
+
+What Predicts Ranking in the M5S 2012 Online Primary Elections?
+
+
+---
+
+class: segue-yellow
+
+# Cross-Platform Affordances
 
 ---
 
@@ -238,7 +645,29 @@ Associability is the property allowing users to associate themself within a soci
 
 ---
 
-### Activity frequency between 2010-2012 on the four target social media platforms
+## Cross-platform affordances
+
+
+- We find **two distinct classes of platforms**:
+
+    - Meetup.com and the Forum facilitate local and horizontal communication, while 
+    - the Blog and Facebook.com enable global, top-down communication. 
+
+- The Forum and Meetup.com are noted for their **strong local visibility and associability**, with the Forum having a notable rate of reciprocated ties and closed triplets, and Meetup.com showing high local associability with a significant percentage of closed triplets but limited global reach. 
+
+- Conversely, Facebook.com and the Blog, despite their different functionalities, both foster **global visibility and associability with minimal local interaction**, positioning them as centralizing forces within the movement, directing attention towards leadership.
+
+
+---
+
+class: segue-yellow
+
+# Cross-Platform Integration
+
+---
+
+### For the platform of users’ first activity, the proportion of users who were active
+multiple times across each platform.
 
 .pull-left[
 .center[&lt;img src = "assets/NU-crossplatform-all-users_edited.svg" width = "100%"/&gt;]
@@ -250,9 +679,36 @@ Associability is the property allowing users to associate themself within a soci
 
 ---
 
+## Cross-platform integration
+
+- Although cross-platform activity exists, we note **significant barriers to crossing platform boundaries**: 
+
+    - The proportion of users active a second time on a different platform is always a fraction of those active again on the same platform. 
+    
+- We also note that the two centrifugal platforms, the Forum and Meetup.com tend to see a higher proportion of their users moving to the other platforms while the Blog and especially Facebook.com, significantly less so. Likely, this is because of differences in terms of audiences.
+
+---
+
 ### Classification of documents published in December 2012 into a platform based on topic weights 
 
 .center[&lt;img src = "assets/classify-platform-from-topic.svg" width = "100%"/&gt;]
+
+
+---
+
+## Cross-platform integration
+
+- Based on the classifiers’ confusion matrix presented in the confusion matrix, we infer **some degree of fragmentation** in the discussion. 
+
+- We can then conclude that **cross-platform participation and discussions are limited** even if not absent.
+
+
+---
+
+class: segue-yellow
+
+# What predicts ranking in the M5S 2012 Online Primary elections?
+
 
 ---
 
@@ -271,6 +727,102 @@ Associability is the property allowing users to associate themself within a soci
 .center[&lt;img src = "assets/feature-importance.svg" width = "95%"/&gt;]
 
 &lt;small&gt;&lt;small&gt;Larger values indicate the model gets worse when a variable is removed, and thus that the variable is more important for accurate predictions.&lt;/small&gt;&lt;/small&gt;
+
+---
+
+### What predicts ranking in the M5S 2012 Online Primary elections?
+
+- Variables available to the voters through the interface of
+the voting platform (e.g. screen position, gender) are consistently more important, followed by different platform-specific measures of centrality, with Meetup.com and Facebook.com appearing as more central.
+
+---
+
+### Relationship between predicted rank in the 2012 primaries and five predictors in best RF model
+
+.center[&lt;img src = "assets/prediction-rank.svg" width = "90%"/&gt;]
+
+---
+
+### What predicts ranking in the M5S 2012 Online Primary elections?
+
+
+- Candidates with higher eigenvector centrality on Meetup.com compared to other competitors in the district tend to rank better. 
+
+- A similar, albeit weaker pattern, appears considering out degree centrality on Facebook.com. 
+
+- Candidates not in the leader’s community appear to receive a moderate boost and rank better.
+
+- Degree centrality on the Forum shows a penalty for candidates who were not on the Forum, with little variation relating to activity. 
+
+- Page rank of a user in the cross-platform network shows a benefit for more active candidates.
+
+---
+
+### What predicts ranking in the M5S 2012 Online Primary elections?
+
+- As a block, associations between candidates and topics did not improve
+predictions.
+
+- Yet, some topics did show moderate importance, especially topics concerning the
+internal life of the movement: candidates who posted more about these topics ranked better in the primary. 
+
+- But, given the wealth of variables to consider and the difficulty in formulating precise hypotheses on which topics would be more prominent, we leave a more focused analysis of what candidates communicated about and its relation with political outcomes in the party to future research.
+
+---
+class: segue-red
+
+# Conclusions
+
+
+---
+
+### Contribution
+
+1. By measuring visibility and associability affordances of the M5S digital ecosystem, monitoring its cross-platform activity, and investigating the concrete impact that it had on candidate selection, we contribute to crossplatform research by providing a first systematic study of **how a fragmented digital media landscape impacts intra-party politics**. 
+
+2. We contribute to the debate on intra-party digitalization by providing evidence of **decentralization dynamics** in a political organization heavily dependent on digital platforms, **supporting centrifugal theories**.
+
+---
+
+### Findings
+
+- M5S’ **horizontal platforms** (Meetup.com and Forum) afford greater local visibility and associability, aligning with our expectations about their fostering of grassroots initiatives and networking. 
+
+- In contrast, **top-down platforms** (Blog and Facebook.com) reported a greater potential in connecting users to the broader M5S network.
+
+- Prioritizing presence and engagement on horizontal platforms (especially Meetup.com) could have been the optimal strategy for candidates aiming to rise within the M5S ranks and not engagement on top-down platforms.
+
+---
+
+### Findings
+
+- And yet the strategic utility of platforms for M5S candidates could vary with the evolution of the Movement trajectory within the Italian political landscape. 
+
+- Top-down platforms’ global affordances could become crucial for MPs to consolidate their power positions in the later stages of the M5S, where a party in public office (Mair and Katz, 2002) established. 
+
+- (Future studies may investigate the implications of online activity in the later stages of the M5S, especially considering the growing trajectory that Facebook.com experienced where many MPs would build large personal audiences).
+
+---
+
+### Findings 
+
+1. Contrary to previous research on digital parties, including the M5S, we find no confirmation of centripetal tendencies in candidates' selection. Active engagement in platforms closer to the grassroots yielded higher electoral rewards than in those closer to the (hyper)leader Beppe Grillo (Gerbaudo, 2019).
+
+2. And yet, variables measuring candidates' platform engagement (albeit being more than 100) contributed to a relatively small portion of the explained variance compared to the information about candidates presented to voters through the interface of the voting platform, such as gender, age, and on-screen position.
+
+  - This suggests that even in the presence of centrifugal tendencies, top-down hierarchical control can be exercised through apparently small design choices.
+
+---
+
+class: segue
+
+# Teaching experience
+
+---
+
+
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
