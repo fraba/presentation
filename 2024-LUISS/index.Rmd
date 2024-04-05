@@ -1152,7 +1152,7 @@ class: segue-yellow
 
 ---
 
-## Cross-platform integration
+### Cross-platform integration
 
 - Based on the classifiers' confusion matrix presented before, we infer **some degree of fragmentation** in the discussion. 
 
