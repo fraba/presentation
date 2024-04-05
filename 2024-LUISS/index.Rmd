@@ -569,7 +569,7 @@ class: segue-red
 
 2\. **Platform fragmentation hypothesis**: We investigate the degree of cross-platform integration under the assumption that *platform boundaries limit cross-platform communication*.
 
-3\. **Platform centrality hypothesis**: Using user metrics from different networks, we investigate whether the primary candidates' position and behavior within the four platforms can predict primary results under the hypothesis that platform centralities and proximity to the leadership might have helped candidates to obtain more preferences.
+3\. **Platform centrality hypothesis**: Using user metrics from different networks, we investigate whether the primary candidates' position and behavior within the four platforms can predict primary results under the hypothesis that *platform centralities and proximity to the leadership might have helped candidates to obtain more preferences*.
 
 ]
 
