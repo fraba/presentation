@@ -1190,8 +1190,7 @@ xfun::file_string('variance-explained-table.html')
 
 ### What predicts ranking in the M5S 2012 Online Primary elections?
 
-- Variables available to the voters through the interface of
-the voting platform (e.g. screen position, gender) are consistently more important, followed by different platform-specific measures of centrality, with Meetup.com and Facebook.com appearing as more central.
+- **Variables** available to the voters **through the interface of the voting platform** (e.g. screen position, gender) are **consistently more important**, followed by different platform-specific measures of centrality, with Meetup.com and Facebook.com appearing as more central.
 
 ---
 
