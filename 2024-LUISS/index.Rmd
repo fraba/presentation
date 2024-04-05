@@ -1302,11 +1302,20 @@ PrintBibliography(myBib, start = 7, end = 12)
 .small[
 
 ```{r, results = "asis", echo=FALSE}
-PrintBibliography(myBib, start = 13)
+PrintBibliography(myBib, start = 13, end = 17)
 ```
 
 ]
 
+---
+
+.small[
+
+```{r, results = "asis", echo=FALSE}
+PrintBibliography(myBib, start = 18)
+```
+
+]
 
 ---
 
@@ -1350,9 +1359,13 @@ My teaching experience in **quantitative methods** includes **statistical and da
 
 #### Using r/exams in the course of Data Analytics in the Social Sciences
 
+<small>
+
 To support the coupling of both statistical concepts and the R programming language in the learning experience, I designed a series of short, hands-on exercises with the R package *R/exams* to **practice statistical concepts applying them to real-world problems**.
 
 In October 2023, I received the *Teaching Innovation Award* of the the Faculty of Arts and Social Sciences of the University of Sydney for "recognising and encouraging the creative and experimental ideas and practices that educators implement to meet current teaching and learning challenges".
+
+</small>
 
 - The course of Data Analytics in the Social Sciences of introduces undergraduates to **statistical concepts and R programming**, focusing on applying these in social sciences research.
 
