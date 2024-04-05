@@ -560,16 +560,16 @@ class: segue-red
 
 ---
 
-### Hypotheses and research goals
+### Hypotheses and Research Goals
 
 .content-box-yellow[
 
-1. **Platform difference hypothesis**: Using key properties of the network of users interacting within each platform, we measure the platform affordances listed in the previous table to substantiate our *hypothesis of significant cross-platform differences*.
+1\. **Platform difference hypothesis**: Using key properties of the network of users interacting within each platform, we measure the platform affordances listed in the previous table to substantiate our *hypothesis of significant cross-platform differences*.
 
 
-2. **Platform fragmentation hypothesis**: We investigate the degree of cross-platform integration under the assumption that *platform boundaries limit cross-platform communication*.
+2\. **Platform fragmentation hypothesis**: We investigate the degree of cross-platform integration under the assumption that *platform boundaries limit cross-platform communication*.
 
-3. **Platform centrality hypothesis**: Using user metrics from different networks, we investigate whether the primary candidates' position and behavior within the four platforms can predict primary results under the hypothesis that platform centralities and proximity to the leadership might have helped candidates to obtain more preferences.
+3\. **Platform centrality hypothesis**: Using user metrics from different networks, we investigate whether the primary candidates' position and behavior within the four platforms can predict primary results under the hypothesis that platform centralities and proximity to the leadership might have helped candidates to obtain more preferences.
 
 ]
 
@@ -1204,27 +1204,22 @@ the voting platform (e.g. screen position, gender) are consistently more importa
 ### What predicts ranking in the M5S 2012 Online Primary elections?
 
 
-- Candidates with higher eigenvector centrality on Meetup.com compared to other competitors in the district tend to rank better. 
+- Candidates with higher eigenvector **centrality on Meetup.com** compared to other competitors in the district **tend to rank better**. 
 
 - A similar, albeit weaker pattern, appears considering out degree centrality on Facebook.com. 
 
-- Candidates not in the leader's community appear to receive a moderate boost and rank better.
+- Candidates **not in the leader's community appear to receive a moderate boost** and rank better.
 
-- Degree centrality on the Forum shows a penalty for candidates who were not on the Forum, with little variation relating to activity. 
-
-- Page rank of a user in the cross-platform network shows a benefit for more active candidates.
+- Centrality of a user **in the cross-platform network** shows a **benefit for more active candidates**.
 
 ---
 
 ### What predicts ranking in the M5S 2012 Online Primary elections?
 
-- As a block, associations between candidates and topics did not improve
-predictions.
+- As a block, **associations between candidates and topics did not improve predictions**.
 
-- Yet, some topics did show moderate importance, especially topics concerning the
-internal life of the movement: candidates who posted more about these topics ranked better in the primary. 
-
-- But, given the wealth of variables to consider and the difficulty in formulating precise hypotheses on which topics would be more prominent, we leave a more focused analysis of what candidates communicated about and its relation with political outcomes in the party to future research.
+- Yet, **some topics did show moderate importance**, especially topics concerning the
+**internal life of the movement**: candidates who posted more about these topics ranked better in the primary. 
 
 ---
 class: segue-red
