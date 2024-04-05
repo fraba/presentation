@@ -1,5 +1,5 @@
 ---
-title: "Affording Fragmented Audiences<br>Multi-Platform Deliberation Within the
+title: "Affording Fragmented Audiences:<br>Multi-Platform Deliberation Within the
 Five Star Movement"
 subtitle: ""
 author: "Francesco Bailo"
@@ -64,28 +64,49 @@ top_icon = function(x) {
 
 ### How does this paper fit in my research agenda
 
-My current and future research is grounded in two lines of research about the
 
-1\. **Emergence, interaction, and diffusion of political opinions online**; and the
 
-.center[<img src = 'assets/research-lines.png' width = "60%">]
+My current and future research is grounded in two lines of research:
 
+.content-box-yellow[
+
+1\. **Emergence, interaction, and diffusion of political opinions online**;
+
+]
+
+.center[<img src = 'assets/research-lines.svg' width = "60%">]
+
+.content-box-blue[
 
 2\. **Impacts of social media technologies and services on political participation and organisation**.
+
+]
 
 ---
 
 ### Lines of research
+
+<small>
+
+.content-box-yellow[
 
 #### 1. Emergence, interaction, and diffusion of **political opinions** online
 * Cross-disciplinary research: Digital ethnography, Computer science and Political science. 
 * Loops involving Qualitative, Quantitative & Computational methods.
 * **Key concepts**: Cloud platforms, Information disorder. 
   
+]
+
+.content-box-blue[  
+  
 #### 2. Impact of social media technologies and services on **political participation and organisation**
 * Political science research: Parties, Movements, Campaigns and Elections.
 * Qualitative, Quantitative & Computational methods.
 * **Key concepts**: Discontent, Turbulence, Centralization/Decentralization 
+
+]
+
+</small>
 
 ---
 
@@ -105,6 +126,8 @@ RefManageR::NoCite(myBib,
 
 
 ### Publications
+
+.content-box-yellow[
 
 #### 1. Emergence, interaction, and diffusion of **political opinions** online
 
@@ -127,9 +150,13 @@ PrintBibliography(myBib[title = "labelling"])
 
 </small>
 
+]
+
 ---
 
 ### Publications
+
+.content-box-blue[
 
 #### 2. Impact of social media technologies and services on **political participation and organisation**
 
@@ -156,6 +183,8 @@ PrintBibliography(myBib[title = "levelling"])
 </small>
 
 And the paper I am about to present today...
+
+]
 ---
 
 ```{r echo = F}
@@ -164,7 +193,7 @@ RefManageR::NoCite(myBib, c("marollaVotingFastSlow2023","bailoOnlineCommunitiesC
 
 ```
 
-### Affording Fragmented Audiences<br>Multi-Platform Deliberation Within the Five Star Movement
+## Affording Fragmented Audiences: Multi-Platform Deliberation Within the Five Star Movement
 
 <small>
 
@@ -182,7 +211,7 @@ RefManageR::NoCite(myBib, c("marollaVotingFastSlow2023","bailoOnlineCommunitiesC
 
 ---
 
-## Introduction
+### Introduction
 
 - Leveraging **digital platforms for internal organization and campaigning**, the Italian Five Star Movement (M5S) exemplifies the transformative power of digitalization in politics.
 
@@ -194,7 +223,7 @@ RefManageR::NoCite(myBib, c("marollaVotingFastSlow2023","bailoOnlineCommunitiesC
 
 ---
 
-## Online Ecosystems of Political Movements: A Multi-Platform Perspective
+### Online Ecosystems of Political Movements: A Multi-Platform Perspective
 
 - Political movements do not confine their online presence to a single platform: they span across multiple platforms, each selected for its **unique user affordances** and the distinct **organizational outcomes** they facilitate.
 
@@ -206,7 +235,7 @@ RefManageR::NoCite(myBib, c("marollaVotingFastSlow2023","bailoOnlineCommunitiesC
 
 ---
 
-## Theory of affordances and network analysis 
+### Theory of Affordances and Network Analysis 
 
 - Using an affordance approach, different platforms are theorized to offer varying degrees of **visibility** and **associability**, which in turn influence different organizational outcomes. 
 
@@ -216,7 +245,7 @@ RefManageR::NoCite(myBib, c("marollaVotingFastSlow2023","bailoOnlineCommunitiesC
 
 ---
 
-## Main findings
+### Main Findings
 
 - **Structural Differences**: Identified within the multi-platform ecosystem of M5S.
 
@@ -245,16 +274,23 @@ class: segue-yellow
 
 ---
 
-## Centrifugal vs. Centripetal Theories in Digital Politics
+### Centrifugal vs. Centripetal Theories in Digital Politics
 
-Different theories contend that *digital technologies* may either decentralize (**centrifugal**) or centralize (**centripetal**) political party operations.
+.content-box-red[
 
-.pull-left[<img src = 'assets/centrifugal.webp'>]
+Different theories contend that *digital technologies* may either **decentralize** or **centralize** political party operations.
 
-.pull-right[<img src = 'assets/centripetal.webp'>]
+]
+
+
+.pull-left[.center[**Centrifugal theories** <img src = 'assets/centrifugal.webp'>]]
+
+.pull-right[.center[**Centripetal theories** <img src = 'assets/centripetal.webp'>]]
 
 
 ---
+
+.content-box-yellow[
 
 ###  Centrifugal Theories
 
@@ -276,19 +312,23 @@ Digital technologies strengthen democracy by reducing barriers to participation 
   - facilitating recruitment and publicity in organized networks while fostering inclusivity and community-building in hybrid networks `r Citep(myBib,"carawayOURWalmartCase2016")`.
 
 </small>
+
+]
 ---
+
+.content-box-blue[
 
 ### Centripetal Theories
 
 Skeptical on whether incorporating digital technologies in politics leads to decentralization. 
 
-1. Between the late 2000s and early 2010s, parties leveraged digital technologies for cost-effective campaigning and administrative services rather than for flattening their hierarchies `r Citep(myBib,"gibson_Parties_2009")`. 
+1. Between the late 2000s and early 2010s, parties leveraged digital technologies for **cost-effective campaigning** and **administrative services** rather than for flattening their hierarchies `r Citep(myBib,"gibson_Parties_2009")`. 
 
-2. Digital technologies do not necessarily encourage internal participation `r Citep(myBib,"gibson_Parties_2009")`. 
+2. Digital technologies **do not necessarily encourage internal participation** `r Citep(myBib,"gibson_Parties_2009")`. 
 
-3. The democratizing potential of digital tools can be undermined by attempts of party elites to control decision-making, paving the way for forms of 'reactive democracy' where members merely ratify top-down decisions `r Citep(myBib,c("deseriisRethinkingDigitalDemocratic2021","gerbaudoDigitalPartyPolitical2019"))`.
+3. The democratizing potential of digital tools can be undermined by attempts of **party elites to control decision-making**, paving the way for forms of 'reactive democracy' where members merely ratify top-down decisions `r Citep(myBib,c("deseriisRethinkingDigitalDemocratic2021","gerbaudoDigitalPartyPolitical2019"))`.
 
-.center[<img src = 'assets/centripetal.webp' width = '15%'>]
+]
 
 ---
 class: segue-yellow
@@ -297,16 +337,16 @@ class: segue-yellow
 
 ---
 
-## Social Media Affordances
+### Social Media Affordances
 
-> **Social media affordances** are defined as perceived actual or imagined properties of social media, emerging through the relation of technological, social and contextual that enables and constrains specific uses of the platforms. .right[-- <cite>Ronzhyn et al., 2022, p. 14</cite>] 
+> Social media affordances are defined as **perceived actual or imagined properties of social media**, emerging through the **relation of technological, social and contextual** that **enables and constrains** specific uses of the platforms. .right[-- <cite>`r Citet(myBib,c("ronzhyn_Defining_2022"))`</cite>] 
 
 
 .center[<img src = 'assets/social-media-affordances.webp' width = '40%'>]
 
 ---
 
-## Social Media Affordances
+### Social Media Affordances
 
 .center[<img src = 'assets/social-media-affordances.webp' width = '30%'>]
 
@@ -318,39 +358,59 @@ class: segue-yellow
 
 ---
 
-## Social Media Affordances
+### Social Media Affordances
+
+
+
+Drawing from `r Citet(myBib,c("treem_Social_2013"))` and `r Citet(myBib,c("kim_Observation_2022"))`, we focus on and operationalize the measurement of two social media affordances:
+
 
 
 .pull-left[
 
+.content-box-yellow[
+
 .center[
-## Visibility 
+.red[.large[Visibility]]
 <img src = 'assets/visibility.webp' width = '95%'>]]
 
+]
+
 .pull-left[
 
+.content-box-blue[
+
 .center[
-## Associability
+.red[.large[Associability]]
 <img src = 'assets/associability.webp' width = '95%'>]]
+
+]
 
 ---
 
-## Visibility 
-
 .content-box-yellow[
-Visibility is the property that allows users and their content to see and be seen within a social media platform.
-]
+
+### Visibility 
+
+
+Visibility is the property that allows users and their content **to see and be seen** within a social media platform.
 
 .center[<img src = 'assets/visibility.webp' width = '45%'>]
 
+]
+
 ---
 
-## Associability 
+.content-box-blue[
 
-.content-box-yellow[
-Associability is the property allowing users to associate themself within a social media platform with other users and with content (e.g. news, stories, photos)]
+### Associability 
+
+
+Associability is the property allowing users **to associate themselves** within a social media platform with other users and with content (e.g. news, stories, photos)
 
 .center[<img src = 'assets/associability.webp' width = '45%'>]
+
+]
 
 ---
 
@@ -359,9 +419,9 @@ Associability is the property allowing users to associate themself within a soci
 
 .pull-left[
 
-.content-box-blue[
+.content-box-purple[
 
-**Local visibility and associability**, allowing communication among a relatively small but dense network of users, as well as 
+**Local visibility and associability**, allowing communication among a relatively **small but dense** network of users, as well as 
 
 ]
 
@@ -389,9 +449,9 @@ plot(g,
 
 .pull-right[
 
-.content-box-yellow[
+.content-box-red[
 
-**Global visibility and associability**, allowing a user to communicate with a relatively large but sparse network of users.
+**Global visibility and associability**, allowing a user to communicate with a relatively **large but sparse** network of users.
 
 ]
 
@@ -420,17 +480,25 @@ class: segue-yellow
 
 ---
 
-# Social Media Outcomes
+### Social Media Outcomes
 
-## What outcomes can social media platforms produce for political organisations?
+#### What different outcomes can social media platforms produce for political organisations?
 
-1. Mobilization: Platforms can help coordinate the mobilization of the base
+We focus on four critical outcomes:<sup>1</sup>
 
-2. Deliberation: Platforms can support decision-making processes (weak deliberation such as online discussions but also strong deliberation such as voting)
+<small>
 
-3. Amplification: Platforms allow to use the network of users to amplify the message of the organisation.
+1. **Mobilization**: Platforms can help coordinate the mobilization of the base
 
-4. Validation: Platform can expose individuals to content that confirms beliefs, attitudes, or perceptions that are in line with the politics of the organisation and validates the political relevance of the organisation. 
+2. **Deliberation**: Platforms can support decision-making processes (weak deliberation such as online discussions but also strong deliberation such as voting)
+
+3. **Amplification**: Platforms allow to use the network of users to amplify the message of the organisation.
+
+4. **Validation**: Platform can expose individuals to content that confirms beliefs, attitudes, or perceptions that are in line with the politics of the organisation and validates the political relevance of the organisation. 
+
+</small>
+
+.small[.small[[1] Note the critical difference between *affordances* as capabilities and *outcomes* as realizations.]]
 
 ---
 
@@ -444,35 +512,42 @@ class: segue-red
 
 - The M5S, established in 2009, has significantly disrupted Italian politics by blending techno-utopian and populist ideologies to advocate for **direct democracy via online participation**, challenging traditional representative systems. 
 
-- It promoted the use of technology to empower ordinary citizens, emphasizing the Internet's role in **decentralizing authority** and believes in the **expertise of common citizens**, showcased through its innovative online-only primary elections in December 2012. 
+- It promoted the use of technology to empower ordinary citizens, emphasizing the Internet's role in **decentralizing authority**<sup>1</sup> and believes in the **expertise of common citizens**, showcased through its innovative online-only primary elections in December 2012. 
 
-- The M5S pioneered the use of digital platforms for political activities, using Internet platforms to spread counter-narratives and foster participatory communication practices, aiming to decentralize political power and bridge resource disparities.
+- The M5S pioneered the use of digital platforms for political activities, using Internet platforms to spread counter-narratives and foster participatory communication practices, aiming to **decentralize political power** and **bridge resource disparities**.
+
+.small[.small[[1] Note that the decentralizing rethoric was about both external and internal (to the party) democracy.]]
 
 ---
 
-### Different platforms for different party functions
+### Different Platforms for Different Party Functions
 
-- Beppe Grillo's personal **blog** served as both the voice of the party's central strategy and his personal commentary, establishing the party’s goals.
-- **Meetup.com** was crucial for mobilizing local grassroots groups and organizing events on national and local issues, acting as the hub for territorial engagement. 
-- The M5S **Forum** provided a space for members to engage in deliberations and propose ideas, fostering a community of online discussion. 
-- **Facebook** extended the reach of the party's messages and blog content to a broader audience, enhancing communication channels. 
-- The **e-voting platform** for the 2012 primaries was instrumental in the elite selection process within the M5S, showing the party's innovative approach to member participation and candidate selection.
+- Beppe Grillo's personal **blog** served as both the voice of the party's central strategy and his personal commentary, **establishing the party’s goals**.
+- **Meetup.com** was crucial for mobilizing local grassroots groups and organizing events on national and local issues, acting as the **hub for territorial engagement and mobilization**. 
+- The M5S **Forum** provided a space for members to **engage in deliberations** and propose ideas, fostering a community of online discussion. 
+- **Facebook** extended the reach of the party's messages and blog content to a broader audience, **enhancing communication channels**. 
+- The **e-voting platform** for the 2012 primaries was instrumental in the elite selection process within the M5S, **showing the party's innovative approach** to member participation and candidate selection.
 
 ---
 
 - The varied functionalities of the M5S's digital platforms have significantly influenced the movement's internal dynamics.
 
-- We characterize the differences in terms of overall **communication orientation**, **affordances** and **outcomes** among the platforms under study. 
+.content-box-yellow[
+
+We characterize the differences in terms of overall **communication orientation**, **affordances** and **outcomes** among the platforms under study. 
+
+]
+
 
 - We expect two communication orientations: 
 
-  1. The **top-down** orientation of the Blog and Facebook.com is characterized by limited or absent bottom-up communication feedback and will result in a centripetal tendency with attention highly concentrated on the leadership. 
+  1. The **top-down** orientation of the Blog and Facebook.com is characterized by **limited or absent bottom-up communication** feedback and will result in a **centripetal tendency** with attention highly concentrated on the leadership. 
   
-  2. The **horizontal** orientation of the Forum and Meetup.com will result in centrifugal tendencies with relatively low attention diffused across small communities of users.
+  2. The **horizontal** orientation of the Forum and Meetup.com will result in **centrifugal tendencies** with relatively **low attention diffused across small communities** of users.
 
 ---
 
-### Expected Affordances and Outcomes Across M5S Digital Platforms
+### Expected Orientations, Affordances and Outcomes Across M5S Digital Platforms
 
 ```{r, echo=FALSE, results='asis'}
 xfun::file_string('affordances-outcomes-table.html')
@@ -485,13 +560,18 @@ class: segue-red
 
 ---
 
-## Hypotheses and research goals
+### Hypotheses and research goals
+
+.content-box-yellow[
 
 1. **Platform difference hypothesis**: Using key properties of the network of users interacting within each platform, we measure the platform affordances listed in the previous table to substantiate our *hypothesis of significant cross-platform differences*.
+
 
 2. **Platform fragmentation hypothesis**: We investigate the degree of cross-platform integration under the assumption that *platform boundaries limit cross-platform communication*.
 
 3. **Platform centrality hypothesis**: Using user metrics from different networks, we investigate whether the primary candidates' position and behavior within the four platforms can predict primary results under the hypothesis that platform centralities and proximity to the leadership might have helped candidates to obtain more preferences.
+
+]
 
 ---
 class: segue-red
@@ -511,7 +591,7 @@ class: segue-red
 
 ### Activity frequency between 2010-2012 on the four target social media platforms
 
-![](assets/post-timeseries.svg)
+.center[<img src = 'assets/post-timeseries.svg' width = "100%">]
 
 ---
 
@@ -540,10 +620,42 @@ class: segue-yellow
 
 From the social media data, two network types were created: 
 
-1. a **user network**, based on replies among users for the Blog, Facebook, and the Forum, and an undirected network on Meetup.com for users attending the same event; and 
+.content-box-yellow[
 
-2. a **content-based network**, utilizing topic modeling and entity recognition. 
+.pull-left[
+<small>
+1\. a **user network**, based on replies among users for the Blog, Facebook, and the Forum, and an undirected network on Meetup.com for users attending the same event; and 
+</small>
+
+]
+
+.pull-right[
+
+.center[<img src = 'assets/NU_graph.svg' width = '55%'>]
+
+]
+
+]
+
+.content-box-blue[
+
+.pull-left[
+<small>
+
+2\. a **content-based network**, utilizing topic modeling and entity recognition. 
 These networks were analyzed globally and individually, with communities identified through algorithms, and user mapping across platforms done through username matching.
+
+</small>
+
+]
+
+.pull-right[
+
+.center[<img src = 'assets/NT_graph.svg' width = '55%'>]
+
+]
+
+]
 
 ---
 
