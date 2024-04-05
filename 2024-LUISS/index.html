@@ -7,6 +7,7 @@
     <meta name="date" content="2024-04-05" />
     <script src="index_files/header-attrs-2.25/header-attrs.js"></script>
     <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="index_files/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
     <script src="index_files/htmlwidgets-1.6.4/htmlwidgets.js"></script>
     <script src="index_files/viz-1.8.2/viz.js"></script>
     <link href="index_files/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
@@ -46,23 +47,131 @@ class: center, middle, inverse, title-slide
 ---
 
 
+layout: true
+&lt;div style="position: absolute;left:60px;bottom:11px;color:gray;"&gt;&lt;small&gt;&lt;small&gt;&lt;small&gt;&lt;a href = 'https://fraba.github.io/presentation/2024-LUISS/'&gt;fraba.github.io/presentation/2024-LUISS &lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/small&gt;&lt;/small&gt;&lt;/small&gt;&lt;/div&gt;
 
-
----
-
-## How does this paper fit in my research agenda.
 
 
 
 ---
 
+## Access slides here &lt;svg viewBox="0 0 512 512" style="height:1em;display:inline-block;position:fixed;top:10;right:10;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"&gt;&lt;/path&gt;&lt;/svg&gt;
 
-- This paper is co-authored with **Francesco Marolla** (Università degli Studi di Milano), **Marilù Miotto** (Erasmus University Rotterdam) and **Giovanni Cassani** (Tilburg University). 
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+
+.center[.large[[fraba.github.io/presentation/2024-LUISS](https://fraba.github.io/presentation/2024-LUISS/)]]
+
+
+---
+
+### How does this paper fit in my research agenda
+
+My current and future research is grounded in two lines of research about the
+
+1\. **Emergence, interaction, and diffusion of political opinions online**; and the
+
+.center[&lt;img src = 'assets/research-lines.png' width = "60%"&gt;]
+
+
+2\. **Impacts of social media technologies and services on political participation and organisation**.
+
+---
+
+### Lines of research
+
+#### 1. Emergence, interaction, and diffusion of **political opinions** online
+* Cross-disciplinary research: Digital ethnography, Computer science and Political science. 
+* Loops involving Qualitative, Quantitative &amp; Computational methods.
+* **Key concepts**: Cloud platforms, Information disorder. 
+  
+#### 2. Impact of social media technologies and services on **political participation and organisation**
+* Political science research: Parties, Movements, Campaigns and Elections.
+* Qualitative, Quantitative &amp; Computational methods.
+* **Key concepts**: Discontent, Turbulence, Centralization/Decentralization 
+
+---
+
+
+
+
+### Publications
+
+#### 1. Emergence, interaction, and diffusion of **political opinions** online
+
+&lt;small&gt;
+Bailo, F., J. Meese, and E. Hurcombe (2021). "The Institutional Impacts
+of Algorithmic Distribution: Facebook and the Australian News Media".
+In: _Social Media + Society_ 7.2. DOI:
+[10.1177/20563051211024963](https://doi.org/10.1177%2F20563051211024963).
+
+Kong, Q., E. Booth, F. Bailo, et al. (2022). "Slipping to the Extreme:
+A Mixed Method to Explain How Extreme Opinions Infiltrate Online
+Discussions". In: _Proceedings of the International AAAI Conference on
+Web and Social Media_ 16.1, pp. 524-535. DOI:
+[10.1609/icwsm.v16i1.19312](https://doi.org/10.1609%2Ficwsm.v16i1.19312).
+
+Bailo, F., A. Johns, and M. Rizoiu (2024). "Riding Information Crises:
+The Performance of Far-Right Twitter Users in Australia during the
+2019-2020 Bushfires and the COVID-19 Pandemic". In: _Information,
+Communication &amp; Society_ 27.2, pp. 278-296. DOI:
+[10.1080/1369118X.2023.2205479](https://doi.org/10.1080%2F1369118X.2023.2205479).
+
+Johns, A., F. Bailo, E. Booth, et al. (2024). "Labelling, Shadow Bans
+and Community Resistance: Did Meta's Strategy to Suppress Rather than
+Remove COVID Misinformation and Conspiracy Theory on Facebook Slow the
+Spread?" In: _Media International Australia_, p. 1329878X241236984.
+DOI:
+[10.1177/1329878X241236984](https://doi.org/10.1177%2F1329878X241236984).
+
+&lt;/small&gt;
+
+---
+
+### Publications
+
+#### 2. Impact of social media technologies and services on **political participation and organisation**
+
+&lt;small&gt;
+
+Bailo, F. (2020). _Online Communities and Crowds in the Rise of the
+Five Star Movement_. Cham: Palgrave Macmillan. DOI:
+[10.1007/978-3-030-45508-8](https://doi.org/10.1007%2F978-3-030-45508-8).
+
+*Currently under review or in progress*
+
+Tronconi, F. and F. Bailo (2024). _The Other Side of Platform Politics.
+Law-making and Online Participatory Democracy in the Five Star
+Movement_.
+
+Bailo, F. (2004). _Breaking out of Legacy Mobilisation Networks: How
+the Internet Can Activate Passive Political Discontent_.
+
+Bailo, F., G. Sandri, and A. Seddone (2024). _Levelling at the Margin:
+Personal Networks, Social Capital and the Internet in the Mobilisation
+of the Five Star Movement_.
+
+&lt;/small&gt;
+
+And the paper I am about to present today...
+---
+
+
+
+### Affording Fragmented Audiences&lt;br&gt;Multi-Platform Deliberation Within the Five Star Movement
+
+&lt;small&gt;
+
+- This paper is co-authored with **Francesco Marolla** (Università degli Studi di Milano), **Marilù Miotto** (Erasmus University Rotterdam) and **Giovanni Cassani** (Tilburg University) and is based on our research published in:
+
+  - Bailo, F. (2020). *Online Communities and Crowds in the Rise of the Five Star Movement*. Cham: Palgrave Macmillan. DOI: [10.1007/978-3-030-45508-8](http://link.springer.com/10.1007/978-3-030-45508-8).
+  - Marolla, F., A. Maineri, J. Tagliabue and G. Cassani (2023). "Voting, Fast and Slow: Ballot Order and Likeability Effects in the Five-Star Movement's 2012 Online Primary Election". In: *Contemporary Italian Politics* 0.0, pp. 1-18. DOI: [10.1080/23248823.2023.2175124](https://doi.org/10.1080/23248823.2023.2175124).
+
 
 - The paper is currently under peer-review. 
 
 - It was accepted for presentation at 2024 Annual Conference of the **International Communication Association** (*Political Communication* division). 
 
+&lt;/small&gt;
 
 ---
 
@@ -131,7 +240,7 @@ class: segue-yellow
 
 ## Centrifugal vs. Centripetal Theories in Digital Politics
 
-- Different theories contend that *digital technologies* may either decentralize (**centrifugal**) or centralize (**centripetal**) political party operations.
+Different theories contend that *digital technologies* may either decentralize (**centrifugal**) or centralize (**centripetal**) political party operations.
 
 .pull-left[&lt;img src = 'assets/centrifugal.webp'&gt;]
 
@@ -144,6 +253,8 @@ class: segue-yellow
 
 Digital technologies strengthen democracy by reducing barriers to participation and need for strong organizational capabilities. They also,
 
+&lt;small&gt;
+
 1. **Enhance democracy and political action** (Farrell, 2012) by 
 
   - increasing electoral competition, 
@@ -154,18 +265,19 @@ Digital technologies strengthen democracy by reducing barriers to participation 
 
   - creating transparent, participatory, and non-hierarchical processes, 
   - empowering party members and undermine leadership, 
-  - enabling connective action (Bennett &amp; Segerberg, 2012), which is based on horizontal structures for political engagement, 
+  - enabling connective action (Bennett and Segerberg, 2012), which is based on horizontal structures for political engagement, 
   - facilitating recruitment and publicity in organized networks while fostering inclusivity and community-building in hybrid networks (Caraway, 2016).
 
+&lt;/small&gt;
 ---
 
 ### Centripetal Theories
 
 Skeptical on whether incorporating digital technologies in politics leads to decentralization. 
 
-1. Between the late 2000s and early 2010s, parties leveraged digital technologies for cost-effective campaigning and administrative services rather than for flattening their hierarchies (Gibson &amp; Ward, 2009). 
+1. Between the late 2000s and early 2010s, parties leveraged digital technologies for cost-effective campaigning and administrative services rather than for flattening their hierarchies (Gibson and Ward, 2009). 
 
-2. Digital technologies do not necessarily encourage internal participation (Gibson &amp; Ward, 2009). 
+2. Digital technologies do not necessarily encourage internal participation (Gibson and Ward, 2009). 
 
 3. The democratizing potential of digital tools can be undermined by attempts of party elites to control decision-making, paving the way for forms of 'reactive democracy' where members merely ratify top-down decisions (Deseriis, 2021; Gerbaudo, 2019).
 
@@ -246,7 +358,7 @@ Associability is the property allowing users to associate themself within a soci
 
 ]
 
-&lt;img src="index_files/figure-html/unnamed-chunk-1-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-11-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -258,7 +370,7 @@ Associability is the property allowing users to associate themself within a soci
 
 ]
 
-&lt;img src="index_files/figure-html/unnamed-chunk-2-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-12-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -414,14 +526,14 @@ We propose to use *four network metrics*
 
 
 
-<div class="grViz html-widget html-fill-item" id="htmlwidget-21d77375e8b471f7ddb6" style="width:100%;height:144px;"></div>
-<script type="application/json" data-for="htmlwidget-21d77375e8b471f7ddb6">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\",\n       label = \"reciprocity = 1\",\n       labelloc = \"t\",\n       labeljust = \"c\",\n       fontname = \"Helvetica\",\n       fontcolor = \"gray30\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"Alice\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [label = \"Bob\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n\"1\"->\"2\" [label = \"replies to\"] \n\"2\"->\"1\" [label = \"replies to\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-3034e3654d1974150277" style="width:100%;height:144px;"></div>
+<script type="application/json" data-for="htmlwidget-3034e3654d1974150277">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\",\n       label = \"reciprocity = 1\",\n       labelloc = \"t\",\n       labeljust = \"c\",\n       fontname = \"Helvetica\",\n       fontcolor = \"gray30\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"Alice\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [label = \"Bob\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n\"1\"->\"2\" [label = \"replies to\"] \n\"2\"->\"1\" [label = \"replies to\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 ]
 
 .pull-right[
 
-<div class="grViz html-widget html-fill-item" id="htmlwidget-573955f48ea1fad37fea" style="width:100%;height:216px;"></div>
-<script type="application/json" data-for="htmlwidget-573955f48ea1fad37fea">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\",\n       label = \"reciprocity = 0.3\",\n       labelloc = \"t\",\n       labeljust = \"c\",\n       fontname = \"Helvetica\",\n       fontcolor = \"gray30\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"Alice\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [label = \"Bob\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"3\" [label = \"Cat\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n\"1\"->\"2\" [label = \"replies to\"] \n\"2\"->\"1\" [label = \"replies to\"] \n\"1\"->\"3\" [label = \"replies to\"] \n\"3\"->\"2\" [label = \"replies to\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-2c1e5910ce3e5cfa8f17" style="width:100%;height:216px;"></div>
+<script type="application/json" data-for="htmlwidget-2c1e5910ce3e5cfa8f17">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\",\n       label = \"reciprocity = 0.3\",\n       labelloc = \"t\",\n       labeljust = \"c\",\n       fontname = \"Helvetica\",\n       fontcolor = \"gray30\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"Alice\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [label = \"Bob\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"3\" [label = \"Cat\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n\"1\"->\"2\" [label = \"replies to\"] \n\"2\"->\"1\" [label = \"replies to\"] \n\"1\"->\"3\" [label = \"replies to\"] \n\"3\"->\"2\" [label = \"replies to\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ]
 
@@ -450,13 +562,13 @@ We propose to use *four network metrics*
 
 .pull-left[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-6-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-16-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
 
 ]
 
 .pull-right[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-7-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-17-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
 
 
 ]
@@ -475,13 +587,13 @@ We propose to use *four network metrics*
 
 .pull-left[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-8-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-18-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
 
 ]
 
 .pull-right[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-9-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-19-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -497,7 +609,7 @@ We propose to use *four network metrics*
 
 .content-box-yellow[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-10-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-20-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
 
 &lt;small&gt;&lt;small&gt;**High** local visibility: 0.6545&lt;/small&gt;&lt;/small&gt;
 
@@ -505,7 +617,7 @@ We propose to use *four network metrics*
 
 .content-box-blue[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-11-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-21-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
 
 &lt;small&gt;&lt;small&gt;**Low** local visibility: 0.2727&lt;/small&gt;&lt;/small&gt;
 
@@ -519,7 +631,7 @@ We propose to use *four network metrics*
 
 .content-box-yellow[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-12-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-22-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
 
 &lt;small&gt;&lt;small&gt;**High** global visibility: 12.4235&lt;/small&gt;&lt;/small&gt;
 
@@ -527,7 +639,7 @@ We propose to use *four network metrics*
 
 .content-box-blue[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-13-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-23-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
 
 &lt;small&gt;&lt;small&gt;**Low** global visibility: 2.7231&lt;/small&gt;&lt;/small&gt;
 
@@ -546,7 +658,7 @@ We propose to use *four network metrics*
 
 .content-box-yellow[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-14-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-24-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
 
 &lt;small&gt;&lt;small&gt;**High** local associability: 0.8148&lt;/small&gt;&lt;/small&gt;
 
@@ -554,7 +666,7 @@ We propose to use *four network metrics*
 
 .content-box-blue[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-15-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-25-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
 
 &lt;small&gt;&lt;small&gt;**Low** local associability: 0.2542&lt;/small&gt;&lt;/small&gt;
 
@@ -568,7 +680,7 @@ We propose to use *four network metrics*
 
 .content-box-yellow[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-16-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-26-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
 
 &lt;small&gt;&lt;small&gt;**High** global associability: 1.9966&lt;/small&gt;&lt;/small&gt;
 
@@ -576,7 +688,7 @@ We propose to use *four network metrics*
 
 .content-box-blue[
 
-&lt;img src="index_files/figure-html/unnamed-chunk-17-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-27-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
 
 &lt;small&gt;&lt;small&gt;**Low** global associability: 5.4553&lt;/small&gt;&lt;/small&gt;
 
@@ -641,7 +753,7 @@ class: segue-yellow
 
 &lt;table style="border-collapse:collapse;border-spacing:0" class="tg"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;&lt;/th&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;&lt;span style="font-weight:bold"&gt;Visibility&lt;/span&gt;&lt;/th&gt;&lt;th style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;&lt;span style="font-weight:bold"&gt;Associability&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal" rowspan="2"&gt;Local&lt;/td&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;&lt;span style="font-weight:normal"&gt;Link reciprocity ratio&lt;/span&gt;&lt;br&gt;&lt;span style="font-weight:normal"&gt;(or proportion of mutual connections)&lt;/span&gt;&lt;/td&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;&lt;span style="font-weight:normal"&gt;Link transitivity ratio (or proportion of closed triplets)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Blog: 0.005828&lt;/span&gt;&lt;br&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Meetup:&lt;sup&gt;1&lt;/sup&gt; NA&lt;/span&gt;&lt;br&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Forum: 0.18717&lt;/span&gt;&lt;br&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Facebook:&lt;sup&gt;2&lt;/sup&gt; 0.000619&lt;/span&gt;&lt;/td&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Blog: 0.000026&lt;/span&gt;&lt;br&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Meetup: 0.594842&lt;/span&gt;&lt;br&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Forum: 0.021789&lt;/span&gt;&lt;br&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Facebook:&lt;sup&gt;2&lt;/sup&gt; 0.000002&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal" rowspan="2"&gt;Global&lt;/td&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;&lt;span style="font-weight:normal"&gt;SD of in-degree distribution&lt;/span&gt;&lt;/td&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;&lt;span style="font-weight:normal"&gt;Mean node distance&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Blog: 1549.971&lt;/span&gt;&lt;br&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Meetup:&lt;sup&gt;1&lt;/sup&gt; NA&lt;/span&gt;&lt;br&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Forum: 8.749&lt;/span&gt;&lt;br&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Facebook:&lt;sup&gt;2&lt;/sup&gt; 1312.437&lt;/span&gt;&lt;/td&gt;&lt;td style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal"&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Blog: 2.0611&lt;/span&gt;&lt;br&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Meetup: 4.010&lt;/span&gt;&lt;br&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Forum: 4.808&lt;/span&gt;&lt;br&gt;&lt;span style="font-weight:bold;font-style:italic"&gt;Facebook:&lt;sup&gt;2&lt;/sup&gt;: 2.073&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
 
-.footnote[[1] Meetup visibility measures are unavailable as we collected no visibility proxy metric. [2] Facebook affordance measurements are limited by the lack of likes to comments.]
+.small[.small[[1] Meetup visibility measures are unavailable as we collected no visibility proxy metric. [2] Facebook affordance measurements are limited by the lack of likes to comments.]]
 
 ---
 
@@ -718,13 +830,13 @@ class: segue-yellow
 
 &lt;small&gt;Sets of predictors capturing conceptually related aspects were entered together and kept when the variance explained improved (positive 𝚫s). Each RF model was run 100 times to derive robust estimates.&lt;/small&gt;
 
-.footnote[[1] We report results for the network measures extracted from the giant component of the cross-platform user network. Measures extracted from the user-location, user-organization, and user-person networks did not afford better predictions when combined with network measures extracted from the cross-platform user network.]
+.small[.small[[1] We report results for the network measures extracted from the giant component of the cross-platform user network. Measures extracted from the user-location, user-organization, and user-person networks did not afford better predictions when combined with network measures extracted from the cross-platform user network.]]
 
 ---
 
 ### Percent increment in Mean Squared Error when removing each variable
 
-.center[&lt;img src = "assets/feature-importance.svg" width = "95%"/&gt;]
+.center[&lt;img src = "assets/feature-importance.svg" width = "90%"/&gt;]
 
 &lt;small&gt;&lt;small&gt;Larger values indicate the model gets worse when a variable is removed, and thus that the variable is more important for accurate predictions.&lt;/small&gt;&lt;/small&gt;
 
@@ -812,6 +924,106 @@ class: segue-red
 
   - This suggests that even in the presence of centrifugal tendencies, top-down hierarchical control can be exercised through apparently small design choices.
 
+
+---
+
+class: segue-red
+
+# Bibliography
+
+---
+
+.small[
+
+Bailo, F. (2004). _Breaking out of Legacy Mobilisation Networks: How
+the Internet Can Activate Passive Political Discontent_.
+
+Bailo, F. (2020). _Online Communities and Crowds in the Rise of the
+Five Star Movement_. Cham: Palgrave Macmillan. DOI:
+[10.1007/978-3-030-45508-8](https://doi.org/10.1007%2F978-3-030-45508-8).
+
+Bailo, F., A. Johns, and M. Rizoiu (2024). "Riding Information Crises:
+The Performance of Far-Right Twitter Users in Australia during the
+2019-2020 Bushfires and the COVID-19 Pandemic". In: _Information,
+Communication &amp; Society_ 27.2, pp. 278-296. DOI:
+[10.1080/1369118X.2023.2205479](https://doi.org/10.1080%2F1369118X.2023.2205479).
+
+Bailo, F., J. Meese, and E. Hurcombe (2021). "The Institutional Impacts
+of Algorithmic Distribution: Facebook and the Australian News Media".
+In: _Social Media + Society_ 7.2. DOI:
+[10.1177/20563051211024963](https://doi.org/10.1177%2F20563051211024963).
+
+Bailo, F., G. Sandri, and A. Seddone (2024). _Levelling at the Margin:
+Personal Networks, Social Capital and the Internet in the Mobilisation
+of the Five Star Movement_.
+
+Bennett, W. L. and A. Segerberg (2012). "The Logic of Connective
+Action". In: _Information, Communication &amp; Society_ 15.5, pp. 739-768.
+DOI:
+[10.1080/1369118X.2012.670661](https://doi.org/10.1080%2F1369118X.2012.670661).
+
+]
+
+---
+
+.small[
+
+Caraway, B. (2016). "OUR Walmart: A Case Study of Connective Action".
+In: _Information, Communication &amp; Society_ 19.7, pp. 907-920. DOI:
+[10.1080/1369118X.2015.1064464](https://doi.org/10.1080%2F1369118X.2015.1064464).
+
+Deseriis, M. (2021). "Rethinking the Digital Democratic Affordance and
+Its Impact on Political Representation: Toward a New Framework". In:
+_New Media &amp; Society_ 23.8, pp. 2452-2473. DOI:
+[10.1177/1461444820929678](https://doi.org/10.1177%2F1461444820929678).
+
+Farrell, H. (2012). "The Consequences of the Internet for Politics".
+In: _Annual Review of Political Science_ 15.1, pp. 35-52. DOI:
+[10.1146/annurev-polisci-030810-110815](https://doi.org/10.1146%2Fannurev-polisci-030810-110815).
+
+Gerbaudo, P. (2019). _The Digital Party: Political Organisation and
+Online Democracy_. London: Pluto Press.
+
+Gibson, R. and S. Ward (2009). "Parties in the Digital Age-a Review
+Article". In: _Representation_ 45.1, pp. 87-100. DOI:
+[10.1080/00344890802710888](https://doi.org/10.1080%2F00344890802710888).
+
+Johns, A., F. Bailo, E. Booth, et al. (2024). "Labelling, Shadow Bans
+and Community Resistance: Did Meta's Strategy to Suppress Rather than
+Remove COVID Misinformation and Conspiracy Theory on Facebook Slow the
+Spread?" In: _Media International Australia_, p. 1329878X241236984.
+DOI:
+[10.1177/1329878X241236984](https://doi.org/10.1177%2F1329878X241236984).
+
+]
+
+---
+
+.small[
+
+Kong, Q., E. Booth, F. Bailo, et al. (2022). "Slipping to the Extreme:
+A Mixed Method to Explain How Extreme Opinions Infiltrate Online
+Discussions". In: _Proceedings of the International AAAI Conference on
+Web and Social Media_ 16.1, pp. 524-535. DOI:
+[10.1609/icwsm.v16i1.19312](https://doi.org/10.1609%2Ficwsm.v16i1.19312).
+
+Marolla, F., A. Maineri, J. Tagliabue, et al. (2023a). "Voting, Fast
+and Slow: Ballot Order and Likeability Effects in the Five-Star
+Movement's 2012 Online Primary Election". In: _Contemporary Italian
+Politics_ 0.0, pp. 1-18. DOI:
+[10.1080/23248823.2023.2175124](https://doi.org/10.1080%2F23248823.2023.2175124).
+
+Norris, P. (2001). _Digital Divide: Civic Engagement, Information
+Poverty, and the Internet Worldwide_. Cambridge: Cambridge University
+Press.
+
+Tronconi, F. and F. Bailo (2024). _The Other Side of Platform Politics.
+Law-making and Online Participatory Democracy in the Five Star
+Movement_.
+
+]
+
+
 ---
 
 class: segue
@@ -820,9 +1032,63 @@ class: segue
 
 ---
 
+### Teaching experience
+
+I have been teaching at the undergraduate and postgraduate levels since 2014; since 2018, my responsibilities have included 
+
+- **curriculum design**, 
+- **course development**,
+- **coordination** and the 
+- **supervision of multiple teaching teams**.
 
 
+My teaching experience in **quantitative methods** includes **statistical and data analysis** (with R), **research methods**, **data visualisation** (with R and Tableau), and **coding** (with R and Python) delivered to diverse audiences, including 
 
+&lt;small&gt;
+
+- undergraduate, postgraduate and research **students** (social sciences); 
+- **academics**; and 
+- **professionals**.
+
+&lt;/small&gt;
+
+---
+
+### Teaching approach
+
+- Development of digital partnerships in learning and teaching, particularly for introducing **technology-enhanced pedagogy** and innovative digital tools. In the design of my curricula.
+
+- Adoption of **Active Learning** principle so as to recurrently engage students with hands-on in-class activities to apply the information they just received.
+
+---
+
+### Teaching approach: Example
+
+#### Using r/exams in the course of Data Analytics in the Social Sciences
+
+To support the coupling of both statistical concepts and the R programming language in the learning experience, I designed a series of short, hands-on exercises with the R package *R/exams* to **practice statistical concepts applying them to real-world problems**.
+
+In October 2023, I received the *Teaching Innovation Award* of the the Faculty of Arts and Social Sciences of the University of Sydney for "recognising and encouraging the creative and experimental ideas and practices that educators implement to meet current teaching and learning challenges".
+
+- The course of Data Analytics in the Social Sciences of introduces undergraduates to **statistical concepts and R programming**, focusing on applying these in social sciences research.
+
+- The unit challenges students by pushing them out of their comfort zones and **requiring simultaneous statistical and programming engagement**, addressed through continuous in-class assessments based on active learning principles.
+
+---
+
+#### Using r/exams in the course of Data Analytics in the Social Sciences
+
+- A series of hands-on exercises allows students to self-assess and apply statistical concepts using R, featuring innovative aspects like the use of the open-source R package 'exams'.
+
+- The 'exams' package facilitates the integration of exercises into the learning management system, enabling dynamic content generation and streamlined maintenance, thus enhancing learning and teaching efficiency.
+
+-  The package enables a large number of practice exercises supporting continuous assessment and personalized feedback based on weekly learning outcomes.
+
+- First implemented in 2023, the innovative approach received positive feedback, with high student engagement and appreciation for the challenge and support provided through the unit.
+
+---
+
+class: segue-red
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

@@ -22,31 +22,163 @@ output:
         scroll: false # disable slide transitions by scrolling
 ---
 
-```{r setup, include=FALSE}
+layout: true
+<div style="position: absolute;left:60px;bottom:11px;color:gray;"><small><small><small><a href = 'https://fraba.github.io/presentation/2024-LUISS/'>fraba.github.io/presentation/2024-LUISS `r icons::fontawesome("link", style = "solid")`</a></small></small></small></div>
+
+
+```{r setup, include=FALSE, cache=FALSE, message=FALSE}
 
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
                       dev = 'svg', out.width = "45%", fig.width = 6,
                       fig.align="center")
 
-require(fontawesome)
+
+library(RefManageR)
+BibOptions(check.entries = FALSE, 
+           bib.style = "authoryear", 
+           cite.style = 'authoryear', 
+           style = "markdown",
+           hyperlink = FALSE, 
+           dashed = FALSE,
+           no.print.fields = c("urldate","isbn","issn"))
+myBib <- ReadBib("assets/biblatex.bib", check = FALSE)
+top_icon = function(x) {
+  icons::icon_style(
+    icons::fontawesome(x),
+    position = "fixed", top = 10, right = 10
+  )
+}
 
 ```
 
 ---
 
-## How does this paper fit in my research agenda.
+## Access slides here `r top_icon("link")`
 
+</br></br></br></br></br></br>
+
+.center[.large[[fraba.github.io/presentation/2024-LUISS](https://fraba.github.io/presentation/2024-LUISS/)]]
 
 
 ---
 
+### How does this paper fit in my research agenda
 
-- This paper is co-authored with **Francesco Marolla** (Università degli Studi di Milano), **Marilù Miotto** (Erasmus University Rotterdam) and **Giovanni Cassani** (Tilburg University). 
+My current and future research is grounded in two lines of research about the
+
+1\. **Emergence, interaction, and diffusion of political opinions online**; and the
+
+.center[<img src = 'assets/research-lines.png' width = "60%">]
+
+
+2\. **Impacts of social media technologies and services on political participation and organisation**.
+
+---
+
+### Lines of research
+
+#### 1. Emergence, interaction, and diffusion of **political opinions** online
+* Cross-disciplinary research: Digital ethnography, Computer science and Political science. 
+* Loops involving Qualitative, Quantitative & Computational methods.
+* **Key concepts**: Cloud platforms, Information disorder. 
+  
+#### 2. Impact of social media technologies and services on **political participation and organisation**
+* Political science research: Parties, Movements, Campaigns and Elections.
+* Qualitative, Quantitative & Computational methods.
+* **Key concepts**: Discontent, Turbulence, Centralization/Decentralization 
+
+---
+
+```{r echo=F}
+RefManageR::NoCite(myBib, 
+                   c("bailoInstitutionalImpactsAlgorithmic2021",
+                     "kongSlippingExtremeMixed2022",
+                     "bailo_Riding_2024",
+                     "johns_Labelling_2024",
+                     "bailoOnlineCommunitiesCrowds2020",
+                     "tronconi_Other_2024",
+                     "bailo_Levelling_2024",
+                     "bailo_Breaking_2004"
+                     ))
+
+```
+
+
+### Publications
+
+#### 1. Emergence, interaction, and diffusion of **political opinions** online
+
+<small>
+```{r, results = "asis", echo=FALSE}
+PrintBibliography(myBib[title = "institutional"])
+```
+
+```{r, results = "asis", echo=FALSE}
+PrintBibliography(myBib[title = "extreme"])
+```
+
+```{r, results = "asis", echo=FALSE}
+PrintBibliography(myBib[title = "riding"])
+```
+
+```{r, results = "asis", echo=FALSE}
+PrintBibliography(myBib[title = "labelling"])
+```
+
+</small>
+
+---
+
+### Publications
+
+#### 2. Impact of social media technologies and services on **political participation and organisation**
+
+<small>
+
+```{r, results = "asis", echo=FALSE}
+PrintBibliography(myBib[title = "communities"])
+```
+
+*Currently under review or in progress*
+
+```{r, results = "asis", echo=FALSE}
+PrintBibliography(myBib[title = "other side"])
+```
+
+```{r, results = "asis", echo=FALSE}
+PrintBibliography(myBib[title = "breaking"])
+```
+
+```{r, results = "asis", echo=FALSE}
+PrintBibliography(myBib[title = "levelling"])
+```
+
+</small>
+
+And the paper I am about to present today...
+---
+
+```{r echo = F}
+
+RefManageR::NoCite(myBib, c("marollaVotingFastSlow2023","bailoOnlineCommunitiesCrowds2020"))
+
+```
+
+### Affording Fragmented Audiences<br>Multi-Platform Deliberation Within the Five Star Movement
+
+<small>
+
+- This paper is co-authored with **Francesco Marolla** (Università degli Studi di Milano), **Marilù Miotto** (Erasmus University Rotterdam) and **Giovanni Cassani** (Tilburg University) and is based on our research published in:
+
+  - Bailo, F. (2020). *Online Communities and Crowds in the Rise of the Five Star Movement*. Cham: Palgrave Macmillan. DOI: [10.1007/978-3-030-45508-8](http://link.springer.com/10.1007/978-3-030-45508-8).
+  - Marolla, F., A. Maineri, J. Tagliabue and G. Cassani (2023). "Voting, Fast and Slow: Ballot Order and Likeability Effects in the Five-Star Movement's 2012 Online Primary Election". In: *Contemporary Italian Politics* 0.0, pp. 1-18. DOI: [10.1080/23248823.2023.2175124](https://doi.org/10.1080/23248823.2023.2175124).
+
 
 - The paper is currently under peer-review. 
 
 - It was accepted for presentation at 2024 Annual Conference of the **International Communication Association** (*Political Communication* division). 
 
+</small>
 
 ---
 
@@ -115,7 +247,7 @@ class: segue-yellow
 
 ## Centrifugal vs. Centripetal Theories in Digital Politics
 
-- Different theories contend that *digital technologies* may either decentralize (**centrifugal**) or centralize (**centripetal**) political party operations.
+Different theories contend that *digital technologies* may either decentralize (**centrifugal**) or centralize (**centripetal**) political party operations.
 
 .pull-left[<img src = 'assets/centrifugal.webp'>]
 
@@ -128,30 +260,33 @@ class: segue-yellow
 
 Digital technologies strengthen democracy by reducing barriers to participation and need for strong organizational capabilities. They also,
 
-1. **Enhance democracy and political action** (Farrell, 2012) by 
+<small>
+
+1. **Enhance democracy and political action** `r Citep(myBib,"farrellConsequencesInternetPolitics2012")` by 
 
   - increasing electoral competition, 
-  - providing new opportunities for mobilization (Norris, 2001), and 
-  - reducing communication and participation costs (Deseriis, 2021).
+  - providing new opportunities for mobilization `r Citep(myBib,"norrisDigitalDivideCivic2001a")`, and 
+  - reducing communication and participation costs `r Citep(myBib,"deseriisRethinkingDigitalDemocratic2021")`.
   
 2. **Improve participation within political parties** by 
 
   - creating transparent, participatory, and non-hierarchical processes, 
   - empowering party members and undermine leadership, 
-  - enabling connective action (Bennett & Segerberg, 2012), which is based on horizontal structures for political engagement, 
-  - facilitating recruitment and publicity in organized networks while fostering inclusivity and community-building in hybrid networks (Caraway, 2016).
+  - enabling connective action `r Citep(myBib,"bennettLogicConnectiveAction2012")`, which is based on horizontal structures for political engagement, 
+  - facilitating recruitment and publicity in organized networks while fostering inclusivity and community-building in hybrid networks `r Citep(myBib,"carawayOURWalmartCase2016")`.
 
+</small>
 ---
 
 ### Centripetal Theories
 
 Skeptical on whether incorporating digital technologies in politics leads to decentralization. 
 
-1. Between the late 2000s and early 2010s, parties leveraged digital technologies for cost-effective campaigning and administrative services rather than for flattening their hierarchies (Gibson & Ward, 2009). 
+1. Between the late 2000s and early 2010s, parties leveraged digital technologies for cost-effective campaigning and administrative services rather than for flattening their hierarchies `r Citep(myBib,"gibson_Parties_2009")`. 
 
-2. Digital technologies do not necessarily encourage internal participation (Gibson & Ward, 2009). 
+2. Digital technologies do not necessarily encourage internal participation `r Citep(myBib,"gibson_Parties_2009")`. 
 
-3. The democratizing potential of digital tools can be undermined by attempts of party elites to control decision-making, paving the way for forms of 'reactive democracy' where members merely ratify top-down decisions (Deseriis, 2021; Gerbaudo, 2019).
+3. The democratizing potential of digital tools can be undermined by attempts of party elites to control decision-making, paving the way for forms of 'reactive democracy' where members merely ratify top-down decisions `r Citep(myBib,c("deseriisRethinkingDigitalDemocratic2021","gerbaudoDigitalPartyPolitical2019"))`.
 
 .center[<img src = 'assets/centripetal.webp' width = '15%'>]
 
@@ -828,7 +963,7 @@ class: segue-yellow
 xfun::file_string('affordances-measurements-table.html')
 ```
 
-.footnote[[1] Meetup visibility measures are unavailable as we collected no visibility proxy metric. [2] Facebook affordance measurements are limited by the lack of likes to comments.]
+.small[.small[[1] Meetup visibility measures are unavailable as we collected no visibility proxy metric. [2] Facebook affordance measurements are limited by the lack of likes to comments.]]
 
 ---
 
@@ -907,13 +1042,13 @@ xfun::file_string('variance-explained-table.html')
 
 <small>Sets of predictors capturing conceptually related aspects were entered together and kept when the variance explained improved (positive 𝚫s). Each RF model was run 100 times to derive robust estimates.</small>
 
-.footnote[[1] We report results for the network measures extracted from the giant component of the cross-platform user network. Measures extracted from the user-location, user-organization, and user-person networks did not afford better predictions when combined with network measures extracted from the cross-platform user network.]
+.small[.small[[1] We report results for the network measures extracted from the giant component of the cross-platform user network. Measures extracted from the user-location, user-organization, and user-person networks did not afford better predictions when combined with network measures extracted from the cross-platform user network.]]
 
 ---
 
 ### Percent increment in Mean Squared Error when removing each variable
 
-.center[<img src = "assets/feature-importance.svg" width = "95%"/>]
+.center[<img src = "assets/feature-importance.svg" width = "90%"/>]
 
 <small><small>Larger values indicate the model gets worse when a variable is removed, and thus that the variable is more important for accurate predictions.</small></small>
 
@@ -1001,6 +1136,44 @@ class: segue-red
 
   - This suggests that even in the presence of centrifugal tendencies, top-down hierarchical control can be exercised through apparently small design choices.
 
+
+---
+
+class: segue-red
+
+# Bibliography
+
+---
+
+.small[
+
+```{r, results = "asis", echo=FALSE}
+PrintBibliography(myBib, start = 1, end = 6)
+```
+
+]
+
+---
+
+.small[
+
+```{r, results = "asis", echo=FALSE}
+PrintBibliography(myBib, start = 7, end = 12)
+```
+
+]
+
+---
+
+.small[
+
+```{r, results = "asis", echo=FALSE}
+PrintBibliography(myBib, start = 13)
+```
+
+]
+
+
 ---
 
 class: segue
@@ -1009,6 +1182,60 @@ class: segue
 
 ---
 
+### Teaching experience
+
+I have been teaching at the undergraduate and postgraduate levels since 2014; since 2018, my responsibilities have included 
+
+- **curriculum design**, 
+- **course development**,
+- **coordination** and the 
+- **supervision of multiple teaching teams**.
 
 
+My teaching experience in **quantitative methods** includes **statistical and data analysis** (with R), **research methods**, **data visualisation** (with R and Tableau), and **coding** (with R and Python) delivered to diverse audiences, including 
 
+<small>
+
+- undergraduate, postgraduate and research **students** (social sciences); 
+- **academics**; and 
+- **professionals**.
+
+</small>
+
+---
+
+### Teaching approach
+
+- Development of digital partnerships in learning and teaching, particularly for introducing **technology-enhanced pedagogy** and innovative digital tools. In the design of my curricula.
+
+- Adoption of **Active Learning** principle so as to recurrently engage students with hands-on in-class activities to apply the information they just received.
+
+---
+
+### Teaching approach: Example
+
+#### Using r/exams in the course of Data Analytics in the Social Sciences
+
+To support the coupling of both statistical concepts and the R programming language in the learning experience, I designed a series of short, hands-on exercises with the R package *R/exams* to **practice statistical concepts applying them to real-world problems**.
+
+In October 2023, I received the *Teaching Innovation Award* of the the Faculty of Arts and Social Sciences of the University of Sydney for "recognising and encouraging the creative and experimental ideas and practices that educators implement to meet current teaching and learning challenges".
+
+- The course of Data Analytics in the Social Sciences of introduces undergraduates to **statistical concepts and R programming**, focusing on applying these in social sciences research.
+
+- The unit challenges students by pushing them out of their comfort zones and **requiring simultaneous statistical and programming engagement**, addressed through continuous in-class assessments based on active learning principles.
+
+---
+
+#### Using r/exams in the course of Data Analytics in the Social Sciences
+
+- A series of hands-on exercises allows students to self-assess and apply statistical concepts using R, featuring innovative aspects like the use of the open-source R package 'exams'.
+
+- The 'exams' package facilitates the integration of exercises into the learning management system, enabling dynamic content generation and streamlined maintenance, thus enhancing learning and teaching efficiency.
+
+-  The package enables a large number of practice exercises supporting continuous assessment and personalized feedback based on weekly learning outcomes.
+
+- First implemented in 2023, the innovative approach received positive feedback, with high student engagement and appreciation for the challenge and support provided through the unit.
+
+---
+
+class: segue-red
