@@ -227,7 +227,7 @@ RefManageR::NoCite(myBib, c("marollaVotingFastSlow2023","bailoOnlineCommunitiesC
 
 - Political movements do not confine their online presence to a single platform: they span across multiple platforms, each selected for its **unique user affordances** and the distinct **organizational outcomes** they facilitate.
 
-- Employing data from four social media platforms (Beppe Grillo’s Blog, Meetup.com, the members’ Forum, and Facebook.com), we examine **structural variances** within the M5S multi-platform online ecosystem and how these differences correlate with **voting behaviors** in the online  primaries of 2012.
+- Employing data from four social media platforms (Beppe Grillo's Blog, Meetup.com, the members' Forum, and Facebook.com), we examine **structural variances** within the M5S multi-platform online ecosystem and how these differences correlate with **voting behaviors** in the online  primaries of 2012.
 
 
 
@@ -239,7 +239,7 @@ RefManageR::NoCite(myBib, c("marollaVotingFastSlow2023","bailoOnlineCommunitiesC
 
 - Using an affordance approach, different platforms are theorized to offer varying degrees of **visibility** and **associability**, which in turn influence different organizational outcomes. 
 
-- Utilizing **network analysis** of users’ interactions across postings and replies and **topic modelling** to map the the content of their discussions, the study measures the implications of platform-specific affordances on the organization and dynamics of political movements, offering new insights into digital political engagement.
+- Utilizing **network analysis** of users' interactions across postings and replies and **topic modelling** to map the the content of their discussions, the study measures the implications of platform-specific affordances on the organization and dynamics of political movements, offering new insights into digital political engagement.
 
 .center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/6/60/Graph_betweenness.svg' width = "30%">]
 
@@ -351,7 +351,7 @@ class: segue-yellow
 .center[<img src = 'assets/social-media-affordances.webp' width = '30%'>]
 
 .content-box-yellow[
-- We argue that in the context of collective action and political organization, the predominance of centrifugal or centripetal tendencies is determined by the **platform’s specific affordances**. 
+- We argue that in the context of collective action and political organization, the predominance of centrifugal or centripetal tendencies is determined by the **platform's specific affordances**. 
 
 - We also argue that centrifugal and centripetal tendencies can **coexist** within a multi-platform ecosystem.
 ] 
@@ -522,7 +522,7 @@ class: segue-red
 
 ### Different Platforms for Different Party Functions
 
-- Beppe Grillo's personal **blog** served as both the voice of the party's central strategy and his personal commentary, **establishing the party’s goals**.
+- Beppe Grillo's personal **blog** served as both the voice of the party's central strategy and his personal commentary, **establishing the party's goals**.
 - **Meetup.com** was crucial for mobilizing local grassroots groups and organizing events on national and local issues, acting as the **hub for territorial engagement and mobilization**. 
 - The M5S **Forum** provided a space for members to **engage in deliberations** and propose ideas, fostering a community of online discussion. 
 - **Facebook** extended the reach of the party's messages and blog content to a broader audience, **enhancing communication channels**. 
@@ -1123,8 +1123,7 @@ class: segue-yellow
 
 ---
 
-### For the platform of users’ first activity, the proportion of users who were active
-multiple times across each platform.
+### For the platform of users' first activity, the proportion users active at least a second time
 
 .pull-left[
 .center[<img src = "assets/NU-crossplatform-all-users_edited.svg" width = "100%"/>]
@@ -1136,7 +1135,7 @@ multiple times across each platform.
 
 ---
 
-## Cross-platform integration
+### Cross-platform integration
 
 - Although cross-platform activity exists, we note **significant barriers to crossing platform boundaries**: 
 
@@ -1155,7 +1154,7 @@ multiple times across each platform.
 
 ## Cross-platform integration
 
-- Based on the classifiers’ confusion matrix presented in the confusion matrix, we infer **some degree of fragmentation** in the discussion. 
+- Based on the classifiers' confusion matrix presented before, we infer **some degree of fragmentation** in the discussion. 
 
 - We can then conclude that **cross-platform participation and discussions are limited** even if not absent.
 
@@ -1209,7 +1208,7 @@ the voting platform (e.g. screen position, gender) are consistently more importa
 
 - A similar, albeit weaker pattern, appears considering out degree centrality on Facebook.com. 
 
-- Candidates not in the leader’s community appear to receive a moderate boost and rank better.
+- Candidates not in the leader's community appear to receive a moderate boost and rank better.
 
 - Degree centrality on the Forum shows a penalty for candidates who were not on the Forum, with little variation relating to activity. 
 
@@ -1239,17 +1238,17 @@ class: segue-red
 
 1. By measuring visibility and associability affordances of the M5S digital ecosystem, monitoring its cross-platform activity, and investigating the concrete impact that it had on candidate selection, we contribute to crossplatform research by providing a first systematic study of **how a fragmented digital media landscape impacts intra-party politics**. 
 
-2. We contribute to the debate on intra-party digitalization by providing evidence of **decentralization dynamics** in a political organization heavily dependent on digital platforms, **supporting centrifugal theories**.
+2. We contribute to the debate on intra-party digitalization by providing evidence of **decentralization dynamics** in a political organization heavily dependent on digital platforms: this **supports centrifugal theories**.
 
 ---
 
 ### Findings
 
-- M5S’ **horizontal platforms** (Meetup.com and Forum) afford greater local visibility and associability, aligning with our expectations about their fostering of grassroots initiatives and networking. 
+- M5S' **horizontal platforms** (Meetup.com and Forum) afford greater local visibility and associability, aligning with our expectations about their fostering of grassroots initiatives and networking. 
 
 - In contrast, **top-down platforms** (Blog and Facebook.com) reported a greater potential in connecting users to the broader M5S network.
 
-- Prioritizing presence and engagement on horizontal platforms (especially Meetup.com) could have been the optimal strategy for candidates aiming to rise within the M5S ranks and not engagement on top-down platforms.
+- Prioritizing presence and **engagement on horizontal platforms** (especially Meetup.com) could have been the **optimal strategy for candidates** aiming to rise within the M5S ranks and not engagement on top-down platforms.
 
 ---
 
@@ -1257,7 +1256,7 @@ class: segue-red
 
 - And yet the strategic utility of platforms for M5S candidates could vary with the evolution of the Movement trajectory within the Italian political landscape. 
 
-- Top-down platforms’ global affordances could become crucial for MPs to consolidate their power positions in the later stages of the M5S, where a party in public office (Mair and Katz, 2002) established. 
+- **Top-down platforms' global affordances could become crucial** for MPs to consolidate their power positions in the later stages of the M5S, where a party in public office (Mair and Katz, 2002) established. 
 
 - (Future studies may investigate the implications of online activity in the later stages of the M5S, especially considering the growing trajectory that Facebook.com experienced where many MPs would build large personal audiences).
 
@@ -1265,9 +1264,9 @@ class: segue-red
 
 ### Findings 
 
-1. Contrary to previous research on digital parties, including the M5S, we find no confirmation of centripetal tendencies in candidates' selection. Active engagement in platforms closer to the grassroots yielded higher electoral rewards than in those closer to the (hyper)leader Beppe Grillo (Gerbaudo, 2019).
+1. Contrary to previous research on digital parties, including the M5S, **we find no confirmation of centripetal tendencies in candidates' selection**. Active engagement in platforms closer to the grassroots yielded higher electoral rewards than in those closer to the (hyper)leader Beppe Grillo (Gerbaudo, 2019).
 
-2. And yet, variables measuring candidates' platform engagement (albeit being more than 100) contributed to a relatively small portion of the explained variance compared to the information about candidates presented to voters through the interface of the voting platform, such as gender, age, and on-screen position.
+2. And yet, **variables measuring candidates' platform engagement** (albeit being more than 100) contributed to a **relatively small portion of the explained variance** compared to the information about candidates presented to voters through the interface of the voting platform, such as gender, age, and on-screen position.
 
   - This suggests that even in the presence of centrifugal tendencies, top-down hierarchical control can be exercised through apparently small design choices.
 
