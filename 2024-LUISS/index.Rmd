@@ -1102,7 +1102,7 @@ xfun::file_string('affordances-measurements-table.html')
 
 ---
 
-## Cross-platform affordances
+### Cross-platform affordances
 
 
 - We find **two distinct classes of platforms**:
