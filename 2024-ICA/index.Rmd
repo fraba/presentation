@@ -424,28 +424,15 @@ class: segue-yellow
 
 ---
 
-### Cross-platform integration
+## Cross-platform integration
 
 - Although cross-platform activity exists, we note **significant barriers to crossing platform boundaries**: 
 
     - The proportion of users active a second time on a different platform is always a fraction of those active again on the same platform. 
     
-- We also note that the two centrifugal platforms, the Forum and Meetup.com tend to see a higher proportion of their users moving to the other platforms while the Blog and especially Facebook.com, significantly less so. Likely, this is because of differences in terms of audiences.
+    - We also note that the two centrifugal platforms, the Forum and Meetup.com tend to see a higher proportion of their users moving to the other platforms while the Blog and especially Facebook.com, significantly less so. Likely, this is because of differences in terms of audiences.
 
----
-
-### Classification of documents published in December 2012 into a platform based on topic weights 
-
-.center[<img src = "assets/classify-platform-from-topic.svg" width = "100%"/>]
-
-
----
-
-## Cross-platform integration
-
-- Based on the classifiers' confusion matrix presented before, we infer **some degree of fragmentation** in the discussion. 
-
-- We can then conclude that **cross-platform participation and discussions are limited** even if not absent.
+- Based on the topic modelling, we also infer **some degree of fragmentation** in the discussion. 
 
 
 ---
@@ -464,7 +451,7 @@ class: segue-yellow
 
 ---
 
-### What predicts ranking in the M5S 2012 Online Primary elections?
+## What predicts ranking in the M5S 2012 Online Primary elections?
 
 - Variables available to the voters through the interface of
 the voting platform (e.g. screen position, gender) are consistently more important.
