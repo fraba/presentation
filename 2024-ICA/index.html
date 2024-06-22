@@ -7,11 +7,6 @@
     <meta name="date" content="2024-06-23" />
     <script src="index_files/header-attrs-2.25/header-attrs.js"></script>
     <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="index_files/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
-    <script src="index_files/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-    <script src="index_files/viz-1.8.2/viz.js"></script>
-    <link href="index_files/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-    <script src="index_files/grViz-binding-1.0.11/grViz.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -74,9 +69,49 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 ---
 
+class: segue-red
+
+# Case
+
+---
+
+# The M5S and the Internet
+
+- The M5S, established in 2009, has significantly disrupted Italian politics by blending techno-utopian and populist ideologies to advocate for **direct democracy via online participation**, challenging traditional representative systems. 
+
+- It promoted the use of technology to empower ordinary citizens, emphasizing the Internet's role in **decentralizing authority**&lt;sup&gt;1&lt;/sup&gt; and believes in the **expertise of common citizens**, showcased through its innovative online-only primary elections in December 2012. 
+
+- The M5S pioneered the use of digital platforms for political activities, using Internet platforms to spread counter-narratives and foster participatory communication practices, aiming to **decentralize political power** and **bridge resource disparities**.
+
+.small[.small[[1] Note that the decentralizing rethoric was about both external and internal (to the party) democracy.]]
+
+
+---
+
+### Five Platforms for Different Party Functions
+
+1. Beppe Grillo's personal **blog** served as both the voice of the party's central strategy and his personal commentary, **establishing the party's goals**.
+
+2. **Meetup.com** was crucial for mobilizing local grassroots groups and organizing events on national and local issues, acting as the **hub for territorial engagement and mobilization**. 
+
+3. The M5S **Forum** provided a space for members to **engage in deliberations** and propose ideas, fostering a community of online discussion. 
+
+4. **Facebook** extended the reach of the party's messages and blog content to a broader audience, **enhancing communication channels**. 
+
+5. The **e-voting platform** for the 2012 primaries was instrumental in the elite selection process within the M5S, **showing the party's innovative approach** to member participation and candidate selection.
+
+---
+class: segue-red
+
+# The paper
+
+
+---
+
 - This paper is co-authored with **Francesco Marolla** (Università degli Studi di Milano), **Marilù Miotto** (Erasmus University Rotterdam) and **Giovanni Cassani** (Tilburg University) and is based on our research published in:
 
   - Bailo, F. (2020). *Online Communities and Crowds in the Rise of the Five Star Movement*. Cham: Palgrave Macmillan. DOI: [10.1007/978-3-030-45508-8](http://link.springer.com/10.1007/978-3-030-45508-8).
+  
   - Marolla, F., A. Maineri, J. Tagliabue and G. Cassani (2023). "Voting, Fast and Slow: Ballot Order and Likeability Effects in the Five-Star Movement's 2012 Online Primary Election". In: *Contemporary Italian Politics* 0.0, pp. 1-18. DOI: [10.1080/23248823.2023.2175124](https://doi.org/10.1080/23248823.2023.2175124).
 
 .content-box-purple[
@@ -87,27 +122,22 @@ For a copy of the paper: francesco.bailo@sydney.edu.au
 
 ---
 
-### Introduction
+class: segue-red
 
-- Leveraging **digital platforms for internal organization and campaigning**, the Italian Five Star Movement (M5S) exemplifies the transformative power of digitalization in politics.
-
-- This digital strategy shaped the M5S **internal dynamics** and established the M5S as a leading example of an Internet-centered political mobilization and party.
-
-- Yet, we know little about what adopting **multiple Internet platforms** by the same political organization means for its **community's cohesion** and **intra-party dynamics**.
-
-.center[&lt;img src = 'https://upload.wikimedia.org/wikipedia/commons/2/2c/MoVimento_5_Stelle_Logo_vettoriale.svg' width = "20%"&gt;]
+# Data
 
 ---
 
-### Online Ecosystems of Political Movements: A Multi-Platform Perspective
+## Data
 
-- Political movements do not confine their online presence to a single platform: they span across multiple platforms, each selected for its **unique user affordances** and the distinct **organizational outcomes** they facilitate.
+- **Social Media Data**. Data was gathered by scraping the Blog and Forum, and through public APIs for Meetup.com and Facebook, focusing on M5S-related Meetup groups, Beppe Grillo's page, the Five Star Movement's page, and pages of 944 M5S leaders identified via snowball sampling.
 
-- Employing data from four social media platforms (Beppe Grillo's Blog, Meetup.com, the members' Forum, and Facebook.com), we examine **structural variances** within the M5S multi-platform online ecosystem and how these differences correlate with **voting behaviors** in the online  primaries of 2012.
+- **E-voting Data**. The dataset, scraped from the e-voting platform used for the 2012 online primaries of the M5S, includes each candidate's personal and electoral details, combined with their historical electoral performance at various administrative levels in Italy from 2007 to 2012.
 
+---
+class: segue-red
 
-
-.center[&lt;img src = 'assets/beppegrillo-it-2010.png' width = "80%"&gt;]
+# Approach
 
 ---
 
@@ -115,57 +145,14 @@ For a copy of the paper: francesco.bailo@sydney.edu.au
 
 - Using an affordance approach, different platforms are theorized to offer varying degrees of **visibility** and **associability**, which in turn influence different organizational outcomes. 
 
-- Utilizing **network analysis** of users' interactions across postings and replies and **topic modelling** to map the the content of their discussions, the study measures the implications of platform-specific affordances on the organization and dynamics of political movements, offering new insights into digital political engagement.
+- Utilizing **network analysis** of users' interactions across postings and replies and **topic modelling** to map the the content of their discussions, the **study measures** the implications of platform-specific affordances on the organization and dynamics of political movements, offering new insights into digital political engagement.
 
 .center[&lt;img src = 'https://upload.wikimedia.org/wikipedia/commons/6/60/Graph_betweenness.svg' width = "30%"&gt;]
 
----
 
-### Main Findings
-
-- **Structural Differences**: Identified within the multi-platform ecosystem of M5S.
-
-- **Visibility and Associability**: Different platforms offer varying degrees of these affordances, affecting organizational outcomes.
-  - Meetup.com and the Forum: Higher *local* visibility and associability.
-  - The Blog and Facebook.com: Higher *global* visibility and associability.
-  
-- **Influence on Voting**: Platforms' boundaries influence cross-platform activity and intra-platform communication.
-  - Network centrality within Meetup.com had a stronger predictive power for the 2012 online primaries results.
 
 ---
 class: segue-red
-
-# Theoretical Approach
-
-Centrifugal vs. Centripetal Theories in Digital Politics
-
-Social Media Affordances: Visibility and Associability
-
-Social Media Outcomes
-
----
-class: segue-yellow
-
-# Centrifugal vs. Centripetal Theories in Digital Politics
-
----
-
-### Centrifugal vs. Centripetal Theories in Digital Politics
-
-.content-box-red[
-
-Different theories contend that *digital technologies* may either **decentralize** or **centralize** political party operations.
-
-]
-
-
-.pull-left[.center[**Centrifugal theories** &lt;img src = 'assets/centrifugal.webp'&gt;]]
-
-.pull-right[.center[**Centripetal theories** &lt;img src = 'assets/centripetal.webp'&gt;]]
-
-
----
-class: segue-yellow
 
 # Social Media Affordances: Visibility and Associability
 
@@ -292,34 +279,6 @@ We focus on four critical outcomes:&lt;sup&gt;1&lt;/sup&gt;
 
 ---
 
-class: segue-red
-
-# The M5S Digital Ecosystem
-
----
-
-### The M5S and the Internet
-
-- The M5S, established in 2009, has significantly disrupted Italian politics by blending techno-utopian and populist ideologies to advocate for **direct democracy via online participation**, challenging traditional representative systems. 
-
-- It promoted the use of technology to empower ordinary citizens, emphasizing the Internet's role in **decentralizing authority**&lt;sup&gt;1&lt;/sup&gt; and believes in the **expertise of common citizens**, showcased through its innovative online-only primary elections in December 2012. 
-
-- The M5S pioneered the use of digital platforms for political activities, using Internet platforms to spread counter-narratives and foster participatory communication practices, aiming to **decentralize political power** and **bridge resource disparities**.
-
-.small[.small[[1] Note that the decentralizing rethoric was about both external and internal (to the party) democracy.]]
-
----
-
-### Different Platforms for Different Party Functions
-
-- Beppe Grillo's personal **blog** served as both the voice of the party's central strategy and his personal commentary, **establishing the party's goals**.
-- **Meetup.com** was crucial for mobilizing local grassroots groups and organizing events on national and local issues, acting as the **hub for territorial engagement and mobilization**. 
-- The M5S **Forum** provided a space for members to **engage in deliberations** and propose ideas, fostering a community of online discussion. 
-- **Facebook** extended the reach of the party's messages and blog content to a broader audience, **enhancing communication channels**. 
-- The **e-voting platform** for the 2012 primaries was instrumental in the elite selection process within the M5S, **showing the party's innovative approach** to member participation and candidate selection.
-
----
-
 - The varied functionalities of the M5S's digital platforms have significantly influenced the movement's internal dynamics.
 
 .content-box-yellow[
@@ -344,7 +303,7 @@ We characterize the differences in terms of overall **communication orientation*
 ---
 class: segue-red
 
-# Research design
+# Hypotheses and research goals
 
 ---
 
@@ -354,32 +313,11 @@ class: segue-red
 
 1. **Platform difference hypothesis**: Using key properties of the network of users interacting within each platform, we measure the platform affordances listed in the previous table to substantiate our *hypothesis of significant cross-platform differences*.
 
-
 2. **Platform fragmentation hypothesis**: We investigate the degree of cross-platform integration under the assumption that *platform boundaries limit cross-platform communication*.
 
 3. **Platform centrality hypothesis**: Using user metrics from different networks, we investigate whether the primary candidates' position and behavior within the four platforms can predict primary results under the hypothesis that platform centralities and proximity to the leadership might have helped candidates to obtain more preferences.
 
 ]
-
----
-class: segue-red
-
-# Data
-
-
----
-
-## Data
-
-- **E-voting Data**. The dataset, scraped from the e-voting platform used for the 2012 online primaries of the M5S, includes each candidate's personal and electoral details, combined with their historical electoral performance at various administrative levels in Italy from 2007 to 2012.
-
-- **Social Media Data**. Data was gathered by scraping the Blog and Forum, and through public APIs for Meetup.com and Facebook, focusing on M5S-related Meetup groups, Beppe Grillo's page, the Five Star Movement's page, and pages of 944 M5S leaders identified via snowball sampling.
-
----
-
-### Activity frequency between 2010-2012 on the four target social media platforms
-
-.center[&lt;img src = 'assets/post-timeseries.svg' width = "100%"&gt;]
 
 ---
 
@@ -451,91 +389,6 @@ class: segue-yellow
 
 # Measuring Affordances Using Network Analysis
 
----
-
-### Measuring Affordances Using Network Analysis
-
-We propose to use *four network metrics* ...
-
-.content-box-yellow[
-
-1\. **Link reciprocity ratio**, or the proportion of mutual connections in a directed network
-
-]
-
-.pull-left[
-
-
-
-<div class="grViz html-widget html-fill-item" id="htmlwidget-502128e865f6211949e5" style="width:100%;height:144px;"></div>
-<script type="application/json" data-for="htmlwidget-502128e865f6211949e5">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\",\n       label = \"reciprocity = 1\",\n       labelloc = \"t\",\n       labeljust = \"c\",\n       fontname = \"Helvetica\",\n       fontcolor = \"gray30\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"Alice\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [label = \"Bob\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n\"1\"->\"2\" [label = \"replies to\"] \n\"2\"->\"1\" [label = \"replies to\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-]
-
-.pull-right[
-
-<div class="grViz html-widget html-fill-item" id="htmlwidget-cc5c3e6413910b2b9ceb" style="width:100%;height:216px;"></div>
-<script type="application/json" data-for="htmlwidget-cc5c3e6413910b2b9ceb">{"x":{"diagram":"digraph {\n\ngraph [layout = \"neato\",\n       outputorder = \"edgesfirst\",\n       bgcolor = \"white\",\n       label = \"reciprocity = 0.3\",\n       labelloc = \"t\",\n       labeljust = \"c\",\n       fontname = \"Helvetica\",\n       fontcolor = \"gray30\"]\n\nnode [fontname = \"Helvetica\",\n      fontsize = \"10\",\n      shape = \"circle\",\n      fixedsize = \"true\",\n      width = \"0.5\",\n      style = \"filled\",\n      fillcolor = \"aliceblue\",\n      color = \"gray70\",\n      fontcolor = \"gray50\"]\n\nedge [fontname = \"Helvetica\",\n     fontsize = \"8\",\n     len = \"1.5\",\n     color = \"gray80\",\n     arrowsize = \"0.5\"]\n\n  \"1\" [label = \"Alice\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"2\" [label = \"Bob\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n  \"3\" [label = \"Cat\", fillcolor = \"#F0F8FF\", fontcolor = \"#000000\"] \n\"1\"->\"2\" [label = \"replies to\"] \n\"2\"->\"1\" [label = \"replies to\"] \n\"1\"->\"3\" [label = \"replies to\"] \n\"3\"->\"2\" [label = \"replies to\"] \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-
-]
-
-.content-box-blue[
-
-2\. **Standard deviation of the in-degree distribution**, which tells how much a single user can have incoming links well above the average for that network. It captures the capacity (for some but not for all) to be seen by a large portion of the network. 
-
-]
-
-
-
-
----
-
-### Measuring Affordances Using Network Analysis
-
-We propose to use *four network metrics* ... 
-
-.content-box-yellow[
-
-3\. **Link transitivity ratio**, which quantifies how many of the potential triangles in a network are actual triangles.
-
-]
-
-.pull-left[
-
-&lt;img src="index_files/figure-html/unnamed-chunk-6-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
-
-]
-
-.pull-right[
-
-&lt;img src="index_files/figure-html/unnamed-chunk-7-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
-
-
-]
-
----
-
-### Measuring Affordances Using Network Analysis
-
-We propose to use *four network metrics* ...
-
-.content-box-blue[
-
-4\. **Mean node distance**, or the average number of steps to traverse the network. 
-
-]
-
-.pull-left[
-
-&lt;img src="index_files/figure-html/unnamed-chunk-8-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
-
-]
-
-.pull-right[
-
-&lt;img src="index_files/figure-html/unnamed-chunk-9-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
-
-]
-
 
 ---
 
@@ -563,120 +416,6 @@ on two scales:
 
 ---
 
-### How We Measure Visibility on Social Media Networks
-
-.pull-left[
-
-**Local**: Link *reciprocity* ratio
-
-.content-box-yellow[
-
-&lt;img src="index_files/figure-html/unnamed-chunk-10-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
-
-&lt;small&gt;&lt;small&gt;**High local visibility**: 0.6545&lt;/small&gt;&lt;/small&gt;
-
-]
-
-.content-box-blue[
-
-&lt;img src="index_files/figure-html/unnamed-chunk-11-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
-
-&lt;small&gt;&lt;small&gt;**Low local visibility**: 0.2727&lt;/small&gt;&lt;/small&gt;
-
-]
-
-]
-
-.pull-right[
-
-**Global**: SD of *in-degree distribution*
-
-.content-box-yellow[
-
-&lt;img src="index_files/figure-html/unnamed-chunk-12-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
-
-&lt;small&gt;&lt;small&gt;**High global visibility**: 12.4235&lt;/small&gt;&lt;/small&gt;
-
-]
-
-.content-box-blue[
-
-&lt;img src="index_files/figure-html/unnamed-chunk-13-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
-
-&lt;small&gt;&lt;small&gt;**Low global visibility**: 2.7231&lt;/small&gt;&lt;/small&gt;
-
-]
-
-]
-
----
-
-
-### How We Measure Associability on Social Media Networks
-
-.pull-left[
-
-**Local**: Link *transitivity* ratio
-
-.content-box-yellow[
-
-&lt;img src="index_files/figure-html/unnamed-chunk-14-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
-
-&lt;small&gt;&lt;small&gt;**High local associability**: 0.8148&lt;/small&gt;&lt;/small&gt;
-
-]
-
-.content-box-blue[
-
-&lt;img src="index_files/figure-html/unnamed-chunk-15-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
-
-&lt;small&gt;&lt;small&gt;**Low local associability**: 0.2542&lt;/small&gt;&lt;/small&gt;
-
-]
-
-]
-
-.pull-right[
-
-**Global**: Mean *node distance*
-
-.content-box-yellow[
-
-&lt;img src="index_files/figure-html/unnamed-chunk-16-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
-
-&lt;small&gt;&lt;small&gt;**High global associability**: 1.9966&lt;/small&gt;&lt;/small&gt;
-
-]
-
-.content-box-blue[
-
-&lt;img src="index_files/figure-html/unnamed-chunk-17-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
-
-&lt;small&gt;&lt;small&gt;**Low global associability**: 5.4553&lt;/small&gt;&lt;/small&gt;
-
-]
-
-]
-
-
----
-
-class: segue-yellow
-
-# Topic Modelling
-
----
-
-### Topic Modelling
-
-
-- Two Contextualized Topic Models (CTM) were developed using an Italian sentence transformers model to analyze the **posts on Beppe Grillo's blog** and **a sample of comments on those posts**, aiming to differentiate between the language used by the leadership and the blog's audience. 
-
-- Each CTM generated 26 topics, which were then labeled by two independent coders based on the topics' 25 most representative words. Only topics with similar labels from both coders were considered for further analysis to ensure consistency and relevance.
-
-- Finally, each textual posting (posts or replies) in the data was assigned a **proximity weight** to all topics: this allows to understand if a particular posting discusses a topic but also the relative distance among users in terms of what they discuss.
-
----
 
 class: segue-yellow
 
@@ -832,18 +571,6 @@ the voting platform (e.g. screen position, gender) are consistently more importa
 - Page rank of a user in the cross-platform network shows a benefit for more active candidates.
 
 ---
-
-### What predicts ranking in the M5S 2012 Online Primary elections?
-
-- As a block, associations between candidates and topics did not improve
-predictions.
-
-- Yet, some topics did show moderate importance, especially topics concerning the
-internal life of the movement: candidates who posted more about these topics ranked better in the primary. 
-
-- But, given the wealth of variables to consider and the difficulty in formulating precise hypotheses on which topics would be more prominent, we leave a more focused analysis of what candidates communicated about and its relation with political outcomes in the party to future research.
-
----
 class: segue-red
 
 # Conclusions
@@ -939,75 +666,6 @@ Communication Association_ 36.1, pp. 143-189. DOI:
 
 ]
 
----
-
-class: segue
-
-# Teaching experience
-
----
-
-### Teaching experience
-
-I have been teaching at the undergraduate and postgraduate levels since 2014; since 2018, my responsibilities have included 
-
-- **curriculum design**, 
-- **course development**,
-- **coordination** and the 
-- **supervision of multiple teaching teams**.
-
-
-My teaching experience in **quantitative methods** includes **statistical and data analysis** (with R), **research methods**, **data visualisation** (with R and Tableau), and **coding** (with R and Python) delivered to diverse audiences, including 
-
-&lt;small&gt;
-
-- undergraduate, postgraduate and research **students** (social sciences); 
-- **academics**; and 
-- **professionals**.
-
-&lt;/small&gt;
-
----
-
-### Teaching approach
-
-- Development of digital partnerships in learning and teaching, particularly for introducing **technology-enhanced pedagogy** and innovative digital tools. In the design of my curricula.
-
-- Adoption of **Active Learning** principle so as to recurrently engage students with hands-on in-class activities to apply the information they just received.
-
----
-
-### Teaching approach: Example
-
-#### Using r/exams in the course of Data Analytics in the Social Sciences
-
-&lt;small&gt;
-
-To support the coupling of both statistical concepts and the R programming language in the learning experience, I designed a series of short, hands-on exercises with the R package *R/exams* to **practice statistical concepts applying them to real-world problems**.
-
-In October 2023, I received the *Teaching Innovation Award* of the the Faculty of Arts and Social Sciences of the University of Sydney for "recognising and encouraging the creative and experimental ideas and practices that educators implement to meet current teaching and learning challenges".
-
-&lt;/small&gt;
-
-- The course of Data Analytics in the Social Sciences of introduces undergraduates to **statistical concepts and R programming**, focusing on applying these in social sciences research.
-
-- The unit challenges students by pushing them out of their comfort zones and **requiring simultaneous statistical and programming engagement**, addressed through continuous in-class assessments based on active learning principles.
-
----
-
-#### Using r/exams in the course of Data Analytics in the Social Sciences
-
-- A series of hands-on exercises allows students to self-assess and apply statistical concepts using R, featuring innovative aspects like the use of the open-source R package 'exams'.
-
-- The 'exams' package facilitates the integration of exercises into the learning management system, enabling dynamic content generation and streamlined maintenance, thus enhancing learning and teaching efficiency.
-
--  The package enables a large number of practice exercises supporting continuous assessment and personalized feedback based on weekly learning outcomes.
-
-- First implemented in 2023, the innovative approach received positive feedback, with high student engagement and appreciation for the challenge and support provided through the unit.
-
----
-
-class: segue-red
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
