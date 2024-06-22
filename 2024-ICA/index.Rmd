@@ -521,38 +521,9 @@ class: segue-red
 .small[
 
 ```{r, results = "asis", echo=FALSE}
-PrintBibliography(myBib, start = 1, end = 6)
+PrintBibliography(myBib)
 ```
 
 ]
 
----
-
-.small[
-
-```{r, results = "asis", echo=FALSE}
-PrintBibliography(myBib, start = 7, end = 12)
-```
-
-]
-
----
-
-.small[
-
-```{r, results = "asis", echo=FALSE}
-PrintBibliography(myBib, start = 13, end = 17)
-```
-
-]
-
----
-
-.small[
-
-```{r, results = "asis", echo=FALSE}
-PrintBibliography(myBib, start = 18)
-```
-
-]
 
