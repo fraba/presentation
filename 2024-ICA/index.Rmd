@@ -293,63 +293,14 @@ class: segue-red
 
 # Methods
 
-Platform Networks
+Topic Modelling
+
+Platform Networks (user-to-user, topic-to-topic, topic-to-user)
 
 Measuring Affordances Using Network Analysis
 
-Topic Modelling
-
 Modelling Primary Results
 
----
-
-class: segue-yellow
-
-
-# Platform Networks
-
----
-
-### Platform Networks
-
-From the social media data, we created two network types: 
-
-.content-box-yellow[
-
-.pull-left[
-<small>
-1\. a **user network**, based on replies among users for the Blog, Facebook, and the Forum, and an undirected network on Meetup.com for users attending the same event; and 
-</small>
-
-]
-
-.pull-right[
-
-.center[<img src = 'assets/NU_graph.svg' width = '55%'>]
-
-]
-
-]
-
-.content-box-blue[
-
-.pull-left[
-<small>
-
-2\. a **content-based network**, utilizing topic modeling and entity recognition. 
-These networks were analyzed globally and individually, with communities identified through algorithms, and user mapping across platforms done through username matching.
-
-</small>
-
-]
-
-.pull-right[
-
-.center[<img src = 'assets/NT_graph.svg' width = '55%'>]
-
-]
-
-]
 
 ---
 
@@ -503,19 +454,6 @@ class: segue-yellow
 
 # What predicts ranking in the M5S 2012 Online Primary elections?
 
-
----
-
-### Variance explained and 𝚫 with respect to immediately simpler models 
-
-```{r, echo=FALSE, results='asis'}
-xfun::file_string('variance-explained-table.html')
-```
-
-<small>Sets of predictors capturing conceptually related aspects were entered together and kept when the variance explained improved (positive 𝚫s). Each RF model was run 100 times to derive robust estimates.</small>
-
-.small[.small[[1] We report results for the network measures extracted from the giant component of the cross-platform user network. Measures extracted from the user-location, user-organization, and user-person networks did not afford better predictions when combined with network measures extracted from the cross-platform user network.]]
-
 ---
 
 ### Percent increment in Mean Squared Error when removing each variable
@@ -554,23 +492,20 @@ class: segue-red
 
 - Prioritizing presence and **engagement on horizontal platforms** (especially Meetup.com) could have been the **optimal strategy for candidates** aiming to rise within the M5S ranks and not engagement on top-down platforms.
 
----
 
-### Findings
-
-- And yet the strategic utility of platforms for M5S candidates could vary with the evolution of the Movement trajectory within the Italian political landscape. 
-
-- **Top-down platforms' global affordances could become crucial** for MPs to consolidate their power positions in the later stages of the M5S, where a party in public office (Mair and Katz, 2002) established. 
-
-- (Future studies may investigate the implications of online activity in the later stages of the M5S, especially considering the growing trajectory that Facebook.com experienced where many MPs would build large personal audiences).
+- And yet the strategic utility of platforms for M5S candidates could vary with the evolution of the Movement trajectory within the Italian political landscape: **Top-down platforms' global affordances could become crucial** for MPs to consolidate their power positions in the later stages of the M5S, where a party in public office (Mair and Katz, 2002) established. 
 
 ---
 
 ### Findings 
 
-1. Contrary to previous research on digital parties, including the M5S, **we find no confirmation of centripetal tendencies in candidates' selection**. Active engagement in platforms closer to the grassroots yielded higher electoral rewards than in those closer to the (hyper)leader Beppe Grillo (Gerbaudo, 2019).
+1. Contrary to previous research on digital parties, including the M5S, **we find no confirmation of centripetal tendencies in candidates' selection**. 
 
-2. And yet, **variables measuring candidates' platform engagement** (albeit being more than 100) contributed to a **relatively small portion of the explained variance** compared to the information about candidates presented to voters through the interface of the voting platform, such as gender, age, and on-screen position.
+  - Active engagement in platforms closer to the grassroots yielded higher electoral rewards ...
+  
+  - But not closeness to the leadership.
+
+2. And yet, **variables measuring candidates' platform engagement** contributed to a **relatively small portion of the explained variance** compared to the information about candidates presented to voters through the interface of the voting platform, such as gender, age, and on-screen position.
 
   - This suggests that even in the presence of centrifugal tendencies, top-down hierarchical control can be exercised through apparently small design choices.
 
