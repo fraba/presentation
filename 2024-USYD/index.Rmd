@@ -1,0 +1,329 @@
+---
+title: "How to use Wikibase for Mixed-Methods Research"
+subtitle: "An Interdisciplinary and Collaborative Approach"
+author: "Francesco Bailo"
+institute: "The University of Sydney"
+date: "25 June 2024"
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+    self_contained: false # if true, fonts will be stored locally
+    seal: true # show a title slide with YAML information
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
+    nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '4:3' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: false # disable slide transitions by scrolling
+---
+
+layout: true
+<div style="position: absolute;left:60px;bottom:11px;color:gray;"><small><small><small><a href = 'https://fraba.github.io/presentation/2024-USYD/'>fraba.github.io/presentation/2024-USYD `r icons::fontawesome("link", style = "solid")`</a></small></small></small></div>
+
+
+```{r setup, include=FALSE, cache=FALSE, message=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+
+top_icon = function(x) {
+  icons::icon_style(
+    icons::fontawesome(x),
+    position = "fixed", top = 10, right = 10
+  )
+}
+
+```
+
+---
+
+## Access slides here `r top_icon("link")`
+
+</br></br></br></br></br></br>
+
+.center[.large[[fraba.github.io/presentation/2024-USYD](https://fraba.github.io/presentation/2024-USYD/)]]
+
+
+</br></br></br></br>
+
+<p style = "font-size: 80px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&swarr;</p>
+
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+---
+class: segue-red
+
+# Forthcoming Book
+
+---
+
+### How to use Wikibase for Mixed-Methods Research: An Interdisciplinary and Collaborative Approach
+
+**Status**: 
+
+- Accepted by Edward Elgar Publishing and to be published (inshallah) in *2025* 
+
+**Authors:** Francesco Bailo, University of Sydney; Emily Booth, University of Technology Sydney; Jennifer Williams, Macquarie University
+
+**Co-authors**: Frankie Yuan, University of Technology Sydney; Marian-Andrei Rizoiu, University of Technology Sydney; Julian Droogan, Macquarie University; Amelia Johns, University of Technology Sydney
+
+---
+
+### Book Description
+
+- This practical guide introduces researchers to Wikibase, a flexible open-source software for data management in collaborative projects. 
+- It supports complex data collection and analysis, ideal for interdisciplinary research teams. 
+- The book integrates theoretical research design with practical application, enhancing data management practices across qualitative, quantitative, and mixed-methods research. 
+- Real-world examples and case studies demonstrate Wikibase’s versatility and effectiveness.
+
+---
+
+### Scope and Aim
+
+**Scope:**
+
+- Introduces Wikibase as collaborative software for project data management.
+- Highlights its capacity to manage complex data through various research phases.
+
+**Aim:**
+
+- Provides a comprehensive resource on Wikibase for interdisciplinary research teams.
+- Promotes Wikibase as an accessible alternative to existing software for managing multimodal research data.
+
+---
+
+### Book Structure
+
+**Chapter Overview:**
+
+1. **Introduction:** Interdisciplinary mixed-methods research, applications, and benefits.
+2. **What is Wikibase:** Overview, history, development, and key features.
+3. **Installing and Maintaining Wikibase:** Step-by-step guide for both technical and non-technical audiences.
+4. **Structuring and Linking Research Data:** Principles of linked data and data linkage.
+5. **Designing and Maintaining Project Ontologies:** Creating and managing schemas and ontologies.
+6. **Collaborative Research Projects:** Practical aspects of using Wikibase for collaborative research.
+7. **Case Study:** Using Wikibase for social media research.
+
+---
+
+### Contribution
+
+**Target:**
+
+- Research teams in academia, government, and non-government organisations
+
+**Unique Contribution:**
+
+- Bridging between theoretical research design and practical software application.
+- Demonstrates Wikibase’s translational capacity between qualitative and quantitative research.
+
+**Relevance:**
+
+- Responds to the growing complexity of research data.
+- Enhances data management practices, fostering collaboration and innovation in interdisciplinary research.
+
+---
+class: segue-red
+
+### How and Why to use Wikibase for research?
+
+---
+
+### Introduction
+
+Wikibase is an open-source extension of MediaWiki, allowing for the creation of semi-structured data items and complex semantic queries.
+
+I'll provide an quick overview of Wikibase as a collaborative research tool, showcasing its application for mapping online conversations.
+
+- Customizable knowledge base
+- Project ontology creation and maintenance
+- SPARQL query service and interactive graph visualization
+- Programmatic access to the knowledge base
+
+---
+
+### What is Wikibase
+
+Wikibase is the software behind Wikidata, enabling the creation of complex, domain-specific knowledge graphs. It extends MediaWiki with a web interface, query services, and tools for data import/export.
+
+- Used for diverse projects (e.g., biomedical data, library resources)
+- Inherits all MediaWiki functionalities
+
+.center[<img src = 'img/Picture 1.png'></img>]
+
+---
+
+### Who Needs Wikibase
+
+Wikibase is ideal for collaborative research projects requiring complex knowledge bases. Its flexible structure accommodates various data types and evolves with project data.
+
+- Supports text, images, audio, and videos
+- Semi-structured data adapts over time
+
+---
+
+### What are Linked Data
+
+Linked data enriches data entities with relationships, forming directed graphs for complex queries. It uses triples (subject, predicate, object) to create statements.
+
+- Enables sophisticated data navigation
+- Forms the basis of Linked Open Data (LOD)
+
+<small>*Fig. An example of data entities linked through properties to form a direct graph*</small>
+.center[<img src = 'img/Picture 2.png' width = '80%'></img>]
+
+
+
+---
+
+### How and Where to Install Wikibase
+
+Wikibase can be installed locally or via cloud solutions, with Docker recommended for local installations. The process involves cloning the release pipeline, setting up the directory, editing environment files, and starting the application with Docker commands.
+
+- Two installation options: local or cloud
+- Docker simplifies deployment and sandboxing
+
+The installation will them be accessible via the web authenticating with username/password.
+
+---
+
+### Designing and Maintaining Your Project Ontology
+
+A project ontology  (a.k.a., the codebook) defines the scope, domain, and vocabulary for data, balancing between existing standards and new creations. Wikibase's version control supports the adaptation and maintenance of ontologies.
+
+- Defines objects, characteristics, and relationships
+- Facilitates integration and coherence in knowledge bases
+
+---
+
+<small>*Fig. An example of an ontology to map conversations across social media. *</small>
+
+.center[<img src = 'img/Picture 3.png' width = '90%'></img>]
+
+---
+
+### Designing Collaborative Research Projects with Wikibase
+
+Wikibase supports the entire lifecycle of collaborative research projects, from ontology creation to data entry and querying. 
+
+Critical steps include 
+
+1. ontology creation, 
+2. data entry, 
+3. data query, and 
+4. computational access to data.
+
+- Items and properties define ontology and project data
+- Example: mapping social media interactions
+
+---
+
+### Ontology Creation
+
+Items represent objects, while properties link items or values. 
+
+Statements like 
+
+- (user) – (instance of) → (class) and 
+
+- (user) – (subclass of) → (actor) 
+
+- (@realDonaldTrump) – (instance of) → (user)  
+
+ensure bi-directional relationship coding.
+
+- Metadata recorded under various properties
+- Enables detailed exploration and analysis
+
+
+---
+
+<small>*Fig. Example of data mapping for social media interactions.*</small>
+
+.center[<img src = 'img/Picture 4.png' width = '90%'></img>]
+
+
+
+---
+
+### Data Entry
+
+Data entry is intuitive, requiring minimal technical knowledge and facilitating multidisciplinary collaboration. 
+
+Items and properties are created through a simple interface.
+
+- Accessible to researchers of any discipline
+- Prioritizes subject matter expertise over technical skills
+
+.pull-left[.center[<img src = 'img/Picture 5.png' width = '110%'></img>]]
+
+.pull-right[.center[<img src = 'img/Picture 6.png' width = '110%'></img>]]
+
+
+---
+
+<small>*Fig. A collection of statements from our Wikibase on a social media post.*</small>
+
+.center[<img src = 'img/Picture 9.png' width = '90%'></img>]
+
+
+
+---
+
+### Data Query
+
+Basic exploration is done through property labels or keyword searches, while complex queries use SPARQL. 
+
+For example, with the following SPARQL query, we request 
+
+1. all social media posts (defined by the property instance of (`P4`) social media post (`Q18`)) in the knowledge base, 
+2. along with the themes they have been labelled with (has theme (`P31`)):
+
+```
+SELECT ?post ?theme
+  WHERE {
+   ?post wdt:P4 wd:Q18.
+   ?post wdt:P31 ?theme.
+   }
+```
+
+---
+
+<small>*Fig. Query on live data visualised as an interactive graph of theme co-occurrences.*</small>
+
+.center[<img src = 'img/Picture 7.png' width = '80%'></img>]
+
+
+---
+
+### Computational Access to Data
+
+Wikibase allows programmatic data access, integrating qualitative and quantitative approaches. 
+
+An example pipeline involves manual entry of social media posts, classifier training, and automatic classification with optional qualitative review.
+
+- Enhances mixed-methods research
+- Improves classifier accuracy through human feedback
+
+---
+
+<small>*Fig. Pipeline integrating human and automatic labelling of social media posts.*</small>
+
+.center[<img src = 'img/Picture 8.png' width = '80%'></img>]
+
+<small>From Kong Q, Booth E, Bailo F, et al. (2022) Slipping to the extreme: A mixed method to explain how extreme opinions infiltrate online discussions. *Proceedings of the International AAAI Conference on Web and Social Media* 16(1): 524–535.</small>
+
+
+
+
+
