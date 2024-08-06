@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>How to use Wikibase for Mixed-Methods Research</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Francesco Bailo" />
+    <meta name="date" content="2024-06-25" />
+    <script src="index_files/header-attrs-2.27/header-attrs.js"></script>
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+    <link rel="stylesheet" href="assets/sydney-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/sydney.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# How to use Wikibase for Mixed-Methods Research
+]
+.subtitle[
+## An Interdisciplinary and Collaborative Approach
+]
+.author[
+### Francesco Bailo
+]
+.institute[
+### The University of Sydney
+]
+.date[
+### 25 June 2024
+]
+
+---
+
+
+layout: true
+&lt;div style="position: absolute;left:60px;bottom:11px;color:gray;"&gt;&lt;small&gt;&lt;small&gt;&lt;small&gt;&lt;a href = 'https://fraba.github.io/presentation/2024-USYD/'&gt;fraba.github.io/presentation/2024-USYD &lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/small&gt;&lt;/small&gt;&lt;/small&gt;&lt;/div&gt;
+
+
+
+
+---
+
+## Access slides here &lt;svg viewBox="0 0 512 512" style="height:1em;display:inline-block;position:fixed;top:10;right:10;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+
+.center[.large[[fraba.github.io/presentation/2024-USYD](https://fraba.github.io/presentation/2024-USYD/)]]
+
+
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+
+&lt;p style = "font-size: 80px"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;swarr;&lt;/p&gt;
+
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+---
+class: segue-red
+
+# Forthcoming Book
+
+---
+
+### How to use Wikibase for Mixed-Methods Research: An Interdisciplinary and Collaborative Approach
+
+**Status**: 
+
+- Accepted by Edward Elgar Publishing and to be published (inshallah) in *2025* 
+
+**Authors:** Francesco Bailo, University of Sydney; Emily Booth, University of Technology Sydney; Jennifer Williams, Macquarie University
+
+**Co-authors**: Frankie Yuan, University of Technology Sydney; Marian-Andrei Rizoiu, University of Technology Sydney; Julian Droogan, Macquarie University; Amelia Johns, University of Technology Sydney
+
+---
+
+### Book Description
+
+- This practical guide introduces researchers to Wikibase, a flexible open-source software for data management in collaborative projects. 
+- It supports complex data collection and analysis, ideal for interdisciplinary research teams. 
+- The book integrates theoretical research design with practical application, enhancing data management practices across qualitative, quantitative, and mixed-methods research. 
+- Real-world examples and case studies demonstrate Wikibase’s versatility and effectiveness.
+
+---
+
+### Scope and Aim
+
+**Scope:**
+
+- Introduces Wikibase as collaborative software for project data management.
+- Highlights its capacity to manage complex data through various research phases.
+
+**Aim:**
+
+- Provides a comprehensive resource on Wikibase for interdisciplinary research teams.
+- Promotes Wikibase as an accessible alternative to existing software for managing multimodal research data.
+
+---
+
+### Book Structure
+
+**Chapter Overview:**
+
+1. **Introduction:** Interdisciplinary mixed-methods research, applications, and benefits.
+2. **What is Wikibase:** Overview, history, development, and key features.
+3. **Installing and Maintaining Wikibase:** Step-by-step guide for both technical and non-technical audiences.
+4. **Structuring and Linking Research Data:** Principles of linked data and data linkage.
+5. **Designing and Maintaining Project Ontologies:** Creating and managing schemas and ontologies.
+6. **Collaborative Research Projects:** Practical aspects of using Wikibase for collaborative research.
+7. **Case Study:** Using Wikibase for social media research.
+
+---
+
+### Contribution
+
+**Target:**
+
+- Research teams in academia, government, and non-government organisations
+
+**Unique Contribution:**
+
+- Bridging between theoretical research design and practical software application.
+- Demonstrates Wikibase’s translational capacity between qualitative and quantitative research.
+
+**Relevance:**
+
+- Responds to the growing complexity of research data.
+- Enhances data management practices, fostering collaboration and innovation in interdisciplinary research.
+
+---
+class: segue-red
+
+### How and Why to use Wikibase for research?
+
+---
+
+### Introduction
+
+Wikibase is an open-source extension of MediaWiki, allowing for the creation of semi-structured data items and complex semantic queries.
+
+I'll provide an quick overview of Wikibase as a collaborative research tool, showcasing its application for mapping online conversations.
+
+- Customizable knowledge base
+- Project ontology creation and maintenance
+- SPARQL query service and interactive graph visualization
+- Programmatic access to the knowledge base
+
+---
+
+### What is Wikibase
+
+Wikibase is the software behind Wikidata, enabling the creation of complex, domain-specific knowledge graphs. It extends MediaWiki with a web interface, query services, and tools for data import/export.
+
+- Used for diverse projects (e.g., biomedical data, library resources)
+- Inherits all MediaWiki functionalities
+
+.center[&lt;img src = 'img/Picture 1.png'&gt;&lt;/img&gt;]
+
+---
+
+### Who Needs Wikibase
+
+Wikibase is ideal for collaborative research projects requiring complex knowledge bases. Its flexible structure accommodates various data types and evolves with project data.
+
+- Supports text, images, audio, and videos
+- Semi-structured data adapts over time
+
+---
+
+### What are Linked Data
+
+Linked data enriches data entities with relationships, forming directed graphs for complex queries. It uses triples (subject, predicate, object) to create statements.
+
+- Enables sophisticated data navigation
+- Forms the basis of Linked Open Data (LOD)
+
+&lt;small&gt;*Fig. An example of data entities linked through properties to form a direct graph*&lt;/small&gt;
+.center[&lt;img src = 'img/Picture 2.png' width = '80%'&gt;&lt;/img&gt;]
+
+
+
+---
+
+### How and Where to Install Wikibase
+
+Wikibase can be installed locally or via cloud solutions, with Docker recommended for local installations. The process involves cloning the release pipeline, setting up the directory, editing environment files, and starting the application with Docker commands.
+
+- Two installation options: local or cloud
+- Docker simplifies deployment and sandboxing
+
+The installation will them be accessible via the web authenticating with username/password.
+
+---
+
+### Designing and Maintaining Your Project Ontology
+
+A project ontology  (a.k.a., the codebook) defines the scope, domain, and vocabulary for data, balancing between existing standards and new creations. Wikibase's version control supports the adaptation and maintenance of ontologies.
+
+- Defines objects, characteristics, and relationships
+- Facilitates integration and coherence in knowledge bases
+
+---
+
+&lt;small&gt;*Fig. An example of an ontology to map conversations across social media. *&lt;/small&gt;
+
+.center[&lt;img src = 'img/Picture 3.png' width = '90%'&gt;&lt;/img&gt;]
+
+---
+
+### Designing Collaborative Research Projects with Wikibase
+
+Wikibase supports the entire lifecycle of collaborative research projects, from ontology creation to data entry and querying. 
+
+Critical steps include 
+
+1. ontology creation, 
+2. data entry, 
+3. data query, and 
+4. computational access to data.
+
+- Items and properties define ontology and project data
+- Example: mapping social media interactions
+
+---
+
+### Ontology Creation
+
+Items represent objects, while properties link items or values. 
+
+Statements like 
+
+- (user) – (instance of) → (class) and 
+
+- (user) – (subclass of) → (actor) 
+
+- (@realDonaldTrump) – (instance of) → (user)  
+
+ensure bi-directional relationship coding.
+
+- Metadata recorded under various properties
+- Enables detailed exploration and analysis
+
+
+---
+
+&lt;small&gt;*Fig. Example of data mapping for social media interactions.*&lt;/small&gt;
+
+.center[&lt;img src = 'img/Picture 4.png' width = '90%'&gt;&lt;/img&gt;]
+
+
+
+---
+
+### Data Entry
+
+Data entry is intuitive, requiring minimal technical knowledge and facilitating multidisciplinary collaboration. 
+
+Items and properties are created through a simple interface.
+
+- Accessible to researchers of any discipline
+- Prioritizes subject matter expertise over technical skills
+
+.pull-left[.center[&lt;img src = 'img/Picture 5.png' width = '110%'&gt;&lt;/img&gt;]]
+
+.pull-right[.center[&lt;img src = 'img/Picture 6.png' width = '110%'&gt;&lt;/img&gt;]]
+
+
+---
+
+&lt;small&gt;*Fig. A collection of statements from our Wikibase on a social media post.*&lt;/small&gt;
+
+.center[&lt;img src = 'img/Picture 9.png' width = '90%'&gt;&lt;/img&gt;]
+
+
+
+---
+
+### Data Query
+
+Basic exploration is done through property labels or keyword searches, while complex queries use SPARQL. 
+
+For example, with the following SPARQL query, we request 
+
+1. all social media posts (defined by the property instance of (`P4`) social media post (`Q18`)) in the knowledge base, 
+2. along with the themes they have been labelled with (has theme (`P31`)):
+
+```
+SELECT ?post ?theme
+  WHERE {
+   ?post wdt:P4 wd:Q18.
+   ?post wdt:P31 ?theme.
+   }
+```
+
+---
+
+&lt;small&gt;*Fig. Query on live data visualised as an interactive graph of theme co-occurrences.*&lt;/small&gt;
+
+.center[&lt;img src = 'img/Picture 7.png' width = '80%'&gt;&lt;/img&gt;]
+
+
+---
+
+### Computational Access to Data
+
+Wikibase allows programmatic data access, integrating qualitative and quantitative approaches. 
+
+An example pipeline involves manual entry of social media posts, classifier training, and automatic classification with optional qualitative review.
+
+- Enhances mixed-methods research
+- Improves classifier accuracy through human feedback
+
+---
+
+&lt;small&gt;*Fig. Pipeline integrating human and automatic labelling of social media posts.*&lt;/small&gt;
+
+.center[&lt;img src = 'img/Picture 8.png' width = '80%'&gt;&lt;/img&gt;]
+
+&lt;small&gt;From Kong Q, Booth E, Bailo F, et al. (2022) Slipping to the extreme: A mixed method to explain how extreme opinions infiltrate online discussions. *Proceedings of the International AAAI Conference on Web and Social Media* 16(1): 524–535.&lt;/small&gt;
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="assets/remark-zoom.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "4:3",
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
