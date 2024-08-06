@@ -126,7 +126,7 @@ class: segue-red
   
   - `r Citet(myBib,c("mueller_Hard_2022"))`: Employed natural language processing to predict armed conflict using newspaper text data, highlighting the predictive power of media-generated data.
   
-#### **ViEWS**
+#### ViEWS
 
 - `r Citet(myBib,c("hegre_ViEWS_2019"))`: Introduced ViEWS, a political violence early-warning system combining various models.
 
@@ -134,37 +134,53 @@ class: segue-red
 
 - Provides detailed three-year forecasts for African regions, identifying both persistent and emergent conflict zones.
 
-- **State-space approach**:
+---
+
+#### State-space approach
 
 - `r Citet(myBib,c("lindholm_Predicting_2022"))`: Explored predictive modelling using a state-space approach to estimate monthly risk and severity of political violence.
 
 - Granular predictions at the grid-cell level offer nuanced understanding of violence probabilities and localized forecasting.
 
+#### Forecasting methods overview
+
+- `r Citet(myBib,c("schrodt_Databased_2013"))`: Broad overview of forecasting methods for armed violence.
+- Highlights diverse analytical techniques and the need for innovative computational approaches.
+  
+
+
+#### Pre-conflict interactions
+
+- `r Citet(myBib,c("dorazio_Kickoff_2015"))`: Used data from the Integrated Crisis Early Warning System to identify patterns that forecast intra-state conflict.
+- Methodological approach to conflict prediction complementing broader models.
+
 ---
 
-- **Forecasting methods overview**:
-  - Schrodt, Yonamine, and Bagozzi (2013): Broad overview of forecasting methods for armed violence.
-  - Highlights diverse analytical techniques and the need for innovative computational approaches.
+#### Predictive model expectations
 
-- **Pre-conflict interactions**:
-  - D’Orazio and Yonamine (2015): Used data from the Integrated Crisis Early Warning System to identify patterns that forecast intra-state conflict.
-  - Methodological approach to conflict prediction complementing broader models.
+- `r Citet(myBib,c("cederman_Predicting_2017"))`: Examined realistic scopes for predictive models of armed conflict.
+- Suggested short-term forecasts within confined geographical and temporal limits are feasible and useful.
 
-- **Predictive model expectations**:
-  - Cederman and Weidmann (2017): Examined realistic scopes for predictive models of armed conflict.
-  - Suggested short-term forecasts within confined geographical and temporal limits are feasible and useful.
+#### Violence early-warning systems
 
-- **Violence early-warning systems**:
-  - Bazzi et al. (2022): Evaluated violence early-warning systems using local data from Colombia and Indonesia.
-  - Found challenges in predicting new outbreaks, highlighting limitations of predictive models.
+- `r Citet(myBib,c("bazzi_Promise_2022"))`: Evaluated violence early-warning systems using local data from Colombia and Indonesia.
+- Found challenges in predicting new outbreaks, highlighting limitations of predictive models.
 
-- **Domestic turmoil and international conflict**:
-  - Amarasinghe (2022): Investigated how governments use foreign policy to divert attention from domestic issues.
-  - Provides a broader socio-political context to conflict dynamics.
+#### Domestic turmoil and international conflict
 
-- **Conclusion**:
-  - These studies enhance understanding of violence measurement and prediction complexities.
-  - Highlight the potential of integrating various data sources, including social media, into predictive models for real-time, granular insights crucial for early warning systems and strategic interventions.
+- `r Citet(myBib,c("amarasinghe_Diverting_2022"))`: Investigated how governments use foreign policy to divert attention from domestic issues.
+- Provides a broader socio-political context to conflict dynamics.
+
+---
+
+.content-box-yellow[
+
+#### Conclusion
+
+- These studies enhance understanding of violence measurement and prediction complexities.
+- Highlight the potential of integrating various data sources, including social media, into predictive models for real-time, granular insights crucial for early warning systems and strategic interventions.
+
+]
 
 ---
 
