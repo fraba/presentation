@@ -27,7 +27,8 @@ layout: true
 
 ```{r setup, include=FALSE, cache=FALSE, message=FALSE}
 
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, 
+                      cache = TRUE,
                       dev = 'svg', out.width = "45%", fig.width = 6,
                       fig.align="center")
 
@@ -225,16 +226,131 @@ class: segue-red
   
   b. published within the timeframe of interest.
 
+--
+
 4. Collect all comments posted to the YouTube videos identified in 3.
 
-4. Retrieve information from the texts of the comments to estimate of perceived violence. `r emo::ji("construction")`
+--
 
-5. Aggregate this information to compute a set of measures. `r emo::ji("construction")`
+5. Retrieve information from the texts of the comments to estimate of perceived violence. `r emo::ji("construction")`
+
+--
+
+6. Aggregate this information to compute a set of measures. `r emo::ji("construction")`
 
 
 ---
 
+class: segue-red
 
+# YouTube: Data source justificaiton
+
+---
+
+## Why using YouTube
+
+.content-box-yellow[
+
+### Data collection is practical
+
+1. API queries for videos with a geographic parameter (`lon+lat` + `radius`) are available. 
+
+2. A research program to increase API quotas is also available.
+
+]
+
+.content-box-purple[
+
+### Data is useful
+
+3. YouTube is one of the most diffuse **social media application**in the world. Users not only use it to watch videos, but of course they also use it to comment videos.
+
+4. YouTube is probably the social media application with the **higher average penetration** in the world. This makes it an excellent data source for developing world-wide measures. 
+
+]
+
+---
+
+class: segue-red
+
+# Social media use: Digital News Report 2024
+
+---
+
+## Digital News Report 2024: Mexico
+
+<iframe title="Top social, messaging, and video networks" aria-label="Table" id="datawrapper-chart-zq8Fx" src="https://datawrapper.dwcdn.net/zq8Fx/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="495" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+
+
+---
+
+## Digital News Report 2024: UK
+
+<iframe title="Top social, messaging, and video networks" aria-label="Table" id="datawrapper-chart-uzl3m" src="https://datawrapper.dwcdn.net/uzl3m/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="435" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+
+---
+
+## Digital News Report 2024: India
+
+<iframe title="Top social, messaging, and video networks" aria-label="Table" id="datawrapper-chart-Zi3T5" src="https://datawrapper.dwcdn.net/Zi3T5/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="515" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+
+---
+
+## Digital News Report 2024: Malaysia
+
+<iframe title="Top social, messaging, and video networks" aria-label="Table" id="datawrapper-chart-rU1jG" src="https://datawrapper.dwcdn.net/rU1jG/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="496" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+
+---
+
+## Digital News Report 2024: Nigeria
+
+<iframe title="Top social, messaging, and video networks" aria-label="Table" id="datawrapper-chart-WCsWl" src="https://datawrapper.dwcdn.net/WCsWl/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="477" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+
+---
+
+## Pew Research Center: US Social Media Fact Sheet 2023
+
+```{r echo = FALSE , dev = 'svg', fig.width = 10, fig.height = 4, out.width = "100%"}
+library(tidyverse)
+library(readr)
+library(cowplot)
+
+# Load the CSV files
+age_data <- read_csv('data/social_media_usage_by_age_group.csv')
+location_data <- read_csv('data/social_media_usage_by_location.csv')
+
+# Select the most frequently used social media applications for comparison
+selected_columns_age <- age_data %>%
+  select(`Age Group`, YouTube, Facebook, Instagram, Snapchat, TikTok)
+
+selected_columns_location <- location_data %>%
+  select(Location, YouTube, Facebook, Instagram, Snapchat, TikTok)
+
+# Reshape data for age group comparison
+age_data_long <- selected_columns_age %>%
+  pivot_longer(cols = -`Age Group`, names_to = "Platform", values_to = "Usage")
+
+# Reshape data for location comparison
+location_data_long <- selected_columns_location %>%
+  pivot_longer(cols = -Location, names_to = "Platform", values_to = "Usage")
+
+plot_grid(
+  # Plot comparison by Age Group
+  ggplot(age_data_long, aes(x=`Age Group`, y=Usage, fill=Platform)) +
+    geom_bar(stat="identity", position=position_dodge()) +
+    theme_bw() +
+    labs(title="Social Media Usage by Age Group", x="Age Group", y="Percentage Usage"),
+  
+  # Plot comparison by Location
+  ggplot(location_data_long, aes(x=Location, y=Usage, fill=Platform)) +
+    geom_bar(stat="identity", position=position_dodge()) +
+    theme_bw() +
+    labs(title="Social Media Usage by Location", x="Location", y="Percentage Usage")
+)
+
+```
+
+[Source: Survey of U.S. adults conducted May 19-Sept. 5, 2023](https://www.pewresearch.org/internet/fact-sheet/social-media/?tabItem=3345cffa-94a6-4e74-9272-70dee1e0e213)
 
 ---
 
@@ -243,6 +359,223 @@ class: segue-red
 # Research Approach
 
 ---
+
+## 1. Set a population grid for the area of interest (Mexico)
+
+```{r}
+
+library(sf)
+library(lwgeom)
+library(raster)
+
+polygon_sf <- 
+  read_sf("data/state-shape/mexican-states.shp")
+
+polygon_sf <- 
+  st_transform(polygon_sf, 4326)
+
+```
+
+```{r}
+r <- 
+  raster("data/pop-grid/mex_ppp_2020_1km_Aggregated.tif")
+r <- 
+  aggregate(r, fact = 10, fun = sum)
+r_df <- 
+  as.data.frame(rasterToPoints(r))
+names(r_df) <- 
+  c("x", "y", "value")
+r_df <- 
+  r_df %>% 
+  mutate(across(c(x, y), round, digits = 4))
+```
+
+
+```{r}
+r_df <- 
+  r_df %>% 
+  mutate(include = value>100) 
+```
+
+```{r fig.width = 7.5, fig.height=4, out.width="90%"}
+ggplot() +
+  geom_tile(data = r_df, aes(x = x, y = y, fill = sqrt(value))) +
+  geom_sf(data = polygon_sf, fill = NA) +
+  scale_fill_distiller(palette ="Spectral") +
+  coord_sf() +
+  labs(title = sprintf("10 km population grid of Mexico\n(2020, n = %s)", 
+                       format(nrow(r_df), 
+                              big.mark = ",")), 
+       x = NULL, y = NULL) +
+  theme_minimal()
+```
+
+---
+
+## 2. Set a population density threshold
+
+```{r fig.width = 7.5, fig.height=4, out.width="90%"}
+
+ggplot() +
+  geom_tile(data = r_df, aes(x = x, y = y, fill = include)) +
+  geom_sf(data = polygon_sf, fill = NA) +
+  scale_fill_brewer(palette ="Set2") +
+  coord_sf() +
+  labs(title = sprintf("Grids with more than 100 inhabitants\n(n = %s)", 
+                       format(sum(r_df$include),
+                              big.mark = ",")), 
+       fill = NULL, x = NULL, y = NULL) +
+  theme_minimal()
+```
+
+
+---
+
+## 3. Identifying YouTube videos 
+
+  a. associated with each cell of the grid within the geographic area of interest using the YouTube API; and 
+  
+  b. published within the timeframe of interest.
+  
+  
+```{r fig.width = 7.5, fig.height=4, out.width="80%"}
+
+center_x <- -100.24292  # Example coordinates
+center_y <- 23.18292
+radius <- 7070  # Radius in meters (or the units of your raster's CRS)
+
+# Create the circle as an sf object
+center_point <- 
+  st_sfc(st_point(c(center_x, center_y)), crs = 4326)
+circle <- 
+  st_buffer(center_point, dist = radius)
+
+# Convert the circle to a data frame
+circle_df <- 
+  as.data.frame(st_as_sf(circle))
+
+# Plot using ggplot2
+ggplot() +
+  geom_tile(data = r_df, aes(x = x, y = y, fill = value>100), colour = "black") +
+  geom_sf(data = circle, colour = "red", fill = 'red', alpha = .5) +
+  geom_sf(data = polygon_sf, fill = NA) +
+  scale_fill_brewer(palette ="Set3") +
+  coord_sf(xlim = c(-100.2923-(100.2923*.01), 
+                    -100.1934+(100.2923*.01)), 
+           ylim = c(23.13724-(23.13724*.03),
+                    23.22858+(23.22858*.03))) +
+  labs(title = "7.07 km radius of one YouTube query ", fill = "pop. > 100", x = NULL, y = NULL) +
+  theme_minimal()
+```
+
+
+---
+
+## 4. Collect all comments posted to the YouTube videos identified in 3.
+
+.content-box-green[
+
+### Three steps in terms of API calls
+
+1. `https://www.googleapis.com/youtube/v3/search`
+  * Video search results filtered by geographic coordinates, radius, and date (`location`, `locationRadius`, `publishedAfter`, and `publishedBefore` parameters).
+
+2. `https://www.googleapis.com/youtube/v3/videos`
+  * Relevant metadata about all videos returned from the video search.
+  
+3. `https://www.googleapis.com/youtube/v3/commentThreads`
+  * Data and relevant metadata of the comments returned by the video search.
+  
+]
+
+---
+
+## Distribution of YouTube videos and comments by publication hour (2023-01 to 2023-12)
+
+All times are Mexico City times
+
+.pull-left[Videos<br><img src = 'assets/unnamed-chunk-10-1.png'>]
+.pull-right[Comments<br><img src = 'assets/unnamed-chunk-16-1.png'>]
+
+
+---
+
+## Distribution of YouTube comments by location (2023-01 to 2023-12)
+
+```{r fig.width = 7.5, fig.height=4, out.width="90%"}
+qwraps2::lazyload_cache_labels("unnamed-chunk-21", path = "/Users/fbai9728/Documents/GitHub/youtube-api/YouTube-API/2023-01-collection/202301_202312_05_mx_summary_cache/latex")
+ggplot() +
+  geom_tile(data = comments_by_all_query, aes(x = longitude, 
+                                           y = latitude, 
+                                           fill = n_comments_cat)) +
+  scale_fill_brewer(palette = 'Spectral', direction = -1) +
+  geom_sf(data = polygon_sf, fill = NA) +
+  labs(fill = NULL) +
+    theme_minimal()
+```
+
+
+---
+
+## 5. Retrieve information from the texts of the comments to estimate of perceived violence. `r emo::ji("construction")`
+
+### Dictionary based approach
+
+1. We started with a list of seed terms related to violence
+
+2. Using Wordnet we expanded to include all words within 2 steps from the seed words.
+
+3. We weight each word to reflect the distance from the seed words: 1 for the original seed words, 0.5 for words with distance = 1 to the seed words and 0.25 for words with distance = 2 from the seed words.
+
+$$L = \{ (e_1, w_1), (e_2, w_2), \ldots, (e_n, w_n) \}$$
+---
+
+.center[<img src = 'assets/wordnet.png' width = '100%'></img>]
+
+---
+
+4\. We assign to each comment $i$ a score based on the presence of word :
+
+$$\text{Comment Score} = \sum_{i=1}^{n} (c_i \cdot w_i)$$
+
+- $c_i$ is the count of the $i$-th word in the document.
+- $w_i$ is the weight associated with the $i$-th word in the list $L$.
+- $n$ is the total number of words in the list $L$.
+
+
+---
+
+### 6. Aggregate this information to compute measures. `r emo::ji("construction")`
+
+1. We average comments for **commenter** and by day.
+
+2. We jitter **commenters** within the geographic boundary of the cell associated to the commented video.
+
+3. We use the inverse distance weighted (IDW) technique to map the entire grid (this can be done for grids of different granularity)
+
+---
+
+### Index based on the comments from 2024-05
+
+```{r fig.width = 7.5, fig.height=4, out.width="90%"}
+
+idw <- 
+  read.csv("data/202401-202406-lonlat_idw_202405_50km.csv")
+ggplot(idw) + 
+  geom_tile(aes(x = X, y = Y, fill = sqrt(pred))) +
+  scale_fill_distiller(palette = "YlGnBu", direction = 1) +
+  geom_sf(data = polygon_sf, fill = NA, alpha = .5) +
+  coord_sf() + 
+  theme_void() +
+  theme(legend.position = c(.8,.8)) +
+  labs(fill = 'index') 
+```
+ 
+
+
+
+
+
 
 ---
 
@@ -255,7 +588,17 @@ class: segue-red
 .small[
 
 ```{r, results = "asis", echo=FALSE}
-PrintBibliography(myBib)
+PrintBibliography(myBib, end = 7)
+```
+
+]
+
+---
+
+.small[
+
+```{r, results = "asis", echo=FALSE}
+PrintBibliography(myBib, start = 8)
 ```
 
 ]

@@ -3,7 +3,7 @@ title: "ARIN3620</br>Researching Digital Cultures"
 subtitle: "Week 09</br>Studying platforms"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 2, 2023 (updated: `r Sys.Date()`)"
+date: "Semester 2, 2024 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
