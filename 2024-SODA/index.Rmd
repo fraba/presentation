@@ -572,11 +572,6 @@ ggplot(idw) +
 ```
  
 
-
-
-
-
-
 ---
 
 class: segue-red
