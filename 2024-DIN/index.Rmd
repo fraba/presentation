@@ -1,0 +1,370 @@
+---
+title: "Using YouTube Comments to Measure the Geographic Spread of Violence"
+subtitle: ""
+author: "Francesco Bailo"
+date: "8 August 2023"
+institute: "The University of Sydney<br><br><br>DIN Industry Forum - Information Warfare @ UTS"
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+    self_contained: false # if true, fonts will be stored locally
+    seal: true # show a title slide with YAML information
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
+    nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: false # disable slide transitions by scrolling
+---
+
+layout: true
+<div style="position: absolute;left:60px;bottom:11px;color:gray;"><small><small><small><a href = 'https://fraba.github.io/presentation/2024-DIN/'>fraba.github.io/presentation/2024-DIN `r icons::fontawesome("link", style = "solid")`</a></small></small></small></div>
+
+
+```{r setup, include=FALSE, cache=FALSE, message=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, 
+                      cache = TRUE,
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = 'authoryear',
+           style = "markdown",
+           hyperlink = FALSE,
+           dashed = FALSE,
+           no.print.fields = c("urldate","isbn","issn"))
+myBib <- ReadBib("assets/biblatex.bib", check = FALSE)
+top_icon = function(x) {
+  icons::icon_style(
+    icons::fontawesome(x),
+    position = "fixed", top = 10, right = 10
+  )
+}
+```
+
+---
+
+## Access slides here `r top_icon("link")`
+
+</br></br></br></br></br></br>
+
+.center[.large[[fraba.github.io/presentation/2024-DIN](https://fraba.github.io/presentation/2024-DIN/)]]
+
+
+</br></br></br></br>
+
+<p style = "font-size: 80px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&swarr;</p>
+
+---
+
+class: segue-red
+
+# Research goal and approach
+
+---
+
+## Research goal
+
+.content-box-yellow[
+
+### a. Developing a highly world-wide granular set of measures of perceived violence, with precise spatial and temporal resolution.
+
+1. Measures will differentiate the **vector** of perceived violence and the **actors** involved
+
+2. Measures will anchor the perceived violence to public **events**.
+
+### b. Fine-tuning the measure against alternative measures to systematic biases of each approach
+
+
+### c. Understand how to integrate alternative measures for improving real-time sensing and forecasting 
+
+]
+
+---
+
+## Research approach
+
+1. Set a population grid for the area of interest (i.e., country);
+
+--
+
+2. Set a population density threshold for areas to exclude from data collection because too scarcely populated;
+
+--
+
+3. Identifying YouTube videos 
+
+  a. associated with each cell of the grid within the geographic area of interest using the YouTube API; and 
+  
+  b. published within the timeframe of interest.
+
+--
+
+4. Collect all comments posted to the YouTube videos identified in 3.
+
+--
+
+5. Retrieve information from the texts of the comments to estimate of perceived violence. `r emo::ji("construction")`
+
+--
+
+6. Aggregate this information to compute a set of measures. `r emo::ji("construction")`
+
+
+---
+
+class: segue-red
+
+# YouTube: Data source justification
+
+---
+
+## Why using YouTube
+
+.content-box-yellow[
+
+### Data collection is practical
+
+1. API queries for videos with a geographic parameter (`lon+lat` + `radius`) are available. 
+
+2. A research program to increase API quotas is also available.
+
+]
+
+.content-box-purple[
+
+### Data is useful
+
+3. YouTube is one of the most diffuse **social media application**in the world. Users not only use it to watch videos, but of course they also use it to comment videos.
+
+4. YouTube is probably the social media application with the **higher average penetration** in the world. This makes it an excellent data source for developing world-wide measures. 
+
+]
+
+---
+
+class: segue-red
+
+# Research Approach
+
+---
+
+## 1. Set a population grid for the area of interest (Mexico)
+
+```{r}
+
+library(sf)
+library(lwgeom)
+library(raster)
+
+polygon_sf <- 
+  read_sf("data/state-shape/mexican-states.shp")
+
+polygon_sf <- 
+  st_transform(polygon_sf, 4326)
+
+```
+
+```{r}
+r <- 
+  raster("data/pop-grid/mex_ppp_2020_1km_Aggregated.tif")
+r <- 
+  aggregate(r, fact = 10, fun = sum)
+r_df <- 
+  as.data.frame(rasterToPoints(r))
+names(r_df) <- 
+  c("x", "y", "value")
+r_df <- 
+  r_df %>% 
+  mutate(across(c(x, y), round, digits = 4))
+```
+
+
+```{r}
+r_df <- 
+  r_df %>% 
+  mutate(include = value>100) 
+```
+
+```{r fig.width = 7.5, fig.height=4, out.width="90%"}
+ggplot() +
+  geom_tile(data = r_df, aes(x = x, y = y, fill = sqrt(value))) +
+  geom_sf(data = polygon_sf, fill = NA) +
+  scale_fill_distiller(palette ="Spectral") +
+  coord_sf() +
+  labs(title = sprintf("10 km population grid of Mexico\n(2020, n = %s)", 
+                       format(nrow(r_df), 
+                              big.mark = ",")), 
+       x = NULL, y = NULL) +
+  theme_minimal()
+```
+
+---
+
+## 2. Set a population density threshold
+
+```{r fig.width = 7.5, fig.height=4, out.width="90%"}
+
+ggplot() +
+  geom_tile(data = r_df, aes(x = x, y = y, fill = include)) +
+  geom_sf(data = polygon_sf, fill = NA) +
+  scale_fill_brewer(palette ="Set2") +
+  coord_sf() +
+  labs(title = sprintf("Grids with more than 100 inhabitants\n(n = %s)", 
+                       format(sum(r_df$include),
+                              big.mark = ",")), 
+       fill = NULL, x = NULL, y = NULL) +
+  theme_minimal()
+```
+
+
+---
+
+## 3. Identifying YouTube videos 
+
+  a. associated with each cell of the grid within the geographic area of interest using the YouTube API; and 
+  
+  b. published within the timeframe of interest.
+  
+  
+```{r fig.width = 7.5, fig.height=4, out.width="80%"}
+
+center_x <- -100.24292  # Example coordinates
+center_y <- 23.18292
+radius <- 7070  # Radius in meters (or the units of your raster's CRS)
+
+# Create the circle as an sf object
+center_point <- 
+  st_sfc(st_point(c(center_x, center_y)), crs = 4326)
+circle <- 
+  st_buffer(center_point, dist = radius)
+
+# Convert the circle to a data frame
+circle_df <- 
+  as.data.frame(st_as_sf(circle))
+
+# Plot using ggplot2
+ggplot() +
+  geom_tile(data = r_df, aes(x = x, y = y, fill = value>100), colour = "black") +
+  geom_sf(data = circle, colour = "red", fill = 'red', alpha = .5) +
+  geom_sf(data = polygon_sf, fill = NA) +
+  scale_fill_brewer(palette ="Set3") +
+  coord_sf(xlim = c(-100.2923-(100.2923*.01), 
+                    -100.1934+(100.2923*.01)), 
+           ylim = c(23.13724-(23.13724*.03),
+                    23.22858+(23.22858*.03))) +
+  labs(title = "7.07 km radius of one YouTube query ", fill = "pop. > 100", x = NULL, y = NULL) +
+  theme_minimal()
+```
+
+
+---
+
+## 4. Collect all comments posted to the YouTube videos identified in 3.
+
+.content-box-green[
+
+### Three steps in terms of API calls
+
+1. `https://www.googleapis.com/youtube/v3/search`
+  * Video search results filtered by geographic coordinates, radius, and date (`location`, `locationRadius`, `publishedAfter`, and `publishedBefore` parameters).
+
+2. `https://www.googleapis.com/youtube/v3/videos`
+  * Relevant metadata about all videos returned from the video search.
+  
+3. `https://www.googleapis.com/youtube/v3/commentThreads`
+  * Data and relevant metadata of the comments returned by the video search.
+  
+]
+
+---
+
+## Distribution of YouTube videos and comments by publication hour (2023-01 to 2023-12)
+
+All times are Mexico City times
+
+.pull-left[Videos<br><img src = 'assets/unnamed-chunk-10-1.png'>]
+.pull-right[Comments<br><img src = 'assets/unnamed-chunk-16-1.png'>]
+
+
+---
+
+## Distribution of YouTube comments by location (2023-01 to 2023-12)
+
+```{r fig.width = 7.5, fig.height=4, out.width="90%"}
+qwraps2::lazyload_cache_labels("unnamed-chunk-21", path = "/Users/fbai9728/Documents/GitHub/youtube-api/YouTube-API/2023-01-collection/202301_202312_05_mx_summary_cache/latex")
+ggplot() +
+  geom_tile(data = comments_by_all_query, aes(x = longitude, 
+                                           y = latitude, 
+                                           fill = n_comments_cat)) +
+  scale_fill_brewer(palette = 'Spectral', direction = -1) +
+  geom_sf(data = polygon_sf, fill = NA) +
+  labs(fill = NULL) +
+    theme_minimal()
+```
+
+
+---
+
+## 5. Retrieve information from the texts of the comments to estimate of perceived violence. `r emo::ji("construction")`
+
+### Dictionary based approach
+
+1. We started with a list of seed terms related to violence
+
+2. Using Wordnet we expanded to include all words within 2 steps from the seed words.
+
+3. We weight each word to reflect the distance from the seed words: 1 for the original seed words, 0.5 for words with distance = 1 to the seed words and 0.25 for words with distance = 2 from the seed words.
+
+$$L = \{ (e_1, w_1), (e_2, w_2), \ldots, (e_n, w_n) \}$$
+---
+
+.center[<img src = 'assets/wordnet.png' width = '100%'></img>]
+
+---
+
+4\. We assign to each comment $i$ a score based on the presence of word :
+
+$$\text{Comment Score} = \sum_{i=1}^{n} (c_i \cdot w_i)$$
+
+- $c_i$ is the count of the $i$-th word in the document.
+- $w_i$ is the weight associated with the $i$-th word in the list $L$.
+- $n$ is the total number of words in the list $L$.
+
+
+---
+
+### 6. Aggregate this information to compute measures. `r emo::ji("construction")`
+
+1. We average comments for **commenter** and by day.
+
+2. We jitter **commenters** within the geographic boundary of the cell associated to the commented video.
+
+3. We use the inverse distance weighted (IDW) technique to map the entire grid (this can be done for grids of different granularity)
+
+---
+
+### Index based on the comments from 2024-05
+
+```{r fig.width = 7.5, fig.height=4, out.width="90%"}
+
+idw <- 
+  read.csv("data/202401-202406-lonlat_idw_202405_50km.csv")
+ggplot(idw) + 
+  geom_tile(aes(x = X, y = Y, fill = sqrt(pred))) +
+  scale_fill_distiller(palette = "YlGnBu", direction = 1) +
+  geom_sf(data = polygon_sf, fill = NA, alpha = .5) +
+  coord_sf() + 
+  theme_void() +
+  theme(legend.position = c(.8,.8)) +
+  labs(fill = 'index') 
+```
+ 
