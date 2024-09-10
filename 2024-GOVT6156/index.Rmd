@@ -67,6 +67,43 @@ top_icon = function(x) {
 
 class: segue-red
 
+# Online Political Participation `r Cite(myBib,c("ruessOnlinePoliticalParticipation2023"))` 
+
+
+
+---
+
+## What is Political Participation?
+
+Political participation includes a variety of activities citizens undertake **to influence political processes**, government decisions, and the selection of political representatives. Traditional forms of participation include:
+  - **Voting**
+  - **Campaigning**
+  - **Protesting**
+
+- Political participation has expanded over time from election-related activities to include unconventional acts such as **volunteering** or **participating in social causes**.
+
+- **Offline participation** often involves higher costs (time, effort, resources) and is focused on influencing government policies.
+
+- Emphasis on **active modes** of behaviour, excluding passive forms like consuming political news.
+
+
+---
+## What is Online Political Participation?
+
+Online political participation (OPP) refers to political activities that occur within the digital sphere. These include actions that are **unique to online platforms**, such as:
+- **Hashtag activism**
+- **Sharing political content on social media**
+- **Signing online petitions**
+
+- OPP includes both **active** and **passive** behaviours, such as posting content or merely reading political news.
+- Online participation is more **platform-specific** and often tied to the **affordances** of different digital platforms (e.g., Twitter, Facebook, YouTube).
+- It tends to involve **expressive** activities and **low-cost** actions, which critics argue may lack the impact of traditional offline political acts.
+
+---
+
+
+class: segue-red
+
 # Twenty Years of Digital Media Effects on Civic and Political Participation `r Cite(myBib,c("boulianne_Twenty_2020"))`
 
 ---
