@@ -30,8 +30,24 @@ background-size: 95%
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
                       dev = 'svg', out.width = "45%", fig.width = 6,
                       fig.align="center")
+top_icon = function(x) {
+  icons::icon_style(
+    icons::fontawesome(x),
+    position = "fixed", top = 10, right = 10
+  )
+}
 
 ```
+
+## Access slides here `r top_icon("link")`
+
+</br></br></br></br></br></br>
+
+.center[.large[[fraba.github.io/presentation/2024-GOVT2901](https://fraba.github.io/presentation/2024-GOVT2901/)]]
+
+
+</br></br></br></br>
+
 
 ---
 
