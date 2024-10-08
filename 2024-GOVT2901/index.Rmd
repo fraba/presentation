@@ -1,7 +1,7 @@
 ---
 title: "GOVT2901</br>Contemporary Issues in Political Science and International Relations"
 subtitle: "Week 10</br>Artificial Intelligence"
-author: "Francesco Bailo (from slides prepared by Jamie Roberts)"
+author: "Francesco Bailo (some slides prepared by Jamie Roberts)"
 institute: "The University of Sydney"
 date: "Semester 2, 2024 (updated: `r Sys.Date()`)"
 output:
