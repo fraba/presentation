@@ -3,7 +3,7 @@ title: "Breaking out of Legacy Mobilization Networks"
 subtitle: "How the Internet Reaches
 and Activates the Politically Disengaged"
 author: "Francesco Bailo (University of Sydney)"
-date: "8 August 2023"
+date: "24 October 2023"
 institute: "Institute for Culture and Society - Western Sydney University"
 output:
   xaringan::moon_reader:
