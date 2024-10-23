@@ -7,7 +7,8 @@
    width="960"
    height="480"
    viewBox="0 0 960 480"
-   sodipodi:docname="figure_5.pdf"
+   sodipodi:docname="rq3.svg"
+   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -257,7 +258,17 @@
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1">
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.2280994"
+     inkscape:cx="655.94021"
+     inkscape:cy="290.15761"
+     inkscape:window-width="1277"
+     inkscape:window-height="847"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g1">
     <inkscape:page
        x="0"
        y="0"
@@ -567,6 +578,13 @@
        style="fill:none;stroke:#eeeeed;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,254.02667,184.52)"
        clip-path="url(#clipPath75)" />
+    <rect
+       style="opacity:0.375;fill:#ffff00;stroke:#000000;stroke-width:0.592984;stroke-linecap:round;stroke-linejoin:bevel;paint-order:fill markers stroke"
+       id="rect573-0"
+       width="890.44165"
+       height="16.948254"
+       x="59.185955"
+       y="189.83095" />
     <path
        id="path76"
        d="M 0,0 V 86.68"
@@ -619,8 +637,8 @@
        transform="matrix(1.3333333,0,0,-1.3333333,796.42667,204.96)" />
     <path
        id="path86"
-       d="M 0,0 H -84.93"
-       style="fill:none;stroke:#100f0d;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       d="M 0,0 H -84.93 M -1.3133046,-120.32781 H -65.010806"
+       style="fill:#000000;stroke:#100f0d;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,796.42667,198.61333)" />
     <path
        id="path87"
@@ -758,12 +776,6 @@
        style="fill:none;stroke:#eeeeed;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.3333333,0,0,-1.3333333,254.02667,372.62667)"
        clip-path="url(#clipPath118)" />
-    <path
-       id="path119"
-       d="M 0,0 H 524"
-       style="fill:none;stroke:#eeeeed;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       transform="matrix(1.3333333,0,0,-1.3333333,254.02667,358.53333)"
-       clip-path="url(#clipPath120)" />
     <path
        id="path121"
        d="M 0,0 H 524"
@@ -1280,5 +1292,32 @@
          y="0"
          sodipodi:role="line"
          id="tspan210">predictor</tspan></text>
+    <rect
+       style="opacity:0.375;fill:#ffff00;stroke:#000000;stroke-width:0.592984;stroke-linecap:round;stroke-linejoin:bevel;paint-order:fill markers stroke"
+       id="rect573"
+       width="890.44165"
+       height="16.948254"
+       x="61.750103"
+       y="30.233444" />
+    <path
+       id="path119"
+       d="M 0,0 H 524"
+       style="fill:none;stroke:#eeeeed;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.3333333,0,0,-1.3333333,254.02667,358.53333)"
+       clip-path="url(#clipPath120)" />
+    <rect
+       style="opacity:0.375;fill:#ffff00;stroke:#000000;stroke-width:0.607437;stroke-linecap:round;stroke-linejoin:bevel;paint-order:fill markers stroke"
+       id="rect573-3"
+       width="935.17297"
+       height="16.933802"
+       x="15.913184"
+       y="350.18668" />
+    <rect
+       style="opacity:1;fill:#000000;stroke:#000000;stroke-width:0.632;stroke-linecap:round;stroke-linejoin:bevel;paint-order:fill markers stroke"
+       id="rect803"
+       width="112.65206"
+       height="0.89762598"
+       x="668.28259"
+       y="358.15277" />
   </g>
 </svg>

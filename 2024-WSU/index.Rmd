@@ -68,8 +68,11 @@ top_icon = function(x) {
 
 ## Introduction
 ### Research Problem
-- Question: How does the Internet mobilise disengaged voters outside traditional political networks?
-- Background: Decline of traditional party mobilisation and rise of anti-establishment parties
+
+- Question: How can the Internet contribute to mobilise disengaged voters outside traditional political networks?
+
+- Background: **Decline** of traditional party mobilisation and rise of **anti-establishment parties**
+
 - Focus: Internet as a tool for organising outside traditional networks
 
 ---
@@ -83,74 +86,12 @@ top_icon = function(x) {
 
 ---
 
-## Internet as a New Mobilisation Tool
+## Internet as an Alternative Mobilisation Tool
 ### Internet Affordances for Political Action
 - Facilitates the spread of information at scale
 - Reduces coordination costs for collective action
 - However, lacks dense, strong-tie networks found in social capital
-- Online networks are more individualised and less reciprocal
-
----
-
-## Hypotheses Overview
-### Hypothesis 1: Internet vs. Social Capital Networks
-- Internet-mediated coordination is more challenging in the absence of social capital
-### Hypothesis 2: Media's Role in Mobilisation
-- News media attention can temporarily boost Internet networks
-### Hypothesis 3: Diffusion of Political Expertise
-- Internet can mirror the role of legacy networks in mobilising voters
-**Figure Placeholder:** [Diagram of hypotheses structure]
-
----
-
-## Case Study - Italy's Five Star Movement (M5S)
-### Overview of M5S
-
-- Anti-establishment, populist, and Internet-centred political party
-- Founded by Beppe Grillo in 2005 via his blog
-- Intensive use of Meetup.com to organise events and grassroots support
-
----
-
-## Timeline of M5S development, 2005–2018
-
-.content-box-yellow[
-
-- **2005**: Beppe Grillo launches "Friends of Beppe Grillo" meetups via his blog, encouraging local coordination through Meetup.com.
-
-- **2007**: V-Day campaign collects 336,000 signatures for electoral reform, marking the movement’s first large-scale mobilisation.
-
-- **2009**: The Five Star Movement (M5S) is officially launched.
-
-- **2012**: M5S wins multiple mayoral elections in Northern Italy, including Parma, and gains national prominence.
-
-- **2013**: M5S becomes Italy’s largest single party, winning 25.6% of the vote in the general election.
-
-- **2014**: M5S secures 17 MEPs in the European Parliament elections.
-
-- **2018**: M5S wins 32.7% of the vote in the general election, forming a coalition government with the League.
-
-]
-
----
-
-## Data and Methods
-### Overview of Datasets
-- Data Sources: Meetup.com API, Italian census, and electoral data
-- Temporal Scope: Focus on the period from 2005 to 2018
-- Analytical Approach: Spatial and temporal analysis of Internet-enabled grassroots organisations
-
----
-
-## Research Questions
-### Research Questions Guiding the Study
-- **RQ1**: Does social capital predict where Meetups are organised?
-- **RQ2**: How does media attention alter Meetup activity?
-- **RQ3**: Does the spread of Meetups predict voting patterns?
-- **RQ4**: Does the local presence of Meetups predict an average increase in the
-frequency of political talks?
-- **RQ5**: Among voters disconnected from social capital networks, do M5S voters
-engage more frequently than non-M5S voters in political discussions?
+- Online networks are more individualised and less reciprocal (Internet-mediated social networks have a lower degree of overlap)
 
 ---
 
@@ -190,6 +131,112 @@ engage more frequently than non-M5S voters in political discussions?
 
 ---
 
+## Hypotheses Overview
+### Hypothesis 1: Internet vs. Social Capital Networks
+- Internet-mediated coordination is more challenging in the absence of social capital
+### Hypothesis 2: Media's Role in Mobilisation
+- News media attention can temporarily boost Interne-mediated coordination of
+collective action outside of pre-existing social capital networks
+### Hypothesis 3: Diffusion of Political Expertise
+- Internet can mirror the role of legacy networks in mobilising voters by diffusing political expertise
+
+---
+
+## Case Study - Italy's Five Star Movement (M5S)
+### Overview of M5S
+
+- Anti-establishment, populist, and Internet-centred political party
+- Founded by Beppe Grillo in 2005 via his blog
+- Intensive use of Meetup.com to organise events and grassroots support
+
+.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/V-day_bologna_02.jpg/800px-V-day_bologna_02.jpg' width = '40%'></img>]
+
+---
+
+## Timeline of M5S development, 2005–2018
+
+.content-box-yellow[
+
+- **2005**: Beppe Grillo launches "Friends of Beppe Grillo" meetups via his blog, encouraging local coordination through Meetup.com.
+
+- **2007**: V-Day campaign collects 336,000 signatures for electoral reform, marking the movement’s first large-scale mobilisation.
+
+- **2009**: The Five Star Movement (M5S) is officially launched.
+
+- **2012**: M5S wins multiple mayoral elections in Northern Italy, including Parma, and gains national prominence.
+
+- **2013**: M5S becomes Italy’s largest single party, winning 25.6% of the vote in the general election.
+
+- **2014**: M5S secures 17 MEPs in the European Parliament elections.
+
+- **2018**: M5S wins 32.7% of the vote in the general election, forming a coalition government with the League.
+
+]
+
+---
+
+## Data and Methods
+
+### Overview of Datasets
+- Data Sources: Meetup.com API, Italian census, and electoral data. 
+
+- Temporal Scope: Focus on the period from 2005 to 2018
+
+- Analytical Approach: Spatial and temporal analysis of Internet-enabled grassroots organisations
+
+### Key variables
+
+.content-box-green[
+
+- **RSVP numbers** refer to the number of people who confirm their participation in an event organised on-site using Meetup.com.
+  
+- **Staff of not-for-profit associations** is a measure for the local density of social capital.
+
+]
+
+---
+
+## Bayesian Spatial Modelling
+### Analytical Methodology
+- Bayesian spatial models used to estimate the impact of geographic diffusion of social capital and Meetup activity
+- Captures neighbouring effects and residual spatial autocorrelation
+
+
+
+---
+
+.center[<img src = 'img/meetup-geo-event-1.jpeg' width = '40%'>
+
+*Geocoded meetup events present in the data*] 
+
+---
+
+## Two periods of M5S mobilisation on Meetup.com
+
+Period 1: Mobilisation between **2007 (V-Day)** and **2012 (First local elections)**
+
+Period 2: Mobilisation between 2012 and **2013 (General election)**
+
+.center[<img src = 'img/change-points-1.svg' width = '70%'>
+
+*Estimation of change points in the time series of RSVPs (for M5S events) weekly counts*]
+
+
+---
+
+## Research Questions
+
+- **RQ1**: Does social capital predict where Meetups are organised?
+- **RQ2**: How does media attention alter Meetup activity?
+- **RQ3**: Does the spread of Meetups predict voting patterns?
+- **RQ4**: Does the local presence of Meetups predict an average increase in the
+frequency of political talks?
+- **RQ5**: Among voters disconnected from social capital networks, do M5S voters
+engage more frequently than non-M5S voters in political discussions?
+
+
+---
+
 ## Meetup.com as example of Internet Capital
 
 - Connecting independently from exiting social networks
@@ -206,6 +253,12 @@ engage more frequently than non-M5S voters in political discussions?
 - Social capital enhances connectedness and political competence
 - Legacy networks historically provide the framework for political participation
 - Initial M5S mobilisation concentrated in areas with high social capital
+
+.content-box-green[
+
+**Legacy networks** refer to traditional, long-established systems of social, political, or organisational connections that facilitate mobilisation and coordination. In the context of politics, legacy networks often include established institutions such as **political parties, civic associations, unions**, and other long-standing organisations that have historically played a central role in engaging citizens, fostering trust, and encouraging political participation.
+
+]
 
 ---
 
@@ -240,16 +293,9 @@ association predicting RSVPs.*]
 
 ## Results - Media Impact (RQ2)
 ### Media and Meetup Diffusion Post-2012
-- Meetup activity spread to regions with lower social capital after 2012
+- Meetup activity spread to areas with lower social capital after 2012
 - Media attention reduced the reliance on existing social capital networks
 - Indication of two distinct waves of mobilisation (pre- and post-2012)
-
----
-
-.center[<img src ='img/h2.svg'></img>
-
-*Timeseries of Meetup RSVPs, news media attention variables and posterior means for the staff of not-for-profit
-association predicting RSVPs.*]
 
 ---
 
@@ -288,9 +334,13 @@ association predicting RSVPs.*]
 ---
 
 ## Voters Disconnected from Legacy Networks (RQ5)
-### Meetup Mobilisation of Disengaged Voters
-- Disengaged voters in areas with Meetup activity reported discussing politics more frequently
-- Meetup platforms activated discussions in previously apathetic or politically disconnected regions
+### M5S Mobilisation of Disengaged Voters
+- In the 2013 general election, 
+
+  - M5S voters who were *disconnected* from legacy mobilisation networks 
+  - reported discussing politics significantly *more frequently* 
+  - than non-M5S voters disconnected from legacy mobilisation networks
+
 
 ---
 
@@ -330,13 +380,6 @@ association predicting RSVPs.*]
 
 ---
 
-## Bayesian Spatial Modelling
-### Analytical Methodology
-- Bayesian spatial models used to estimate the impact of geographic diffusion of social capital and Meetup activity
-- Captures neighbouring effects and residual spatial autocorrelation
-
----
-
 ## The Role of Media in Internet-Driven Movements
 ### Importance of Media Validation
 - Media attention amplifies the reach of Internet-based movements
@@ -348,16 +391,7 @@ association predicting RSVPs.*]
 ### Summary of Key Insights
 - Internet-enabled networks can bypass traditional social capital constraints
 - Media plays a critical role in sustaining Internet-driven mobilisation
-- Diffusion of political expertise occurs even in disengaged, low-capital areas
-
-
----
-
-## Theoretical Contributions
-### Broader Implications of the Study
-- Internet-enabled participation redefines political mobilisation patterns
-- Opens participation to more diverse and disengaged demographics
-- Suggests a new model for political unpredictability and turbulence in both democratic and non-democratic regimes
+- Diffusion of political expertise occurs even in disengaged, low-capital areas (something that is of course critical to disengage discontent)
 
 ---
 
@@ -370,16 +404,14 @@ association predicting RSVPs.*]
 
 ---
 
-## Future Research Directions
-### Suggested Areas for Further Study
-- Long-term political effects of Internet-based mobilisation
-- Examining the role of other platforms (e.g., Facebook, Twitter) in political mobilisation
-- Exploring the sustainability of Internet-enabled movements without media attention
+## Broader Theoretical Contributions
+
+- **Diversifying Participation**: The Internet opens participation to more diverse demographics, rapidly redefining political engagement patterns.
+
+- **Political Unpredictability**: Internet-mediated mobilisation can emerge quickly and challenge existing geographic and demographic cleavages, leading to greater political turbulence.
+
+- **Discontent and Mobilisation**: Extreme levels of political discontent may be necessary to effectively activate Internet capital, crowding out more moderate forms of politics.
 
 
----
 
-## Final Remarks
-### Contributions to Digital Mobilisation Studies
-- This study demonstrates how Internet technologies can mobilise disengaged voters and extend political expertise beyond legacy networks
-- Offers new insights into the relationship between Internet and media in fostering political action
+
