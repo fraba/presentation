@@ -432,8 +432,25 @@ comments_score_by_date %>%
 
 2. We jitter **commenters** within the geographic boundary of the cell associated to the commented video.
 
-3. We use the inverse distance weighted (IDW) technique to map the entire grid (this can be done for grids of different granularity)
+3. We use the inverse distance weighted (IDW) technique to map the entire grid (this can be done for grids of different granularity) 
 
 ---
+
+#### Preliminary results
+
+```{r fig.width = 7.5, fig.height=4, out.width="90%"}
+lonlat_weight <- 
+  readRDS("data/lonlat_weight.rds")
+ggplot2::ggplot() +
+  ggplot2::geom_tile(data = lonlat_weight, 
+                     aes(x = longitude, y = latitude, 
+                         fill = mean_value_cut)) +
+  ggplot2::geom_sf(data = polygon_sf, fill = NA) +
+  ggplot2::scale_fill_brewer(palette ="YlOrRd", direction = 1) +
+  ggplot2::coord_sf() +
+  ggplot2::labs(title = "Comment reference to violence 2020-24", 
+                x = NULL, y = NULL) +
+  ggplot2::theme_minimal() + labs(fill = "Mean score")
+```
 
 
