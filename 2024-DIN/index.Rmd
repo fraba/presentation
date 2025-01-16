@@ -339,6 +339,22 @@ $$\text{Comment Score} = \sum_{i=1}^{n} (c_i \cdot w_i)$$
 - $w_i$ is the weight associated with the $i$-th word in the list $L$.
 - $n$ is the total number of words in the list $L$.
 
+---
+
+### Average score per day (7-day moving average)
+
+```{r fig.width = 7.5, fig.height=4, out.width="90%"}
+
+comments_score_by_date <- 
+  readRDS("data/comments_score_by_date.rds")
+comments_score_by_date %>%
+  dplyr::filter(date >= as.Date("2020-01-01") &
+                  date < as.Date("2024-06-10")) %>%
+  ggplot() + 
+  geom_line(aes(x = date, y = rollmean)) +
+  theme_bw()
+```
+
 
 ---
 

@@ -292,12 +292,6 @@ ggplot() +
 
 ---
 
-class: segue-red
-
-# Data
-
----
-
 ### Data collection for Mexico 2020-01-01 - 2024-06-18
 
 - **Videos**: 1.2M
@@ -365,7 +359,9 @@ ggplot(comments_by_hour) +
 
 ---
 
-## 
+### Data for Mexico 2020-01-01 - 2024-06-18
+
+#### Comments by location
 
 ```{r fig.width = 7.5, fig.height=4, out.width="90%"}
 comment_coords_sum <-
@@ -380,5 +376,64 @@ ggplot2::ggplot() +
   ggplot2::theme_minimal()
 ```
 
+---
+
+## 5. Retrieve information from the texts of the comments to estimate of perceived violence. `r emo::ji("construction")`
+
+### Dictionary based approach
+
+1. We started with a list of seed terms related to violence
+
+2. Using Wordnet we expanded to include all words within 2 steps from the seed words.
+
+3. We weight each word to reflect the distance from the seed words: 1 for the original seed words, 0.5 for words with distance = 1 to the seed words and 0.25 for words with distance = 2 from the seed words.
+
+$$L = \{ (e_1, w_1), (e_2, w_2), \ldots, (e_n, w_n) \}$$
+---
+
+.center[<img src = 'assets/wordnet.png' width = '100%'></img>]
+
+---
+
+4\. We assign to each comment $i$ a score based on the presence of word :
+
+$$\text{Comment Score} = \sum_{i=1}^{n} (c_i \cdot w_i)$$
+
+- $c_i$ is the count of the $i$-th word in the document.
+- $w_i$ is the weight associated with the $i$-th word in the list $L$.
+- $n$ is the total number of words in the list $L$.
+
+---
+
+### Average score per day (7-day moving average)
+
+```{r fig.width = 7.5, fig.height=4, out.width="90%"}
+
+comments_score_by_date <- 
+  readRDS("data/comments_score_by_date.rds")
+comments_score_by_date %>%
+  dplyr::filter(date >= as.Date("2020-01-01") &
+                  date < as.Date("2024-06-10")) %>%
+  ggplot() + 
+  geom_line(aes(x = date, y = rollmean)) +
+  theme_bw() +
+  annotate("text", y = 0.09, x = as.Date("2021-01-01"), 
+           label = "March 2020 massive protests against violence") +
+  annotate("text", y = 0.07, x = as.Date("2022-06-01"),
+           label = "January 2023 Sinaloa unrest following Ovidio Guzmán arrest")
+  
+```
+
+---
+
+### 6. Aggregate this information to compute measures. `r emo::ji("construction")`
+
+1. We average comments for **commenter** and by day.
+
+2. We jitter **commenters** within the geographic boundary of the cell associated to the commented video.
+
+3. We use the inverse distance weighted (IDW) technique to map the entire grid (this can be done for grids of different granularity)
+
+---
 
 
