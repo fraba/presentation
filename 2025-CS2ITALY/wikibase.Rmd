@@ -85,7 +85,7 @@ The book provides a practical guide for interdisciplinary research teams to leve
 
 ---
 
-# Why Wikibase? A Historical Perspective
+# Why Wikibase?
 ## Wikibase: From Wikipedia to Research Applications
 
 .pull-left[
