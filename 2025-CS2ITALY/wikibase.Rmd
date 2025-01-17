@@ -72,7 +72,7 @@ library(ggplot2)
 # Introduction to Wikibase
 ## Collaborative Use of Wikibase for Interdisciplinary Research
 
-- Wikibase is a *(free)* (as in 'free beer') knowledge graph software developed by the Wikimedia Foundation in 2012.
+- Wikibase is a *free* (as in 'free beer') knowledge graph software developed by the Wikimedia Foundation in 2012.
 - Initially created to centralise and structure facts across Wikipedia.
 - Powers **Wikidata**, integrating information into a graph database to improve consistency and machine readability.
 - The book "**Collaborative Use of Wikibase for Interdisciplinary Mixed-Methods Research**" (also with Emily Booth, Marian-Andrei Rizoiu, Jennifer Williams, Amelia Johns, Julian Droogan, Frankie Yuan) will be published by Edward Elgar in 2025 (inshallah).
