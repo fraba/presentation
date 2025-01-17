@@ -175,12 +175,8 @@ digraph {
 .pull-left[
 
 - Faciliates emergence of complex data schema (a.k.a. **ontology**)
-- Facilitates **qual-quant data integration**.
+- Facilitates **qual-quant data integration** and interdisciplinary collaborations.
   - Convergent, explanatory, and exploratory sequential designs.
-- Facilitates interdisciplinary collaboration:
-  - Synchronous editing ensures data consistency.
-  - Tracks historical data versions and reversions.
-  
 ]
 
 .pull-right[
