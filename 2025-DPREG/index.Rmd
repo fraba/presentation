@@ -15,7 +15,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-      ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      ratio: '4:3' # alternatives '16:9' or '4:3' or others e.g. 13:9
       navigation:
         scroll: false # disable slide transitions by scrolling
 
@@ -25,30 +25,33 @@ output:
 
 AI, especially Generative AI technologies and tools, will be ubiquitous and strongly integrated with the existing infrastructure of digital and social platforms
 
+.content-box-green[
+
 In **2024**,
 
-- **Over half of Australians** (51%) accessed **news more than once a day**, a 3 percentage point increase from the prior year.
 - **Almost half of Australians** (49%) **used social media to access news**, marking a 4 percentage point increase since the prior year.
 - **Nearly two-thirds of Gen Z** (60%) **relied on social media as their main news source**, a significant increase of 17 percentage points over the past year.
 - Trust in news generally fell slightly (-3pp) to 40%, but **distrust rose consistently and reached its highest point since 2016** (33%, +8pp).
+
+]
 
 .footnote[S. Park, C. Fisher, K. McGuinness, J. Y. Lee, K. McCallum, and X. Cai, ‘Digital news report: Australia 2024’, News and Media Research Centre, Report, Jun. 2024. Available: https://apo.org.au/node/326816]
 
 ---
 
-### These systems increasingly mediate: 
+### Platforms increasingly mediate: 
 
-- Access to political information
-- Political engagement and participation
-- Electoral and civic processes
+1. Access to political information
+2. Political engagement and participation
+3. Electoral and civic processes
 
 ### Our recent research shows these systems:
 
 .content-box-yellow[
 
-1. Reshape *who* is reached and *how* people are activated politically; 
-2. Create new risks of information disorders;
-3. Challenge regulatory and governance models.
+1. **Reshape** *who* is reached and *how* people are activated politically; 
+2. **Create** new risks of information disorders;
+3. **Challenge** regulatory and governance models.
 
 ]
 
@@ -75,11 +78,10 @@ In **2024**,
 
 ## Challenge 1  
 
-### Coordinated Manipulation
+### Manipulation, coordinated or uncoordinated, emerges from digital platforms
 
 .content-box-yellow[
 
-- Coordinated, either authentic or inauthentic behavior (bots, cyborg accounts, social manipulation).
 - Far-right networks linked to QAnon **overperformed** while spreading COVID-19 misinformation.
 - Platforms struggle to detect or simply decide to ignore coordinated influence campaigns.
 - In fact, platforms often amplifies conflicting, outrageous content thus increasing overall information disorder.  
@@ -96,13 +98,16 @@ In **2024**,
 .content-box-yellow[
 
 #### Key insights from our study:
-- Meta’s strategies (labels, shadow bans) reduced some COVID-19 misinformation but:
-  - Communities developed **resistance tactics** (social steganography, migration to less-moderated spaces)
-  - Moderation transparency gaps fueled conspiratorial thinking
-  
-- Also,
-  - In the US, platforms such as Meta stopped many content moderation activities after the 2024 election, raising concerns about the future handling of misinformation
-  - Meta and X (formerly Twitter) have made it increasingly difficult for academics and journalists to access social media data, limiting independent oversight (referencing our Conversation article on coordinated, inauthentic behavior)
+
+- Meta's strategies (labels, shadow bans) reduced some COVID-19 misinformation but:
+
+  - Communities developed resistance tactics (social steganography, migration to less-moderated spaces)
+Moderation transparency gaps fueled conspiratorial thinking
+
+- Additionally:
+
+  - Post-2024 election, platforms like Meta scaled back content moderation, raising future misinformation concerns
+  - Meta and X increasingly restrict academic/journalistic data access, limiting independent oversight
 
   
 ]
@@ -218,9 +223,9 @@ In **2024**,
 
 Different platform affordances (visibility, associability) structure how leaders and members engage across networks
 
-Grassroots platforms foster horizontal, participatory spaces; top-down platforms amplify centralized control
+**Grassroots platforms** foster horizontal, participatory spaces; **top-down platforms** amplify centralised control
 
-→ Key challenge: How can we harness multi-platform environments to strengthen internal party democracy and avoid reinforcing hierarchical, exclusionary dynamics?
+→ Key challenge: How can we harness multi-platform environments to strengthen internal democracy across organisations and avoid reinforcing hierarchical, exclusionary dynamics, while mantaining organisational coherence?
 
 ]
 
