@@ -133,7 +133,7 @@ class: segue-red
 ---
 
 ## **Current Research Projects**
-- **Three Active Projects:**
+- **Four Active Projects:**
 
 1. **Vietnam Media Influence Measurement** (with University of Social Sciences and Humanities, Ho Chi Minh City)
 
@@ -209,7 +209,7 @@ As AI technologies rapidly reshape information environments already transformed 
 The Centre for AI, Trust and Governance embodies this imperative, combining rigorous interdisciplinary scholarship with direct policy engagement to ensure technological development strengthens rather than undermines democratic institutions.
 
 
---- 
+---
 
 ## References
 
