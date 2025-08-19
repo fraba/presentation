@@ -20,9 +20,11 @@ output:
         scroll: false # disable slide transitions by scrolling
 
 
-# Researcher Spotlight Presentation: Francesco Bailo
-## Deputy Director, Centre for AI, Trust and Governance
+---
 
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
 
 ---
 
@@ -498,7 +500,7 @@ How does "Internet capital" enable political mobilisation beyond traditional soc
 
 ---
 
-# Slide 19: The Decline of Legacy Mobilisation Networks
+# The Decline of Legacy Mobilisation Networks
 
 ## Why Traditional Social Capital Weakened
 
@@ -516,11 +518,9 @@ How does "Internet capital" enable political mobilisation beyond traditional soc
 
 ---
 
-# Slide 20: Introducing Internet Capital
+# Introducing Internet Capital
 
-## Bailo's Theoretical Innovation
-
-### Definition
+## Definition
 **Internet capital**: Digital resources that enable collective action **independently** of existing social capital structures
 
 ### Key Characteristics
@@ -534,7 +534,7 @@ Internet capital operates **parallel to** rather than **replacing** social capit
 
 ---
 
-# Slide 21: Internet Capital vs. Social Capital
+# Internet Capital vs. Social Capital
 
 ## Comparing Two Forms of Political Resources
 
@@ -551,9 +551,7 @@ Internet capital operates **parallel to** rather than **replacing** social capit
 
 ---
 
-# Slide 22: Case Study - Italy's Five Star Movement (M5S)
-
-## "From the Web 2.0" - A Natural Experiment
+# Case Study - Italy's Five Star Movement (M5S)
 
 ### Background
 - **Founded 2005**: Emerged from comedian Beppe Grillo's blog
@@ -566,9 +564,9 @@ Can Internet capital mobilise voters in **low-social capital areas** where tradi
 
 ---
 
-# Slide 23: The M5S Research Design
+# The M5S Research Design
 
-## Bailo's Methodological Approach
+## Methodological Approach
 
 ### Data Sources
 - **Meetup.com events (2005-2013)**: Granular mobilisation data
@@ -584,7 +582,7 @@ Can Internet capital mobilise voters in **low-social capital areas** where tradi
 
 ---
 
-# Slide 24: Two Waves of M5S Mobilisation
+# Two Waves of M5S Mobilisation
 
 ## The Media Attention Turning Point
 
@@ -602,9 +600,7 @@ Can Internet capital mobilise voters in **low-social capital areas** where tradi
 
 ---
 
-# Slide 25: The Role of Media Attention
-
-## Bailo's Hypothesis H2 Confirmed
+# The Role of Media Attention
 
 ### The Mechanism
 **News media attention temporarily strengthens Internet network density**
@@ -620,7 +616,15 @@ Internet networks need **external validation** to overcome weak-tie limitations
 
 ---
 
-# Slide 26: Reaching the Politically Disengaged
+## Social vs Internet capital
+
+A theoretical activation model for local collective action.
+
+.center[<img src = 'https://www.tandfonline.com/cms/asset/cb801e3c-2072-4497-ab93-c8387cf2ed36/witp_a_2494116_f0002_oc.jpg'>]
+
+---
+
+# Reaching the Politically Disengaged
 
 ## Breaking Out of Elite Networks
 
@@ -638,7 +642,7 @@ Internet networks need **external validation** to overcome weak-tie limitations
 
 ---
 
-# Slide 27: The Dark Side - Extremism and Outrage
+# The Dark Side - Extremism and Outrage
 
 ## When Internet Capital Enables Harmful Mobilisation
 
@@ -656,7 +660,7 @@ Internet networks need **external validation** to overcome weak-tie limitations
 
 ---
 
-# Slide 28: From Italy to Global Patterns
+# From Italy to Global Patterns
 
 ## Internet Capital in Comparative Perspective
 
@@ -674,7 +678,7 @@ Internet networks need **external validation** to overcome weak-tie limitations
 
 ---
 
-# Slide 29: Institutional Implications
+# Institutional Implications
 
 ## How Internet Capital Challenges Democracy
 
@@ -692,7 +696,11 @@ Internet networks need **external validation** to overcome weak-tie limitations
 
 ---
 
-# Slide 30: PART III - THE PARTICIPATION PARADOX
+class: segue-red
+
+# PART III - THE PARTICIPATION PARADOX
+
+---
 
 ## Does Digital Media Democratise or Reinforce Inequality?
 *Heiss & Matthes (2019): "Does incidental exposure on social media equalise or reinforce participatory gaps?"*
@@ -700,9 +708,11 @@ Internet networks need **external validation** to overcome weak-tie limitations
 ### Central Question
 Do social media platforms reduce political inequalities by engaging the disengaged, or do they reinforce existing participatory gaps?
 
+.footnote[Also see Vaccari, C., & Valeriani, A. (2021). *Outside the bubble: Social media and political participation in Western democracies*. Oxford University Press. https://doi.org/10.1093/oso/9780190858476.001.0001]
+
 ---
 
-# Slide 31: The Equalisation Hypothesis
+# The Equalisation Hypothesis
 
 ## The Optimistic View of Digital Democracy
 
@@ -717,7 +727,7 @@ Do social media platforms reduce political inequalities by engaging the disengag
 
 ---
 
-# Slide 32: The Reinforcement Hypothesis
+# The Reinforcement Hypothesis
 
 ## The Pessimistic Alternative
 
@@ -732,7 +742,7 @@ Do social media platforms reduce political inequalities by engaging the disengag
 
 ---
 
-# Slide 33: The Incidental Exposure Mechanism
+# The Incidental Exposure Mechanism
 
 ## How Casual Users Might Become Engaged
 
@@ -748,7 +758,7 @@ Do social media platforms reduce political inequalities by engaging the disengag
 
 ---
 
-# Slide 34: The Austrian Panel Study
+# The Austrian Panel Study
 
 ## Methodological Innovation
 
@@ -765,7 +775,7 @@ Do social media platforms reduce political inequalities by engaging the disengag
 
 ---
 
-# Slide 35: Low-Effort vs. High-Effort Participation
+# Low-Effort vs. High-Effort Participation
 
 ## Distinguishing Types of Digital Engagement
 
@@ -786,7 +796,7 @@ Different types of participation may respond differently to incidental exposure
 
 ---
 
-# Slide 36: Key Findings - The Reinforcement Reality
+# Key Findings - The Reinforcement Reality
 
 ## Panel Results Challenge Optimistic Assumptions
 
@@ -802,7 +812,7 @@ Different types of participation may respond differently to incidental exposure
 
 ---
 
-# Slide 37: Visualising the Participation Paradox
+# Visualising the Participation Paradox
 
 ## Why Incidental Exposure Fails to Democratise
 
@@ -818,7 +828,7 @@ Different types of participation may respond differently to incidental exposure
 
 ---
 
-# Slide 38: Explaining the Paradox
+# Explaining the Paradox
 
 ## Why Digital Democracy Disappoints
 
@@ -832,6 +842,8 @@ Different types of participation may respond differently to incidental exposure
 - Political knowledge necessary for meaningful engagement  
 - Social capital advantages translate to digital advantages
 
+---
+
 ### **Algorithmic Amplification**
 - Platforms reward existing engagement patterns
 - Active users see more political content
@@ -839,7 +851,7 @@ Different types of participation may respond differently to incidental exposure
 
 ---
 
-# Slide 39: Broader Implications - Three Studies Converge
+# Broader Implications - Three Studies Converge
 
 ## Synthesising Our Evidence
 
@@ -853,6 +865,8 @@ Different types of participation may respond differently to incidental exposure
 - **Enables anti-establishment mobilisation** more than democratic inclusion
 - **Emotional politics** crowds out deliberative engagement
 
+---
+
 ### **Participation Paradox** (Heiss & Matthes)
 - **Reinforces inequalities** rather than reducing them
 - **Benefits already engaged** users most
@@ -860,7 +874,7 @@ Different types of participation may respond differently to incidental exposure
 
 ---
 
-# Slide 40: Conclusion - Democracy in the Digital Age
+# Conclusion - Democracy in the Digital Age
 
 ## Answering Our Central Question
 
@@ -876,6 +890,78 @@ Digital media fundamentally alter political communication through:
 - **Inequality reinforcement**: Digital divides persist and deepen
 - **Fragmentation**: Shared public sphere erodes
 
-### **The Verdict**: Digital media more likely **weaken** than strengthen democratic institutions, while creating **conditional** and **unequal** participation opportunities
+---
+
+class: segue-yellow
+
+# Bonus
+
+# What about the Internet in non-democratic regimes?
+
+---
+
+## How does Internet technology affect political protest in autocracies?
+
+
+.pull-left[
+
+.small[
+
+
+ - Local-level data across ~70 autocratic countries
+ 
+### Major Findings
+
+- Internet reduces **protest occurrence**:
+  - Regimes use propaganda, censorship, surveillance, digital governance
+
+- Internet boosts **protest persistence & diffusion**:
+  - Once protest starts, activists use digital tools to sustain and spread action
+
+> “Modern communication technology can empower opposition activists — but also strengthen regime control.”
+
+]
+ 
+]
+
+.pull-right[
+.center[<img src = 'https://fdslive.oup.com/covers/gab/550-550-72-jpg-RGB-85/9780190918309.jpg'>]
+]
+
+---
+
+### Theoretical Contributions
+
+- Identifies **asymmetric control**:
+  - Autocracies often control where and how Internet is deployed
+  - Digital tools reinforce or substitute for traditional repression (violence, bans)
+
+- Highlights **contextual variation**:
+  - Less repressive regimes rely more on digital control
+  - More vulnerable once protests erupt
+  
+  
+
+.content-box-yellow[
+
+Internet expansion reduces protest overall — but makes regimes more vulnerable when unrest begins.
+
+]
+
+> “Digital communication’s political effects are fundamentally multifaceted and context-dependent.”
+
+  
+.footnote[
+  Weidmann, N. B., & Rød, E. G. (2019). *The internet and political protest in autocracies*. Oxford University Press. https://doi.org/10.1093/oso/9780190918309.001.0001
+
+]
+
+---
+class: inverse, center, middle
+
+# Questions?
+
+(francesco.bailo@sydney.edu.au)
+
 
 ---
