@@ -1,0 +1,323 @@
+---
+title: "Creative Underspheres and Democratic Challenges"
+subtitle: "Exploring the Implications of Generative AI Misuse"
+author: "Milica Stilinovic, Francesco Bailo, Jonathon Hutchinson"
+date: "University of Sydney | New Media & Society, 2025"
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+    self_contained: false
+    seal: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+---
+
+## The Research Problem
+
+.font120[**Current AI regulations are failing to protect people from real harms**]
+
+--
+
+.pull-left[
+**What regulators do:**
+- Focus on predictable uses
+- Categorize static risks
+- Regulate what we know
+]
+
+--
+
+.pull-right[
+**What's happening:**
+- Creative communities repurpose AI
+- New, unexpected harms emerge
+- Risks are complex and evolving
+]
+
+--
+
+.font130[
+**The Gap:** How do we regulate AI when we can't predict how people will use it?
+]
+
+---
+
+## Introducing the Undersphere
+
+### Networked communities united by creative experimentation with technology
+
+--
+
+.pull-left[
+**Key Characteristics:**
+
+- Share expertise, not social bonds
+
+- Task-focused, not community-building
+
+- Apolitical spaces
+
+- Span multiple platforms
+]
+
+--
+
+.pull-right[
+**Definition:**
+
+Workshop for technology tinkerers
+
+Members united by the task
+
+Outcomes can be harmful, even when communities aren't
+]
+
+---
+class: sydney-yellow
+
+## Case Study: r/StableDiffusion
+
+--
+
+.pull-left[
+**The Community**
+- 600,000+ members on Reddit
+- AI image generation (Stable Diffusion)
+- Share creative works and code
+
+**Appears harmless:**
+- Artistic experimentation
+- Creative outputs
+]
+
+--
+
+.pull-right[
+**Spawns harmful offshoots:**
+- Non-consensual deepfake porn
+- NSFW AI communities
+- Code shared across platforms
+- Operates beyond regulation
+]
+
+---
+
+## The Deepfake Precedent
+
+--
+
+.pull-left[
+**Timeline**
+
+**2017:** First deepfake porn
+
+**2019:** 14,678 videos online
+
+**2023:** 95,820 videos
+- 550% increase
+- 98% pornographic
+- 99% feature women without consent
+]
+
+--
+
+.pull-right[
+**Real Harms**
+
+- Privacy violations
+- Reputation damage
+- Harassment
+- Career destruction
+- Undermines democracy
+]
+
+---
+
+## Why Current Regulations Fail
+
+### The EU AI Act's Risk-Based Approach
+
+--
+
+**What it does:**
+- Categorizes by intended use
+- Identifies predictable applications
+- Bans certain uses
+
+--
+
+**What it misses:**
+- Creative misappropriation
+- Assumes knowable risks
+- Static, not evolving
+- Slow to respond
+
+--
+
+.font120[
+**By the time regulators act, harm has already spread**
+]
+
+---
+
+## Complex Risks
+
+.white[**AI risks parallel climate risks**]
+
+--
+
+.white[
+.pull-left[
+**Interconnected**  
+Effects spread across systems
+
+**Amplified**  
+Algorithms multiply content
+]
+
+.pull-right[
+**Cascading**  
+Innovation becomes weaponized
+
+**Systemic**  
+Threatens democratic principles
+]
+]
+
+--
+
+.white[
+.font130[
+**Unknown risks require adaptive responses**
+]
+]
+
+---
+
+## Why AI Risks Are Complex
+
+--
+
+**Multiple unknowns** – Models aren't fully understood
+
+--
+
+**Creative repurposing** – Constant new uses
+
+--
+
+**Rapid scaling** – Knowledge spreads quickly
+
+--
+
+**Unpredictable interactions** – AI meets social media, politics, markets
+
+--
+
+**Emergent harms** – Arise from unanticipated interactions
+
+--
+
+.font130[.center[**You can't regulate what you can't foresee**]]
+
+---
+
+## A Better Approach
+
+--
+
+.pull-left[
+**Current: Risk Categories**
+- Probable uses
+- Static categories
+- Reactive
+- Slow
+]
+
+--
+
+.pull-right[
+**Proposed: Adaptive Governance**
+- Continuous monitoring
+- Flexible responses
+- Evolves with technology
+- Reflexive coordination
+]
+
+--
+
+.font110[
+**Key requirements:** Observability, Inspectability, Flexibility
+]
+
+---
+class: sydney-yellow
+
+## Key Takeaways
+
+--
+
+.font110[
+**1.** Underspheres experiment with AI unpredictably
+]
+
+--
+
+.font110[
+**2.** Current regulations miss emerging harms
+]
+
+--
+
+.font110[
+**3.** Deepfakes show how creative tools become weapons
+]
+
+--
+
+.font110[
+**4.** AI risks are complex and systemic
+]
+
+--
+
+.font110[
+**5.** We need adaptive governance
+]
+
+--
+
+.font120[
+**AI regulation must account for what we don't yet know**
+]
+
+---
+class: sydney-blue
+background-image: url(assets/USydLogo-white.svg)
+background-size: 260px
+background-position: 5% 95%
+
+# Questions?
+
+.pull-right[.pull-down[
+
+.white[
+**Research Team**
+
+Milica Stilinovic  
+Francesco Bailo  
+Jonathon Hutchinson
+
+University of Sydney
+
+*New Media & Society*, 2025
+
+doi: [10.1177/14614448251338511](https://journals.sagepub.com/doi/full/10.1177/14614448251338511)
+]
+
+<br><br>
+
+]]
