@@ -315,7 +315,7 @@ University of Sydney
 
 *New Media & Society*, 2025
 
-doi: [10.1177/14614448251338511](https://journals.sagepub.com/doi/full/10.1177/14614448251338511)
+doi: 10.1177/14614448251338511[`r icons::fontawesome("link")`](https://journals.sagepub.com/doi/full/10.1177/14614448251338511)
 ]
 
 <br><br>
