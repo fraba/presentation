@@ -17,7 +17,7 @@ output:
 
 ## The Research Problem
 
-.font120[**Current AI regulations are failing to protect people from real harms**]
+**Current AI regulations are failing to protect people from real harms**
 
 --
 
@@ -39,9 +39,7 @@ output:
 
 --
 
-.font130[
 **The Gap:** How do we regulate AI when we can't predict how people will use it?
-]
 
 ---
 
@@ -157,19 +155,17 @@ class: sydney-yellow
 
 --
 
-.font120[
+
 **By the time regulators act, harm has already spread**
-]
+
 
 ---
 
 ## Complex Risks
 
-.white[**AI risks parallel climate risks**]
+**AI risks parallel climate risks**
 
---
 
-.white[
 .pull-left[
 **Interconnected**  
 Effects spread across systems
@@ -180,20 +176,15 @@ Algorithms multiply content
 
 .pull-right[
 **Cascading**  
-Innovation becomes weaponized
+Innovation becomes weaponised
 
 **Systemic**  
 Threatens democratic principles
 ]
-]
 
 --
 
-.white[
-.font130[
 **Unknown risks require adaptive responses**
-]
-]
 
 ---
 
@@ -249,9 +240,7 @@ Threatens democratic principles
 
 --
 
-.font110[
 **Key requirements:** Observability, Inspectability, Flexibility
-]
 
 ---
 class: sydney-yellow
@@ -260,33 +249,23 @@ class: sydney-yellow
 
 --
 
-.font110[
 **1.** Underspheres experiment with AI unpredictably
-]
 
 --
 
-.font110[
 **2.** Current regulations miss emerging harms
-]
 
 --
 
-.font110[
 **3.** Deepfakes show how creative tools become weapons
-]
 
 --
 
-.font110[
 **4.** AI risks are complex and systemic
-]
 
 --
 
-.font110[
 **5.** We need adaptive governance
-]
 
 --
 
@@ -304,8 +283,7 @@ background-position: 5% 95%
 
 .pull-right[.pull-down[
 
-.white[
-**Research Team**
+
 
 Milica Stilinovic  
 Francesco Bailo  
@@ -316,7 +294,7 @@ University of Sydney
 *New Media & Society*, 2025
 
 doi: 10.1177/14614448251338511[`r icons::fontawesome("link")`](https://journals.sagepub.com/doi/full/10.1177/14614448251338511)
-]
+
 
 <br><br>
 
