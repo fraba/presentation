@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Information disorder on Facebook around the 2020 US Presidential election</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Francesco Bailo (University of Sydney) - also with Justin Miller (University of Sydney), Rohan Alexander (University of Toronto)" />
+    <meta name="date" content="2025-12-04" />
+    <script src="index_files/header-attrs-2.27/header-attrs.js"></script>
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/sydney-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/sydney.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Information disorder on Facebook around the 2020 US Presidential election
+]
+.author[
+### Francesco Bailo (University of Sydney) - also with Justin Miller (University of Sydney), Rohan Alexander (University of Toronto)
+]
+.institute[
+### Australian Society for Quantitative Political Science Conference 13 - Monash University
+]
+.date[
+### 4 December 2025
+]
+
+---
+
+
+background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
+background-size: 95%
+
+
+
+## I wish to acknowledge the people of the Kulin Nations, on whose land we are gathered today. I pay my respects to their Elders, past and present.
+
+---
+
+## The Challenge: Information Disorder in Democracy
+
+Citizens face immersion in environments where coherent understanding becomes impossible
+
+- Traditional fact-checking approach has fundamental limitations:
+  - Requires establishing contested ground truths
+  - Doesn't scale across millions of posts
+  - Misses how contradictory *legitimate* perspectives undermine sense-making
+
+**Key distinction**: Healthy pluralism → Chaotic pluralism
+
+- Citizens possess **epistemic rights** to sufficient information AND competence to navigate information systems
+- When undermined, consequences extend beyond confusion to degradation of democratic deliberation
+
+---
+
+## Our Contribution: Measuring Disorder Without Adjudicating Truth
+
+**Framework**: Information environments as networks of semantic relationships
+
+- **Infons**:$^1$ discrete, meaningful units of information (individual posts)
+- Relationships between infons: agreement, disagreement, or independence
+- **No reference to ground truth needed** - assess mutual support/contradiction
+
+**Information Disorder Measure**:
+
+$$
+D = \frac{|E^-|}{|E^+| + |E^-| + |E^0|}
+$$
+
+Where `\(E^+\)` = agreement, `\(E^-\)` = disagreement, `\(E^0\)` = independence
+
+Ranges from 0 (no disagreement) to 1 (complete disagreement)
+
+.footnote[Devlin, K. J. (1991). *Logic and Information*. Cambridge University Press. Floridi, L. (2011). *The philosophy of information*. Oxford University Press.]
+
+---
+
+## Methodological Innovation: Supra-Infon
+
+**Supra-infon**: Anchoring claim outside immediate information space
+
+.pull-left[
+
+*"The election has been administered fairly so far"*
+
+- Each infon classified as agreeing, disagreeing, or independent with respect to this reference
+- Enables measurement of discourse alignment with specific positions
+- **Still without adjudicating truth value**
+
+]
+
+.pull-right[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-1-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+## Data Collection
+
+**Source**: Facebook via CrowdTangle API (🪦 RIP)
+
+.pull-left[
+
+**Account types**:
+- 749 curated lists (Local News, Politics, Metro groups, etc.)
+- Republican and Democrat officials, state parties, PACs
+]
+
+.pull-right[
+
+**Coverage**:
+- 969,207 posts from 38,149 accounts
+- October 26 - December 1, 2020
+- With Election Day on 3 Nov 2020.
+
+]
+
+.center[
+&lt;img src="assets/posts_timeseries_hourly.svg" alt="Time series of posting activity" width="50%"/&gt;
+]
+
+---
+
+![Time series of posting activity](assets/posts_timeseries_hourly.svg)
+
+
+
+
+
+
+
+---
+
+## Classification Pipeline
+
+**Stage 1: Election-Related Content**
+
+### This happened in two stages: 
+
+.center[
+
+1\. LLM annotation (4 models) for election content (`True/False`)
+
+`\(\downdownarrows\)`
+
+2\. Supervised classification using Logistic Regression (using majority vote labels)
+
+]
+
+---
+
+### 1\. LLM annotation (4 models) for election content (`True/False`)
+
+| Model Pair | Cohen's κ | Agreement (%) |
+|:-----------|----------:|--------------:|
+| Llama3 vs Gemma | 0.736 | 90.6 |
+| Llama3 vs Granite | 0.848 | 95.4 |
+| Llama3 vs Qwen3 | 0.841 | 95.0 |
+| Gemma vs Granite | 0.752 | 91.1 |
+| Gemma vs Qwen3 | 0.797 | 92.5 |
+| Granite vs Qwen3 | 0.856 | 95.4 |
+| **Fleiss' Kappa (all models)** | **0.804** | **—** |
+| **Krippendorff's Alpha** | **0.804** | **—** |
+
+*Note:* Interpretation: &lt;0 poor, 0-0.20 slight, 0.21-0.40 fair, 0.41-0.60 moderate, 0.61-0.80 substantial, 0.81-1.0 almost perfect (Landis &amp; Koch, 1977).
+
+---
+
+## **Stage 1: Election-Related Content**
+
+- LLM annotation (4 models: Llama3, Gemma, Granite, Qwen3)
+- Fleiss' Kappa = 0.804 (substantial agreement)
+- Supervised classification (Logistic Regression)
+
+### Result
+
+- 175,613 election-related posts (19.1%)
+
+---
+
+## Stage 2: Network Construction
+
+.pull-left[
+
+**Temporal windowing**: 3-hour windows
+
+**Sample Set** (Partisan comparison):
+- 9 posts per window across full period
+- Weighted by share counts
+- Separate: General, Republican, Democrat samples
+
+]
+
+
+
+.pull-right[
+
+&lt;img src="index_files/figure-html/unnamed-chunk-2-1.svg" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+## LLM Classification of Relationships
+
+**Llama3** via local GPU cluster (Ollama), context + "few shots"
+
+Three categories:
+- **AGREEMENT**: Mutually supportive claims (co-informative)
+- **DISAGREEMENT**: Mutually exclusive claims (contradictory)
+- **INDEPENDENCE**: Logically unrelated
+
+---
+
+## Classification prompt
+
+&gt; You are an Information Analyst classifying the semantic relationship between two discrete items of information (infons) about the 2020 US presidential election.
+
+&gt; CONTEXT: The 2020 US Presidential Election
+
+&gt; The election was held on November 3, 2020. Democrat Joe Biden defeated incumbent ...
+
+&gt; CLASSIFICATION CATEGORIES: 
+
+&gt; AGREEMENT: The infons are co-informative—they convey the same fundamental claim or mutually supportive claims. This includes:
+&gt; - Semantically equivalent statements (same meaning, different wording)
+&gt; - Claims that reinforce or support each other
+&gt; - Statements that would both be true under the same circumstances ...
+
+---
+
+&gt; EXAMPLES:
+
+&gt; Infon A: "Poll workers were excluded and couldn't observe the count"
+&gt; Infon B: "The election has been administered fairly so far"
+&gt; Classification: DISAGREEMENT
+&gt; Reason: Excluding observers implies unfair administration; these claims cannot both be true ...
+
+
+---
+
+## **Validation**: 100 post pairs, 4 models
+
+- Cohen's Kappa: 0.230-0.606 (moderate agreement)
+- Highest: Mistral-Llama3 (κ = 0.606)
+
+*Pair-wise agreement (%)*
+
+| | Gemma3 | Mistral | Deepseek-r1_8b | Llama3 |
+|:----------------|-------:|--------:|---------------:|-------:|
+| **Gemma3** | 100 | 75 | 73 | 78 |
+| **Mistral** | 75 | 100 | 92 | 91 |
+| **Deepseek-r1_8b** | 73 | 92 | 100 | 88 |
+| **Llama3** | 78 | 91 | 88 | 100 |
+
+---
+
+## Key Finding 1: Partisan Asymmetry in Disorder
+
+**Pre-election**: Low, stable internal disagreement
+
+**Post-election spike**: Sharp increase after Nov 3, especially Republican accounts
+
+**Election fairness stance**:
+- **Democrat accounts**: Consistent agreement (~80%), low disagreement (&lt;20%)
+- **Republican accounts**: Sustained high disagreement, strong rejection of legitimacy
+- **Asymmetry persisted** (and still persists today...)
+
+**Secondary spike**: After Nov 15 (Trump's continued denunciation)
+
+.center[
+&lt;img src="assets/partisan_comparison.svg" alt="Time series of posting activity" width="40%"/&gt;
+]
+
+---
+
+&lt;img src="assets/partisan_comparison.svg" alt="Time series of posting activity" width="100%"/&gt;
+
+---
+
+## Key Finding 2: Algorithmic Amplification of Disorder
+
+**Question**: Did recommender systems amplify disorder or promote consensus?
+
+**Method**: Logistic regression - stance toward fairness predicting viral spread (log share count)
+
+**Results** - Asymmetric amplification:
+- **Disagreement** with fairness of election → significantly **higher** shares
+  - Republican: β = 0.27, p &lt; .05
+  - Democrat: β = 0.19, p &lt; .05
+  - General: β = 0.22, p &lt; .05
+- **Agreement** with fairness of election → signficantly **lower** shares
+  - General: β = -0.06, p &lt; .05
+
+**Implication**: Platform dynamics systematically amplified disorder-generating content
+
+---
+
+&lt;img src="assets/sharecount_coefficients.svg" alt="Sharecount coefficients" width="100%"/&gt;
+
+---
+
+## Implications for Democratic Governance
+
+**Diagnostic utility**:
+- Scalable, quantifiable measure of ecosystem health
+- Identifies thresholds where contradiction density erodes public trust
+- No adjudication of contested claims required
+
+**Policy applications**:
+- Actionable metrics for platform designers
+- Monitor information environment quality
+- Assess interventions without content moderation debates
+
+**Critical insight**: Attention-driven algorithms systematically reward conflict over coherence
+
+---
+
+## Limitations and Future Directions
+
+**Current limitations**:
+- Single platform (Facebook)
+- One election event
+- LLM classification reliability (moderate inter-model agreement)
+- Temporal windows may miss longer-term dynamics
+
+**Future research**:
+- Structural analysis of semantic networks
+- Cross-platform comparison
+- Multiple electoral contexts
+- Refined relationship classification
+- Causal mechanisms of amplification
+- Intervention studies
+
+---
+
+## Conclusion
+
+**Three contributions**:
+
+1. **Theoretical**: Framework for measuring disorder without truth adjudication
+2. **Methodological**: LLM-based classification of semantic relationships at scale
+3. **Empirical**: Evidence of partisan asymmetry and algorithmic amplification
+
+**Core finding**: Post-2020 election Facebook exhibited:
+- Sharp partisan divide in information disorder
+- Systematic amplification of skepticism over consensus
+- Platform dynamics that exacerbated democratic information crisis
+
+**Broader significance**: Move from identifying misinformation → diagnosing information ecosystem health
+
+---
+
+## Thank you
+
+**Questions?**
+
+francesco.bailo@sydney.edu.au
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
