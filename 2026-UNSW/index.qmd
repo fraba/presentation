@@ -18,6 +18,7 @@ format:
     scrollable: false
     pdf-max-pages-per-slide: 1
     history: false # don't add each slide to browser history
+    footer: "[Slides: https://francescobailo.net/65IFXRKL/](https://francescobailo.net/65IFXRKL/)"
 bibliography: assets/pres_bib.bib
 csl: assets/apa-old-doi-prefix.csl
 execute:
