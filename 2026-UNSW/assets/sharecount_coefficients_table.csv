@@ -1,0 +1,7 @@
+sample,outcome,coefficient,ci,p_value,sig
+General,Disagreement,0.190,"[0.149, 0.230]",0.0000,***
+General,Agreement,0.014,"[-0.045, 0.072]",0.6462,
+Democrat,Disagreement,0.169,"[0.075, 0.262]",0.0004,***
+Democrat,Agreement,0.029,"[-0.048, 0.106]",0.4571,
+Republican,Disagreement,0.226,"[0.167, 0.285]",0.0000,***
+Republican,Agreement,0.134,"[0.037, 0.229]",0.0061,**

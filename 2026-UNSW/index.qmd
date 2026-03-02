@@ -18,6 +18,7 @@ format:
     scrollable: false
     pdf-max-pages-per-slide: 1
     history: false # don't add each slide to browser history
+    footer: "[Slides: https://francescobailo.net/65IFXRKL/](https://francescobailo.net/65IFXRKL/)"
 bibliography: assets/pres_bib.bib
 csl: assets/apa-old-doi-prefix.csl
 execute:
@@ -27,8 +28,6 @@ execute:
 ## Acknowledgement of Country
 
 I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
-
----
 
 ---
 
@@ -242,7 +241,7 @@ print(plot_network_ggraph(g_small))
 
 * 969,207 posts from 38,149 accounts
 * October 26 - December 1, 2020
-* With Election Day on 3 Nov 2020.
+* With Election Day on **3 Nov** and called for Biden on **7 Nov**.
 
 :::
 :::
@@ -254,8 +253,6 @@ print(plot_network_ggraph(g_small))
 ---
 
 ![Time series of posting activity](assets/posts_timeseries_hourly.svg){width=100%}
-
----
 
 
 ```{r setup, echo = FALSE}
@@ -263,14 +260,14 @@ library(tidyverse)
 library(knitr)
 
 # File paths - adjust these to your actual paths
-DATA_DIR <- "/Users/fbai9728/Library/CloudStorage/OneDrive-TheUniversityofSydney(Staff)/research/2025-info-disorder-us-election-in-2020/LLM-coding/run-2/results/"
+DATA_DIR <- "/Users/francesco/Library/CloudStorage/OneDrive-TheUniversityofSydney(Staff)/research/2025-info-disorder-us-election-in-2020/LLM-coding/run-2/results/"
 BINARY_RESULTS <- paste0(DATA_DIR, "election_coding_results_full.csv")
 ENHANCED_RESULTS <- paste0(DATA_DIR, "election_coding_results_enhanced.csv")
 RELIABILITY_SUMMARY <- paste0(DATA_DIR, "reliability_summary_table.csv")
 KAPPA_MATRIX <- paste0(DATA_DIR, "reliability_kappa_matrix.csv")
-INFON_RESULTS_DEM <- "/Users/fbai9728/Library/CloudStorage/OneDrive-TheUniversityofSydney(Staff)/research/2025-info-disorder-us-election-in-2020/LLM-coding/run-2/06_classify_infons/results/posts_sampled_democrat_results_3models_20251211_034121.csv"
-INFON_RESULTS_REP <- "/Users/fbai9728/Library/CloudStorage/OneDrive-TheUniversityofSydney(Staff)/research/2025-info-disorder-us-election-in-2020/LLM-coding/run-2/06_classify_infons/results/posts_sampled_republican_results_3models_20251211_034121.csv"
-INFON_RESULTS_GEN <- "/Users/fbai9728/Library/CloudStorage/OneDrive-TheUniversityofSydney(Staff)/research/2025-info-disorder-us-election-in-2020/LLM-coding/run-2/06_classify_infons/results/posts_sampled_general_results_3models_20251211_034121.csv"
+INFON_RESULTS_DEM <- "/Users/francesco/Library/CloudStorage/OneDrive-TheUniversityofSydney(Staff)/research/2025-info-disorder-us-election-in-2020/LLM-coding/run-2/06_classify_infons/results/posts_sampled_democrat_results_3models_20251211_034121.csv"
+INFON_RESULTS_REP <- "/Users/francesco/Library/CloudStorage/OneDrive-TheUniversityofSydney(Staff)/research/2025-info-disorder-us-election-in-2020/LLM-coding/run-2/06_classify_infons/results/posts_sampled_republican_results_3models_20251211_034121.csv"
+INFON_RESULTS_GEN <- "/Users/francesco/Library/CloudStorage/OneDrive-TheUniversityofSydney(Staff)/research/2025-info-disorder-us-election-in-2020/LLM-coding/run-2/06_classify_infons/results/posts_sampled_general_results_3models_20251211_034121.csv"
 ```
 
 ```{r}
@@ -296,8 +293,12 @@ df_infons <-
 flowchart TD
     A["Raw Data<br>(~1M Posts)"] --> B["Stage 1: Binary Classification<br>(Sample 1K posts, 10 LLMs)"]
     B --> C["Stage 2: Intercoder Reliability<br>(Large vs Small Models)"]
-    C --> D["Stage 3: ML Classifier<br>(Train on LLM labels)"]
-    D --> E["Stage 4: Relationship Classif.<br>(Agreement/Disagreement)<br>on sample"]
+    C --> D["Stage 3: ML Classifier (~1M Posts)<br>(Train on LLM labels)"]
+    D --> E["Stage 4: Relationship Classif. (Sample ~100k pairs, 3 LLMs)<br>(Agreement/Disagreement)<br>on sample"]
+    B --> F["Classification Task<br>Is the post about the election?"]
+    D --> F
+    E --> G["Classification Task<br>Do the statements agree?"]
+    
 ```
 
 # Stage 1: Binary Classification
@@ -323,7 +324,6 @@ if (file.exists(BINARY_RESULTS)) {
 **Input**
 
 - Random sample: `r if(exists("n_posts")) n_posts else "1,000"` posts
-- Seed: 42 (reproducible)
 :::
 
 ::: {.column width="50%"}
@@ -427,11 +427,6 @@ if (!is.null(df_binary) && exists("model_stats")) {
     kable()
 }
 ```
-
-::: callout-note
-### Timeout Issues
-Reasoning models (deepseek-r1, qwen3) required extended timeouts (600s) due to chain-of-thought processing.
-:::
 
 # Stage 2: Intercoder Reliability
 
@@ -615,6 +610,8 @@ tibble(
   kable()
 ```
 
+# Stage 4: Relationship Classification
+
 ## Temporal Window Sampling
 
 **Goal**: Create comparable samples across partisan information environments
@@ -638,7 +635,6 @@ tibble(
 | 3-hour windows | Temporal granularity with sufficient posts |
 | Max 20 posts | Limits pairs: $\binom{20}{2} = 190$ |
 | Share-weighted | Prioritizes high-reach content |
-| Seed = 42 | Reproducibility |
 
 :::
 :::
@@ -649,7 +645,10 @@ Partisan classification based on CrowdTangle list titles containing "democrat" o
 
 ## Sample 3-hour window with max 20 posts
 
-```{r echo = FALSE, dev = "svg", out.width="50%"}
+```{r}
+#| echo: false
+#| dev: "svg"
+#| out.width: "100%"
 
 library(igraph)
 library(ggraph)
@@ -660,12 +659,13 @@ library(RColorBrewer)
 set.seed(42)
 
 # =============================================================================
-# Function to create a representative signed network
+# Function to create a representative signed network with independence
 # =============================================================================
 
 create_network <- function(n_nodes, 
-                          p_agreement = 0.3, 
-                          p_disagreement = 0.3,
+                          p_agreement = 0.25, 
+                          p_disagreement = 0.25,
+                          p_independence = 0.25,
                           include_supra = TRUE) {
   # Create node labels
   node_ids <- paste0("Infon ", 1:n_nodes)
@@ -679,19 +679,32 @@ create_network <- function(n_nodes,
   adj_matrix <- matrix(0, n_total, n_total)
   rownames(adj_matrix) <- colnames(adj_matrix) <- node_ids
   
+  # Create edge type matrix
+  edge_type <- matrix(NA, n_total, n_total)
+  rownames(edge_type) <- colnames(edge_type) <- node_ids
+  
   # Generate edges between regular nodes (not supra)
   if (n_nodes > 1) {
     for (i in 1:(n_nodes-1)) {
       for (j in (i+1):n_nodes) {
         rand <- runif(1)
         if (rand < p_agreement) {
-          adj_matrix[i, j] <- 1  # Agreement
+          adj_matrix[i, j] <- 1
           adj_matrix[j, i] <- 1
+          edge_type[i, j] <- "agreement"
+          edge_type[j, i] <- "agreement"
         } else if (rand < (p_agreement + p_disagreement)) {
-          adj_matrix[i, j] <- -1  # Disagreement
-          adj_matrix[j, i] <- -1
+          adj_matrix[i, j] <- 1
+          adj_matrix[j, i] <- 1
+          edge_type[i, j] <- "disagreement"
+          edge_type[j, i] <- "disagreement"
+        } else if (rand < (p_agreement + p_disagreement + p_independence)) {
+          adj_matrix[i, j] <- 1
+          adj_matrix[j, i] <- 1
+          edge_type[i, j] <- "independence"
+          edge_type[j, i] <- "independence"
         }
-        # Otherwise: independence (no edge)
+        # Otherwise: no edge
       }
     }
   }
@@ -701,14 +714,23 @@ create_network <- function(n_nodes,
     supra_idx <- n_total
     for (i in 1:n_nodes) {
       rand <- runif(1)
-      if (rand < 0.35) {
-        adj_matrix[i, supra_idx] <- 1  # Agree with supra
+      if (rand < 0.30) {
+        adj_matrix[i, supra_idx] <- 1
         adj_matrix[supra_idx, i] <- 1
-      } else if (rand < 0.65) {
-        adj_matrix[i, supra_idx] <- -1  # Disagree with supra
-        adj_matrix[supra_idx, i] <- -1
+        edge_type[i, supra_idx] <- "agreement"
+        edge_type[supra_idx, i] <- "agreement"
+      } else if (rand < 0.60) {
+        adj_matrix[i, supra_idx] <- 1
+        adj_matrix[supra_idx, i] <- 1
+        edge_type[i, supra_idx] <- "disagreement"
+        edge_type[supra_idx, i] <- "disagreement"
+      } else if (rand < 0.85) {
+        adj_matrix[i, supra_idx] <- 1
+        adj_matrix[supra_idx, i] <- 1
+        edge_type[i, supra_idx] <- "independence"
+        edge_type[supra_idx, i] <- "independence"
       }
-      # Otherwise: independent from supra
+      # Otherwise: no edge
     }
   }
   
@@ -720,16 +742,23 @@ create_network <- function(n_nodes,
   V(g)$type <- ifelse(V(g)$name == "Supra", "supra", "post")
   V(g)$label <- V(g)$name
   
-  # Set edge attributes based on weight
-  E(g)$relationship <- ifelse(E(g)$weight > 0, "agreement", "disagreement")
+  # Set edge attributes from edge_type matrix
+  edge_list <- as_edgelist(g)
+  edge_types <- sapply(1:nrow(edge_list), function(i) {
+    from_name <- edge_list[i, 1]
+    to_name <- edge_list[i, 2]
+    edge_type[from_name, to_name]
+  })
+  E(g)$relationship <- edge_types
   
   return(g)
 }
 
-# Network 1: 9 nodes (Set 1 - Partisan samples)
+# Create network
 g_small <- create_network(n_nodes = 20, 
-                          p_agreement = 0.25, 
-                          p_disagreement = 0.30,
+                          p_agreement = 0.20, 
+                          p_disagreement = 0.25,
+                          p_independence = 0.20,
                           include_supra = TRUE)
 
 plot_network_ggraph <- function(g) {
@@ -738,36 +767,39 @@ plot_network_ggraph <- function(g) {
     activate(nodes) %>%
     mutate(type = ifelse(name == "Supra", "Supra-infon", "Post")) %>%
     activate(edges) %>%
-    mutate(relationship = ifelse(weight > 0, "Agreement", "Disagreement"),
-           abs_weight = abs(weight))  # Add absolute weight for layout
+    mutate(relationship = factor(relationship, 
+                                 levels = c("agreement", "disagreement", "independence"),
+                                 labels = c("Agreement", "Disagreement", "Independence")))
   
-  # Create plot - use abs_weight for layout computation
-  p <- ggraph(tg, layout = "fr", weights = abs_weight) +
+  # Create plot
+  p <- ggraph(tg, layout = "fr") +
     # Edges
-    geom_edge_link(aes(color = relationship, edge_width = relationship), 
-                   alpha = 0.8) +  # Increased alpha from 0.7
+    geom_edge_link(aes(color = relationship, linetype = relationship), 
+                   edge_width = 1.5, alpha = 0.8) +
     scale_edge_color_manual(values = c("Agreement" = "#2E8B57", 
-                                       "Disagreement" = "#DC143C"),
+                                       "Disagreement" = "#DC143C",
+                                       "Independence" = "#888888"),
                            name = "Relationship") +
-    scale_edge_width_manual(values = c("Agreement" = 2.0,   # Increased from 1.5
-                                       "Disagreement" = 2.0),
-                           guide = "none") +
+    scale_edge_linetype_manual(values = c("Agreement" = "solid", 
+                                          "Disagreement" = "solid",
+                                          "Independence" = "dashed"),
+                              name = "Relationship") +
     # Nodes
     geom_node_point(aes(size = type, fill = type), 
-                    shape = 21, color = "gray30", stroke = 1.5) +  # Increased stroke
-    scale_size_manual(values = c("Post" = 12, "Supra-infon" = 20),  # Increased from 8 and 15
+                    shape = 21, color = "gray30", stroke = 1.5) +
+    scale_size_manual(values = c("Post" = 12, "Supra-infon" = 20),
                      name = "Node Type") +
     scale_fill_manual(values = c("Post" = "#87CEEB", "Supra-infon" = "#FFD700"),
                      name = "Node Type") +
     # Labels
     geom_node_text(aes(label = name, fontface = ifelse(type == "Supra-infon", "bold", "plain")),
-                   size = 5, repel = TRUE) +  # Increased from 3 to 5
+                   size = 5, repel = TRUE) +
     # Theme
     theme_void() +
     theme(legend.position = "bottom",
-          legend.text = element_text(size = 14),        # Increased legend text
-          legend.title = element_text(size = 16, face = "bold"),  # Increased legend title
-          plot.title = element_text(hjust = 0.5, size = 18, face = "bold"),  # Increased from 14 to 18
+          legend.text = element_text(size = 14),
+          legend.title = element_text(size = 16, face = "bold"),
+          plot.title = element_text(hjust = 0.5, size = 18, face = "bold"),
           plot.margin = margin(10, 10, 10, 10))
   
   return(p)
@@ -778,8 +810,6 @@ print(plot_network_ggraph(g_small))
 
 ```
 
-
-# Stage 4: Relationship Classification
 
 ## Stage 4: Infon Relationship Classification
 
@@ -805,7 +835,7 @@ Unrelated claims with no bearing on each other
 :::
 :::
 
-#### We used these three large LLMs and then majority vote
+### We used these three large LLMs and then majority vote
 
 1. gemma3:27b, 27B
 2. llama4:scout, ~17B
@@ -978,7 +1008,7 @@ p3 <- ggplot(post_counts, aes(x = window_3hr, y = rep_dem_diff)) +
 p1 / p2 / p3 + plot_layout(heights = c(5, 1, 1))
 ```
 
----
+# Preliminary Findings
 
 ```{r}
 #| echo: false
@@ -994,7 +1024,57 @@ p3 <- p3 + zoom_period
 p1 / p2 / p3 + plot_layout(heights = c(5, 1, 1))
 ```
 
+## Key Finding 1: Information disorder in the post-election 
 
+- Information disorder peaks (~40%) in the general conversation one day post-election, coinciding with a surge in Republican posting activity and challenges to election fairness (75–100% disagreement with supra-infon).
+
+- Two days after the election—and persisting beyond the November 7 call—posts from general (civil society) accounts contesting election fairness remain elevated, stabilizing above 75%.
+
+
+## Key Finding 2: Role of algorithmic amplification
+
+* Does a post share count predict if the post agrees or disagrees with the statement tha the election is fair?
+
+```{r}
+#| echo: false
+
+coef_table <- read_csv("assets/sharecount_coefficients_table.csv", show_col_types = FALSE)
+
+coef_table %>%
+  select(Sample = sample, Outcome = outcome, `Coefficient (log-odds)` = coefficient, 
+         `95% CI` = ci, `p-value` = p_value, Sig = sig) %>%
+  kable(align = c("l", "l", "r", "c", "r", "c"))
+```
+
+::: callout-important
+### Key Finding
+**Disagreement is amplified across all three environments** — posts challenging election fairness receive significantly more shares than those affirming it.
+:::
+
+## Algorithmic Amplification: Interpretation
+
+![](assets/sharecount_coefficients_faceted.svg){width="100%"}
+
+---
+
+::: columns
+::: {.column width="50%"}
+### Agreement (Left Panel)
+- Effects **not significant** for General and Democrat samples (CIs cross zero)
+- Small positive effect for Republican (β = 0.134, p < .01)
+:::
+
+::: {.column width="50%"}
+### Disagreement (Right Panel)
+- **Significant amplification** in all three environments (p < .001)
+- Strongest effect in Republican sample (β = 0.226)
+- General and Democrat similar (~0.17–0.19)
+:::
+:::
+
+::: aside
+Model: Logistic regression predicting stance from log(shareCount), controlling for temporal effects. Coefficients in log-odds.
+:::
 
 
 ## References
