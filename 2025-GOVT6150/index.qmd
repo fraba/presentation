@@ -1,0 +1,666 @@
+---
+title: "GOVT6150 Challenges of Democratic Politics"
+subtitle: |
+  Digital Media and Political Communication: Transformation, Democratisation, or Fragmentation?
+author: "Francesco Bailo"
+format:
+  revealjs:
+     # can set self-contained to false if not uploading to Canvas
+     # true makes the HTML files pretty big
+    self-contained: true
+    fig-format: retina
+    toc: true
+    toc-depth: 1
+    toc-title: "In this lecture"
+    theme: [default, "assets/sydney.scss"]
+    code-line-numbers: false
+    slide-number: c
+    scrollable: false
+    pdf-max-pages-per-slide: 1
+    history: false # don't add each slide to browser history
+bibliography: assets/pres_bib.bib
+csl: assets/apa-old-doi-prefix.csl
+execute:
+  echo: true
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The University of Sydney is located on the land of the Gadigal people of the Eora Nation. I pay my respects to their Elders, past and present.
+
+## Who am I
+
+**Academic Background**
+
+- PhD in Government & International Relations (University of Sydney, 2017)
+- Senior Lecturer in the School of Government and International Relations, School of Social and Political Sciences
+- Co-Director, [Centre for AI, Trust and Governance](https://www.sydney.edu.au/arts/our-research/centres-institutes-and-groups/centre-for-ai-trust-and-governance.html) and Director of the [Computational Social Science Lab](https://canvas.sydney.edu.au/courses/65547)
+
+**Research Focus**
+
+- Intersection of digital technologies and political participation, and democratic governance
+- Computational methods for understanding information systems and their societal and political impacts
+
+**Teaching**: GOVT6139 Research Design (S2), SSPS4102/6006 Data analytics (with R, S1), GOVT3901 Digital Politics (S2) and CISS6022 Cybersecurity (S1).
+
+You can reach me at francesco.bailo@sydney.edu.au.
+
+## {.section-ochre}
+
+::: {.center-content .xlarge-text}
+How does the massification of digital media transform political communication, and does this transformation strengthen or weaken democratic participation and institutions?
+:::
+
+## Plan for today
+
+::: {.incremental}
+1. **Introduction: The Digital Media Revolution** - From mass to network communication
+
+2. **PART I: ALGORITHMIC MEDIATION** - The new gatekeepers
+
+3. **PART II: PARTICIPATION PARADOX** - Digital media and inequality
+
+4. **PART III: INTERNET vs SOCIAL CAPITAL** - New forms of mobilisation
+:::
+
+## What is the FIRST word that comes to mind when you think about digital media's impact on democracy?
+
+
+### Instructions
+
+- Enter ONE word only
+- Think about your personal experience with social media, political information online, or digital political participation
+- Be honest - positive, negative, or neutral words all welcome
+
+::: {.center-image}
+![](img/week-03-qr-menti.png){width="15%"}
+
+or try <https://www.menti.com/al331g5knty1>
+:::
+
+## {background-iframe="https://www.mentimeter.com/app/presentation/alexu78d98bi1m242kgivzf4r18mpiy7/embed"}
+
+## {.section-sandstone}
+
+::: {.center-content .large-text}
+**Introduction**
+
+The Digital Media Revolution
+:::
+
+## The Convergence of Four Revolutions {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**The Internet Revolution**
+
+- Computing power: Moore's Law
+- Bandwidth: 300 bits/s → 1 billion bits/s
+- Broadband adoption: <5% (2000) → 61% (2011)
+- From novelty to essential utility
+
+**The Mobile Revolution**
+
+- Fastest consumer technology adoption in history
+- More mobile lines than landlines by 2006
+- "Always-on" connectivity
+- Phones become "part of their body"
+:::
+
+::: {.column width="50%"}
+**The Social Network Revolution**
+
+- From groups to networked individuals
+- Partial membership in multiple networks
+- Relationships transcend geography
+- Active network management required
+
+**The Social Media Revolution**
+
+- "Living in the cloud" goes mainstream
+- Facebook opens to all (Sept 26, 2006)
+- 50% of Americans on social media by 2011
+- Social networks as "dashboards of the Internet"
+:::
+:::
+
+::: {.notes}
+These four revolutions happened rapidly in the 2000s and fundamentally transformed how we communicate and participate politically.
+:::
+
+## The Transformation: Mass to Network Communication {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Traditional Mass Media**
+
+- Centralised broadcasting
+- Professional gatekeepers
+- Scheduled consumption
+- Geographic constraints
+- Shared public sphere
+- Elite control
+:::
+
+::: {.column width="50%"}
+**Digital Network Media**
+
+- Many-to-many communication
+- Algorithmic curation
+- Always-on access
+- Global reach
+- Fragmented information environments
+- Democratised access (?)
+:::
+:::
+
+. . .
+
+::: {.callout-important}
+## The Central Tension
+
+Digital media promised **democratisation** (broader access, lower barriers) but may **weaken institutions** (fragmented publics, algorithmic manipulation, anti-establishment mobilisation)
+:::
+
+## Our Analytical Framework {.smaller}
+
+Today we examine three key perspectives on how digital media transforms democracy:
+
+::: {.incremental}
+1. **Algorithmic Mediation** (Soffer, 2021)
+   How algorithms replace human gatekeepers in political information flow
+
+2. **The Participation Paradox** (Heiss & Matthes, 2019)
+   How digital media may reinforce rather than reduce political inequalities
+
+3. **Internet vs. Social Capital** (Bailo, 2025)
+   How digital networks enable new forms of political mobilisation outside traditional institutions
+:::
+
+## {.section-ochre}
+
+::: {.center-content .large-text}
+**PART I**
+
+ALGORITHMIC MEDIATION
+:::
+
+## The New Gatekeepers {.smaller}
+
+*Soffer (2021): "Algorithmic Personalisation and the Two-Step Flow of Communication"*
+
+::: {.callout-note}
+## Central Question
+
+How do algorithms function as the new "opinion leaders" in political communication?
+:::
+
+**From human to algorithmic intermediaries:**
+
+- Traditional media: Journalists, editors, producers select and frame content
+- Digital media: Algorithms curate personalised information feeds
+- **Key difference**: Invisible, unaccountable, corporate-controlled
+
+::: {.footer}
+Soffer, O. (2021). Algorithmic Personalization and the Two-Step Flow of Communication. *Communication Theory*, 31(3), 297–315.
+:::
+
+## The Classical Two-Step Flow Model {.smaller}
+
+### Katz & Lazarsfeld (1955)
+
+::: {.columns}
+::: {.column width="50%"}
+**The Process**
+
+1. Media → Opinion Leaders
+2. Opinion Leaders → General Public
+
+**Key Elements**
+
+- Human intermediaries
+- Social proximity
+- Personal relationships
+- **Visible mediation**
+:::
+
+::: {.column width="50%"}
+**Why It Worked**
+
+- Trust based on social connections
+- Opinion leaders share group membership
+- People know who influences them
+- Social validation and interpretation
+:::
+:::
+
+---
+
+::: {.callout-warning}
+## The Digital Disruption
+
+- Abundance of sources (no single "mass media")
+- Personalised feeds (individual information environments)
+- **Invisible mediation** (users unaware of algorithmic influence)
+:::
+
+## The Algorithmic Two-Step Flow {.smaller}
+
+### Soffer's Theoretical Innovation
+
+::: {.columns}
+::: {.column width="50%"}
+**The New Process**
+
+1. Media → **Algorithms** → Individual Users
+2. Algorithms perform opinion leader functions
+
+**How Algorithms Work**
+
+- **Inputs**: User behaviour, social signals, demographics, context
+- **Process**: Personalised content curation
+- **Outputs**: Customised feeds, recommendations, trending topics
+:::
+
+::: {.column width="50%"}
+**From Solid to Liquid Peer Groups**
+
+Traditional peer groups:
+
+- Stable membership
+- Geographic proximity
+- Clear group norms
+
+Algorithmic "peer groups":
+
+- Data-driven ("users like you")
+- Constantly changing
+- **Invisible boundaries**
+:::
+:::
+
+## Democratic Implications {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Potential Benefits**
+
+- Personalised relevance
+- Efficiency in filtering information
+- Serendipitous discovery
+- Scale (millions served)
+:::
+
+::: {.column width="50%"}
+**Democratic Risks**
+
+- **Filter bubbles**: Reduced exposure to diverse views
+- **Manipulation**: Invisible editorial control
+- **Polarisation**: Amplification of extreme content
+- **Fragmented reality**: No shared information environment
+:::
+:::
+
+. . .
+
+**The Evidence: Mixed**
+
+- Some polarisation for partisan users
+- Some diversity for casual users
+- Platform differences matter
+- User agency remains important
+
+::: {.notes}
+The debate continues: Are filter bubbles real? Evidence suggests algorithmic effects vary by platform, user type, and context. But the loss of accountable gatekeepers is undeniable.
+:::
+
+## {.section-ochre}
+
+::: {.center-content .large-text}
+**PART II**
+
+THE PARTICIPATION PARADOX
+:::
+
+## Does Digital Media Democratise or Reinforce Inequality? {.smaller}
+
+*Heiss & Matthes (2019): "Does incidental exposure on social media equalise or reinforce participatory gaps?"*
+
+::: {.callout-note}
+## Central Question
+
+Do social media platforms reduce political inequalities by engaging the disengaged, or do they reinforce existing participatory gaps?
+:::
+
+**Two competing hypotheses:**
+
+1. **Equalisation**: Lower barriers → broader participation → reduced inequality
+2. **Reinforcement**: Digital divides → motivated users dominate → increased inequality
+
+::: {.footer}
+Heiss, R., & Matthes, J. (2019). Does incidental exposure on social media equalize or reinforce participatory gaps? *New Media & Society*.
+:::
+
+## The Incidental Exposure Mechanism {.smaller}
+
+### The Optimistic View
+
+::: {.columns}
+::: {.column width="50%"}
+**The Process**
+
+1. Non-political use (entertainment, socialising)
+2. Incidental exposure to political content
+3. Gradual engagement
+4. **Equalisation**: Disengaged users become active
+
+**Why It Should Work**
+
+- Social media reach beyond civic networks
+- Lower barriers than offline participation
+- Accidental encounters with politics
+- Easy digital activities
+:::
+
+::: {.column width="50%"}
+**Types of Digital Participation**
+
+**Low-Effort Activities**
+
+- Liking political posts
+- Sharing political content
+- Following political accounts
+- Commenting
+
+**High-Effort Activities**
+
+- Creating political content
+- Organising events
+- Fundraising
+- Extended discussions
+:::
+:::
+
+## The Austrian Panel Study: Key Findings {.smaller}
+
+### Research Design
+
+- **Two-wave panel**: Same respondents measured twice
+- **N = 559**: Representative sample
+- **2017 Austrian election**: High-stakes context
+- **Causal inference**: Panel design reduces reverse causation
+
+---
+
+### Results: The Reinforcement Reality
+
+::: {.columns}
+::: {.column width="50%"}
+**Low-Effort Participation**
+
+- ✓ Incidental exposure increases low-effort activities
+- ✗ Effect **equally distributed** across interest levels
+- ✗ No equalisation
+:::
+
+::: {.column width="50%"}
+**High-Effort Participation**
+
+- ✗ Effect depends on political interest
+- ✗ **Negative effect** for low-interest users
+- ✗ Gap **increases**
+:::
+:::
+
+::: {.callout-important}
+## The Paradox
+
+Incidental exposure mobilises low-effort "slacktivism" but **reinforces inequalities** in meaningful political participation
+:::
+
+## Explaining the Paradox {.smaller}
+
+### Why Digital Democracy Disappoints
+
+::: {.incremental}
+1. **Motivation Still Matters**
+   - Political interest remains strongest predictor
+   - Technology doesn't eliminate participation requirements
+   - Casual exposure insufficient to overcome disinterest
+
+2. **Skill Requirements**
+   - High-effort participation requires digital literacy
+   - Political knowledge necessary for meaningful engagement
+   - Social capital advantages translate digitally
+
+3. **Algorithmic Amplification**
+   - Platforms reward existing engagement patterns
+   - Active users see more political content
+   - Passive users filtered away from demanding activities
+:::
+
+## Interactive Poll
+
+**Based on the research we've discussed, which group is MOST likely to benefit from social media for political participation?**
+
+::: {.center-image}
+![](img/week-03-qr-menti.png){width="15%"}
+
+or try <https://www.menti.com/al331g5knty1>
+:::
+
+## {background-iframe="https://www.mentimeter.com/app/presentation/alexu78d98bi1m242kgivzf4r18mpiy7/embed"}
+
+## {.section-ochre}
+
+::: {.center-content .large-text}
+**PART III**
+
+INTERNET vs SOCIAL CAPITAL
+:::
+
+## New Forms of Political Mobilisation {.smaller}
+
+*Bailo (2025): "Breaking out of legacy mobilisation networks"*
+
+::: {.callout-note}
+## Central Question
+
+How does "Internet capital" enable political mobilisation beyond traditional social capital networks?
+:::
+
+### The Problem with Traditional Social Capital
+
+- **Dense social networks**: Clubs, unions, churches, community groups
+- **Geographic clustering**: Concentrated in wealthy, educated areas
+- **Declining**: Mass party membership down since 1960s
+- **Exclusionary**: Working-class, rural, immigrant populations underrepresented
+
+## Defining Internet Capital {.smaller}
+
+::: {.callout-tip}
+## Definition
+
+**Internet capital**: Digital resources that enable collective action **independently** of existing social capital structures
+:::
+
+### Comparing Two Forms of Political Resources
+
+| Social Capital | Internet Capital |
+|---------------|-----------------|
+| Dense, local networks | Sparse, distributed networks |
+| High-quality relationships | Lower-quality connections |
+| Geographic constraints | Geographic independence |
+| Strong reciprocity | Weaker obligations |
+| Slow to build | Rapid formation |
+| Stable membership | Fluid participation |
+| Institutional embedding | **Anti-institutional potential** |
+
+## Case Study: Italy's Five Star Movement (M5S) {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**Background**
+
+- Founded 2005 from comedian's blog
+- No pre-existing organisation
+- Pure digital origins
+- "Anti-party system party"
+- Used Meetup.com for organising
+
+**Research Question**
+
+Can Internet capital mobilise voters in **low-social capital areas** where traditional parties failed?
+:::
+
+::: {.column width="50%"}
+**Data Sources**
+
+- Meetup.com events (2005-2013)
+- Census data (social capital indicators)
+- Electoral results (2013)
+- Media coverage intensity
+
+**Key Finding**
+
+M5S achieved **25% vote share** in 2013 elections
+:::
+:::
+
+## Two Waves of M5S Mobilisation {.smaller}
+
+### Wave 1 (2005-2012): Legacy Networks
+
+- Meetups concentrated in **high social capital areas**
+- Followed traditional associational geography
+- Limited reach to disengaged populations
+- Modest electoral impact
+
+
+### Wave 2 (2012-2013): Internet Breakthrough
+
+- **Massive media coverage** of M5S
+- Meetups spread to **low social capital areas**
+- Reached previously disengaged voters
+- Electoral breakthrough: 25% vote share
+
+---
+
+::: {.callout-important}
+## The Mechanism
+
+**News media attention temporarily strengthens Internet network density**
+
+Internet networks need **external validation** to overcome weak-tie limitations
+:::
+
+## The Dark Side: Extremism and Outrage {.smaller}
+
+### When Internet Capital Enables Harmful Mobilisation
+
+::: {.columns}
+::: {.column width="50%"}
+**The Emotional Requirement**
+
+- Extreme discontent needed
+- **Outrage as fuel**
+- Emotional messages travel faster
+- Anti-institutional bias required
+
+**Similar Cases Worldwide**
+
+- Trump 2016 (USA)
+- Brexit campaign (UK)
+- Podemos (Spain)
+- AfD (Germany)
+:::
+
+::: {.column width="50%"}
+**Political Consequences**
+
+- **Crowding out moderation**: Extreme voices advantaged
+- **Institutional delegitimisation**: Undermines democratic norms
+- **Emotional politics**: Rational deliberation declines
+- **Unpredictability**: Political turbulence increases
+
+**Common Patterns**
+
+- Anti-establishment messaging
+- Digital-first strategy
+- Emotional appeals
+- Media amplification crucial
+:::
+:::
+
+## {.section-ochre}
+
+::: {.center-content .large-text}
+**CONCLUSION**
+
+Democracy in the Digital Age
+:::
+
+## Synthesising Our Evidence {.smaller}
+
+### The Transformation Is Real
+
+Digital media fundamentally alter political communication through:
+
+1. **Algorithmic mediation** of information flows (Soffer)
+   - New forms of gatekeeping, but invisible and unaccountable
+   - Personalisation fragments shared public sphere
+   - Corporate control over political information
+
+2. **Reinforced inequalities** rather than democratisation (Heiss & Matthes)
+   - Benefits already engaged users most
+   - Fails to mobilise the truly disengaged
+   - "Slacktivism" replaces meaningful participation
+
+3. **Institutional bypass** enabled by Internet capital (Bailo)
+   - Anti-establishment mobilisation advantages
+   - Emotional politics crowds out deliberation
+   - Requires external validation to scale
+
+## Answering Our Central Question {.smaller}
+
+::: {.medium-large-text}
+**How does the massification of digital media transform political communication, and does this transformation strengthen or weaken democratic participation and institutions?**
+:::
+
+### The Verdict: **Institutional Weakening Dominates**
+
+::: {.incremental}
+- ✗ **Gatekeeping crisis**: Loss of accountable intermediaries
+- ✗ **Inequality reinforcement**: Digital divides persist and deepen
+- ✗ **Fragmentation**: Shared public sphere erodes
+- ✗ **Emotional polarisation**: Outrage advantages over deliberation
+- ⚠️ **New opportunities**: But primarily for anti-establishment mobilisation
+:::
+
+---
+
+::: {.callout-warning}
+## The Policy Challenge
+
+How can democratic institutions adapt to algorithmic mediation, address digital inequalities, and channel Internet capital toward constructive participation?
+:::
+
+## Final Interactive Poll
+
+**Task: Rank these digital media impacts from MOST threatening (1) to LEAST threatening (4) for democratic institutions**
+
+::: {.center-image}
+![](img/week-03-qr-menti.png){width="15%"}
+
+or try <https://www.menti.com/al331g5knty1>
+:::
+
+## {background-iframe="https://www.mentimeter.com/app/presentation/alexu78d98bi1m242kgivzf4r18mpiy7/embed"}
+
+## {.section-charcoal}
+
+::: {.center-content .large-text}
+**Questions?**
+
+francesco.bailo@sydney.edu.au
+:::
