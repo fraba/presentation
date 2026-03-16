@@ -1,0 +1,151 @@
+% To read acronym file
+\usepackage[nolist]{acronym}
+
+\setbeamertemplate{sidebar right}{}
+\setbeamertemplate{footline}{%
+\hfill\usebeamertemplate***{navigation symbols}
+\hspace{1cm}\insertframenumber{}/\inserttotalframenumber}
+
+\renewcommand\rmdefault{pplx}
+\renewcommand\mathfamilydefault{cmr}
+\usepackage{adjustbox}
+
+% Number style
+\usepackage[osf,sc]{mathpazo}
+
+% Reference to list items
+% \usepackage[loadonly]{enumitem} % <- Incompatible
+
+% Comment out section by \begin{comment} & \end{comment}
+\usepackage{comment}
+
+%Reference name instead of number
+\usepackage{nameref}
+
+% Figures, letter spacing and caption style
+\usepackage{microtype}
+\usepackage[font={small,it},labelfont=bf]{caption}
+\usepackage[font={scriptsize,it}]{subcaption}
+\captionsetup{compatibility=false}
+% \usepackage[font={rm,md,up},margin=10pt,singlelinecheck=false]{subfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows, positioning, shapes.geometric, shadows, backgrounds, decorations.text}
+\usepackage{soul}
+
+% Font encoding. Among others, solve problems with accented chars in output
+\usepackage[T1]{fontenc}
+
+% Paragraph spacing
+\usepackage{parskip}
+
+% For tables
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{etoolbox} 
+\usepackage{dcolumn}
+
+% \newcolumntype{C}{>{\centering\arraybackslash}m{2.5em}}
+% \newcolumntype{D}{>{\arraybackslash}m{15em}}
+% \newcolumntype{E}{>{\centering\arraybackslash}m{3.4em}}
+% \newcolumntype{F}{>{\centering\arraybackslash}m{4.4em}}
+
+\pgfplotstableset{
+    %font={\small},
+    empty cells with={--}, %  replace empty cells with ’--’
+    every head row/.style={before row=\toprule,after row=\midrule},
+    every last row/.style={after row=\bottomrule}
+}
+
+%Separate digits with comma (e.g. 1,000,000)
+\usepackage[group-separator={,}]{siunitx}
+\sisetup{
+  detect-all,
+  detect-inline-family=math,
+  detect-inline-weight=math,
+  detect-display-math=true,
+  round-mode=places,
+  round-precision=2,
+  round-minimum = 0.01}
+
+\usepackage{amsmath}
+
+% Set up the images/graphics package
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+\newsavebox\mybox % <- To save size of a picture
+
+% After table/figure space with no idennt
+\def\changebreak{\par\vspace{\baselineskip}\noindent}
+
+% The units package provides nice, non-stacked fractions and better spacing
+% for units.
+\usepackage{units}
+
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments.  We use a slightly smaller font.
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+% Small sections of multiple columns
+\usepackage{multicol}
+
+% Provides paragraphs of dummy text
+\usepackage{kantlipsum}
+
+% Figure size
+\newlength\onecolumnimage
+\setlength\onecolumnimage{.45\textwidth}
+\newlength\halfcolumnimage
+\setlength\halfcolumnimage{.25\textwidth}
+
+% % Adds a bookmark and table-of-contents line as if it were a subsection
+
+% \AtBeginSection{\frame{\tableofcontents[currentsection]}}
+
+% \usepackage{bookmark}
+% \usepackage{etoolbox}
+% \makeatletter
+% % save the current definition of \beamer@@frametitle
+% \let\nobookmarkbeamer@@frametitle\beamer@@frametitle
+% % then patch it to do the bookmarks and/or TOC entries
+% \apptocmd{\beamer@@frametitle}{%
+%   % keep this to add the frame title to the TOC at the "subsection level"
+%   % \addtocontents{toc}{\protect\beamer@subsectionintoc{\the\c@section}{0}{#1}{\the\c@page}{\the\c@part}%
+%   %     {\the\beamer@tocsectionnumber}}%
+%   % keep this line to add a bookmark that shows up in the PDF TOC at the subsection level
+%   \bookmark[page=\the\c@page,level=3]{#1}%
+%   }%
+%   {\message{** patching of \string\beamer@@frametitle succeeded **}}%
+%   {\errmessage{** patching of \string\beamer@@frametitle failed **}}%
+
+% \pretocmd{\beamer@checknoslide}{%
+%   % ensure the bookmark is not created if the slide is filtered out
+%   \let\beamer@@frametitle\nobookmarkbeamer@@frametitle
+%   }%
+%   {\message{** patching of \string\beamer@checknoslide succeeded **}}%
+%   {\errmessage{** patching of \string\beamer@checknoslide failed **}}%
+
+%  \makeatother
+
+%Create Hyperlinks
+% To be loaded after everything (except: cleveref, amsrefs, float before hyperref before algorithm, chappg, sidecap, linguex)
+\usepackage{hyperref}
+\hypersetup{
+  pdfinfo={
+    Title={\doctitle},
+    Author={\docauthor},
+    Subject={\docsubject},
+    Keywords={\dockeywords},
+    CreationDate={\doccreationdate},
+    Creator={Typeset with LaTeX}
+  },
+  linktoc=all
+  % colorlinks,
+  % citecolor=blue,
+  % filecolor=blue,
+  % linkcolor=blue,
+  % urlcolor=blue
+}
+\usepackage{url}
