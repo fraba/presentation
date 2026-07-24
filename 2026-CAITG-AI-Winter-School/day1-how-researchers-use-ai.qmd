@@ -1,0 +1,237 @@
+---
+title: "How Researchers Use AI"
+subtitle: "Day 1 - AI for Research: Common Uses and Limitations<br>CAITG AI Postgraduate Winter School 2026<br>Last updated: `r Sys.Date()`"
+author: "Francesco Bailo"
+format:
+  revealjs:
+     # can set self-contained to false if not uploading to Canvas
+     # true makes the HTML files pretty big
+    self-contained: true
+    fig-format: retina
+    toc: true
+    toc-depth: 1
+    toc-title: "In this session"
+    theme: [default, "assets/sydney.scss"]
+    code-line-numbers: false
+    slide-number: c
+    scrollable: false
+    pdf-max-pages-per-slide: 1
+    history: false # don't add each slide to browser history
+bibliography: assets/pres_bib.bib
+csl: assets/apa-old-doi-prefix.csl
+execute:
+  echo: true
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+---
+
+```{r, echo = FALSE}
+library(tidyverse)
+```
+
+# The studies
+
+## Five recent studies {.smaller}
+
+| Study | Sample | When | Design |
+|---|---|---|---|
+| @vannoorden2023ai | >1,600 researchers, worldwide | 2023 | Survey (self-selected sample) |
+| @chugunova2026who | 6,215 researchers, Max Planck and Fraunhofer, Germany | Jun 2024 | Survey |
+| @mishra2024use | 226 clinical researchers, 59 countries (Harvard GCSRT) | Apr-Jun 2024 | Survey |
+| @mohammadi2026generative | Publishing academics, 20 countries | Jan-Mar 2024 | Survey |
+| @khalifa2024using | 24 studies | 2024 | Systematic review |
+
+::: aside
+The authors of @vannoorden2023ai and @mohammadi2026generative note their samples are not representative of all researchers; @chugunova2026who report a sample close to their target populations.
+:::
+
+# Adoption and frequency of use
+
+## Awareness of AI tools
+
+- @mishra2024use: **87.6%** of clinical researchers were aware of large language models; those aware had a higher number of publications (*p* < 0.001).
+- @mohammadi2026generative: **73.1%** of publishing academics had heard "a lot" about generative AI tools; only **3.4%** reported no familiarity.
+- @chugunova2026who: **42.4%** reported being very or rather familiar with AI tools; a further **44.0%** had used them a few times.
+
+## Frequency of use
+
+- @chugunova2026who: **25.9%** use AI tools at least once a day; **22.2%** never use them for any work task.
+- @mohammadi2026generative: **54.7%** use generative AI at least monthly for academic purposes (**28.2%** never). For research specifically, **62.5%** use it at least monthly and **13.4%** never.
+- @mishra2024use: among aware respondents, **18.7%** had used LLMs in a publication; **81.3%** had not.
+- @vannoorden2023ai: in 2023, none reported using AI regularly for research, and **17.4%** used generative AI weekly or more often.
+
+::: callout-note
+These are extraordinary figures for a technology that in practice didn't exist before November 2022.
+:::
+
+
+## Comparing the 2023 and 2024 surveys
+
+@chugunova2026who report a shift from 2023 [@vannoorden2023ai]:
+
+- In 2023, regular research use of AI was essentially absent; by mid-2024, a quarter of researchers used AI daily [@chugunova2026who].
+
+Reported non-use moved in the opposite direction:
+
+::: {.blockquote}
+14.6% of researchers in 2024 report not using AI tools, compared with 1.3% in 2023.
+:::
+
+- @chugunova2026who attribute this to the 2023 sample being skewed toward researchers already interested in AI.
+
+# What researchers use AI for
+
+## Six domains of academic AI use
+
+@khalifa2024using group the literature into six domains:
+
+::: {layout-ncol="2"}
+### Ideas and content
+
+1. Idea development and research design
+2. Content development and structuring
+3. Literature review and synthesis
+
+### Data, output and ethics
+
+4. Data management and analysis
+5. Editing, review and publishing support
+6. Communication, outreach and ethical compliance
+:::
+
+::: aside
+Framework from @khalifa2024using.
+:::
+
+## Reported uses across the research process
+
+```{r}
+#| echo: false
+#| fig-width: 11
+#| fig-height: 6
+
+tasks <- tibble::tribble(
+  ~task,                          ~y2023, ~y2024,
+  "Write code",                     20.2,   43.2,
+  "Creative fun (non-research)",    24.9,   36.9,
+  "Write manuscripts",              16.9,   32.9,
+  "Literature reviews",             14.5,   31.5,
+  "Grant applications",             10.1,   26.0,
+  "Administrative emails",          13.6,   23.9,
+  "Presentations",                  11.6,   21.7,
+  "Brainstorm research ideas",      16.4,   19.6,
+  "Graphics or pictures",            9.1,   17.7,
+  "Review manuscripts",              8.1,    9.4,
+  "Coursework / exam questions",     4.2,    7.3
+) |>
+  dplyr::mutate(task = forcats::fct_reorder(task, y2024))
+
+ggplot(tasks) +
+  geom_segment(aes(x = y2023, xend = y2024, y = task, yend = task),
+               colour = "grey75", linewidth = 1.1) +
+  geom_point(aes(x = y2023, y = task, colour = "2023"), size = 3.6) +
+  geom_point(aes(x = y2024, y = task, colour = "2024"), size = 3.6) +
+  scale_colour_manual(values = c("2023" = "#FFB800", "2024" = "#e64626"),
+                      name = NULL) +
+  labs(x = "% of researchers selecting this use", y = NULL) +
+  theme_minimal(base_size = 18) +
+  theme(legend.position = "top",
+        panel.grid.major.y = element_blank())
+```
+
+::: aside
+Comparable use categories only. Source: @chugunova2026who  and @vannoorden2023ai.
+:::
+
+## Most common research uses
+
+- @chugunova2026who: the two most frequent uses are **piloting and testing (47.9%)** and **writing code (43.2%)**; **50.6%** use AI for two to five distinct tasks.
+- @mohammadi2026generative: the most common research uses are **translating text (13.5%)**, **proofreading drafts (13.0%)**, **synthesising initial drafts (12.5%)** and **literature reviews (12.5%)**; supporting data analysis is lower (**6.4%**). These tools were mainly used for academic writing rather than data analysis.
+- @mishra2024use: among those who had used LLMs, the most common stages were **grammatical errors and formatting (64.9%)**, **writing (45.9%)** and **revision and editing (45.9%)**.
+- @vannoorden2023ai: in 2023, the single most common use was creative fun unrelated to research.
+
+## Disclosure of AI use
+
+- @mishra2024use: among researchers who had used LLMs in a publication, **40.5%** did not acknowledge that use.
+- @mishra2024use: **58.1%** thought journals should allow AI use in research, and **78.3%** thought regulations (for example modified journal policies, AI review boards, or detection tools) should be in place.
+
+# Who uses AI
+
+## Role, field and age
+
+- @chugunova2026who: familiarity and use **decline with age** and **grow with education**; familiarity is **highest in the social sciences**. Clustering researchers as *leaders*, *builders* and *analysts*, "leaders" are the most positive toward AI.
+- @mohammadi2026generative: **PhD students** are the highest users, followed by assistant professors and instructors. The **social sciences** show the highest adoption, then engineering. Highest adoption by country: **Taiwan, South Korea, India, Iran**; lowest: **United States, United Kingdom, China, Russia**.
+- @mishra2024use: only number of publications was significantly associated with awareness; age, region and field of practice were not.
+
+## The gender gap
+
+- @chugunova2026who: the gender gap in AI use for research is almost entirely explained by observable characteristics, with **familiarity the dominant factor (71% of the explained gap, 99% of the total gap)**. Among non-users, women rated AI as more helpful than men did. **45.9%** of women versus **34.8%** of men had not consulted, and did not intend to consult, resources such as prompt engineering guides.
+- @mohammadi2026generative: women were **10% less likely** to use generative AI frequently (daily or weekly) for research, **4% less** for teaching, and **3% less** for administrative tasks.
+
+## Prompting as a skill
+
+```{r}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 5.2
+
+prompt <- tibble::tibble(
+  resource = c("No, and I don't\nintend to",
+               "No, but I\nintend to",
+               "Yes, a little",
+               "Yes,\nextensively"),
+  success  = c(16.2, 19.0, 29.0, 39.2)
+) |>
+  dplyr::mutate(resource = forcats::fct_inorder(resource))
+
+ggplot(prompt, aes(x = resource, y = success)) +
+  geom_col(fill = "#0148A4", width = 0.7) +
+  geom_text(aes(label = paste0(success, "%")), vjust = -0.4, size = 6) +
+  labs(x = "Have you consulted resources on how to use AI tools?",
+       y = "% who wrote a successful prompt") +
+  scale_y_continuous(limits = c(0, 45)) +
+  theme_minimal(base_size = 18) +
+  theme(panel.grid.major.x = element_blank())
+```
+
+::: aside
+@chugunova2026who: **50.4%** report using AI to speed up work, but only **21.0%** produced a successful prompt in a test task.
+:::
+
+
+# Benefits, concerns and regulation
+
+## Perceived future impact
+
+- @vannoorden2023ai: more than half expected AI tools to become "very important" or "essential" in their field within a decade.
+- @chugunova2026who: **69.2%** expect AI to transform or revolutionise their field within a decade.
+- @mishra2024use: **52.0%** expect a major overall impact. Areas seen as most impacted: **grammatical errors and formatting (66.3%)**, **revision and editing (57.2%)**, **writing (57.2%)** and **literature review (54.2%)**. Least impacted: methodology, journal selection and study ideas. **50.8%** anticipated a positive future impact; **32.6%** were unsure.
+
+## Perceived benefits
+
+@mohammadi2026generative, share agreeing or strongly agreeing:
+
+- Personalised tutoring or instruction: **37.4%**
+- Improving problem-solving abilities: **35.2%**
+- Enhancing students' learning: **34.5%**
+- Fostering creativity and ideation: **31.2%** agree vs **35.9%** disagree
+- Accuracy and reliability of AI content: **20.6%** confident vs **48.7%** disagree
+- Consistency of AI content: **20.0%** agree vs **50.1%** disagree
+
+## Concerns about AI use
+
+- @vannoorden2023ai (machine learning): **69%** more reliance on pattern recognition without understanding; **58%** entrenching bias; **55%** fraud easier; **53%** irreproducible research. On generative AI: **68%** misinformation; **68%** easier plagiarism; **66%** mistakes in papers.
+- @mohammadi2026generative (moderate or extreme concern): inaccuracy **67.8%**; plagiarism **65.0%**; discouraging critical thinking **61.7%**; lack of transparency **59.2%**; lack of explainability **57.8%**; intellectual property **52.2%**; data privacy **49.0%**; bias **41.3%**.
+- @mishra2024use: misinformation **66.7%**; unintended bias **65.7%**; copyright infringement **63.1%**; impaired creativity **60.1%**; lack of accountability **58.1%**; data security **50.5%**.
+
+## Barriers and regulation
+
+- @chugunova2026who: the most common top-two barriers are **legal uncertainties (17.6%)**, **lack of knowledge (17.4%)** and **suitable tools not available (16.6%)**.
+- @chugunova2026who: on where guidance should come from, **58.7%** look to supranational bodies (for example the EU), **51.3%** to research societies, **49.0%** to professional associations.
+- @mishra2024use: **78.3%** thought regulations should be put in place; **58.1%** thought journals should allow AI use.
+
+## References
