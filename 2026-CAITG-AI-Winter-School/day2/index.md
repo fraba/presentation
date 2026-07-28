@@ -10,6 +10,11 @@ Each activity builds on the one before it — don't skip the first one just beca
 
 ---
 
+## Synthetic papers
+
+I have created some synthetic papers using an LLM. You can download them [here](./synth-papers).
+
+
 ## Part 1 — Intro lecture
 
 Start here: **[Intro slides](https://fraba.github.io/presentation/2026-CAITG-AI-Winter-School/day2/wagner-lecture-slides.html)**
