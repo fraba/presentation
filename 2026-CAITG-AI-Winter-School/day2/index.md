@@ -12,7 +12,7 @@ Each activity builds on the one before it — don't skip the first one just beca
 
 ## Part 1 — Intro lecture
 
-Start here: **[wagner-lecture-slides.md](./wagner-lecture-slides.md)**
+Start here: **[Intro slides](https://fraba.github.io/presentation/2026-CAITG-AI-Winter-School/day2/wagner-lecture-slides.html)**
 
 This breaks "doing a literature review" into discrete tasks and walks through what an AI tool can take off your hands at each one, and what you should keep for yourself — including two ideas you'll use for the rest of today: distillation (why a short note beats a full paper) and the Zettelkasten method.
 
@@ -59,7 +59,7 @@ Antigravity is Google's agentic IDE — genuinely folder/project-based, unlike L
 
 More on Projects, available models, agent modes, and slash commands: **[antigravity-deep-dive-slides.md](./antigravity-deep-dive-slides.md)**
 
-**Today's task:** **[antigravity-task-slides.md](./antigravity-task-slides.md)** *(link coming soon)*
+**[Tasks](https://fraba.github.io/presentation/2026-CAITG-AI-Winter-School/day2/antigravity-task.html)**
 
 ---
 
@@ -67,6 +67,6 @@ More on Projects, available models, agent modes, and slash commands: **[antigrav
 
 The third and most deliberate activity: a structured, traceable extraction process using a custom skill and your own note-extraction schema, connected to a cloud model via OpenRouter.
 
-Full walkthrough: **[hermes-desktop-student-guide.md](./hermes-desktop-student-guide.md)**
+Full walkthrough: **[using-hermes.md](./using-hermes.md)**
 
 That guide covers connecting to a model, creating your project folder, shaping the agent's behavior, and building notes that stay tied to your actual research question.
