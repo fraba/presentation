@@ -12,7 +12,7 @@ Each activity builds on the one before it — don't skip the first one just beca
 
 ## Synthetic papers
 
-I have created some synthetic papers using an LLM. You can download them [here](./synth-papers).
+I have created some synthetic papers using an LLM. You can download them [here](https://github.com/fraba/presentation/tree/master/2026-CAITG-AI-Winter-School/day2/synth-papers).
 
 
 ## Part 1 — Intro lecture
@@ -72,6 +72,6 @@ More on Projects, available models, agent modes, and slash commands.
 
 The third and most deliberate activity: a structured, traceable extraction process using a custom skill and your own note-extraction schema, connected to a cloud model via OpenRouter.
 
-Full walkthrough: **[using-hermes.md](./using-hermes.md)**
+**[Full walkthrough](https://fraba.github.io/presentation/2026-CAITG-AI-Winter-School/day2/)**
 
 That guide covers connecting to a model, creating your project folder, shaping the agent's behavior, and building notes that stay tied to your actual research question.
