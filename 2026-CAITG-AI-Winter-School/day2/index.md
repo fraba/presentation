@@ -62,7 +62,7 @@ Antigravity is Google's agentic IDE — genuinely folder/project-based, unlike L
 3. **Add Folder** → point it at a folder of papers.
 4. **Create**.
 
-More on Projects, available models, agent modes, and slash commands: **[antigravity-deep-dive-slides.md](./antigravity-deep-dive-slides.md)**
+More on Projects, available models, agent modes, and slash commands: **[antigravity-deep-dive-slides.md](./antigravity-task.md)**
 
 **[Tasks](https://fraba.github.io/presentation/2026-CAITG-AI-Winter-School/day2/antigravity-task.html)**
 
