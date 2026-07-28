@@ -1,0 +1,113 @@
+---
+title: "Universal LLM Peer Review Workshop"
+subtitle: "Task Framework<br>Last updated: 29 July 2026"
+author: "Francesco Bailo"
+format:
+  revealjs:
+     # can set self-contained to false if not uploading to Canvas
+     # true makes the HTML files pretty big
+    self-contained: true
+    fig-format: retina
+    toc: true
+    toc-depth: 1
+    toc-title: "In this lecture"
+    theme: [default, "template/assets/sydney.scss"]
+    code-line-numbers: false
+    slide-number: c
+    scrollable: false
+    pdf-max-pages-per-slide: 1
+    history: false # don't add each slide to browser history
+bibliography: template/assets/pres_bib.bib
+csl: template/assets/apa-old-doi-prefix.csl
+execute:
+  echo: true
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The University of Sydney is located on the land of the Gadigal people of the Eora Nation. I pay my respects to their Elders, past and present.
+
+# Framework Overview
+
+## Framework Overview
+
+A 3-task analytical framework for benchmarking LLM agent capabilities on academic paper corpora across any discipline (Political Science, Economics, Medicine, Computer Science, etc.).
+
+## The 3 Core Tasks
+
+1.  **Task 1: Cross-Paper Synthesis & Connection**
+    -   Evaluates narrative integration and thematic connection across papers.
+
+2.  **Task 2: Methodological & Empirical Comparison**
+    -   Evaluates data extraction precision, sample benchmarking, and research design parsing.
+
+3.  **Task 3: Tensions & Paradoxes Identification**
+    -   Evaluates detection of empirical contradictions, trade-offs, and boundary conditions.
+
+# Task 1: Cross-Paper Synthesis & Connection
+
+## Description
+
+Evaluate whether the LLM agent can synthesize findings across multiple papers into a unified narrative rather than producing isolated paper-by-paper summaries.
+
+## Prompt Template
+
+::: callout-note
+### Prompt
+
+"Synthesize findings across the paper corpus regarding [CORE RESEARCH THEME]. Specifically compare how [PAPER A] and [PAPER B] explain the underlying mechanism driving [PRIMARY OUTCOME METRIC]."
+:::
+
+## Evaluation Criteria
+
+-   **Thematic Integration**: Synthesizes ideas structurally by theme rather than sequentially by paper.
+-   **Cross-Citation Precision**: Accurately attributes empirical findings to the correct source papers.
+-   **Hallucination Rate**: Zero invention of unstated mechanisms or non-existent citations.
+
+# Task 2: Methodological & Empirical Comparison
+
+## Description
+
+Test the LLM agent's capability to extract, parse, and benchmark quantitative parameters and research designs across papers.
+
+## Prompt Template
+
+::: callout-note
+### Prompt
+
+*"Construct a comparative table across all papers detailing: (1) Paper ID/Author, (2) Research Design (e.g., RCT, DiD, Panel, Case Study), (3) Sample Size ($N$), (4) Primary Outcome Metric, (5) Effect Size, and (6) Statistical Significance ($p$-value / CI). Critique the external vs. internal validity of [PAPER A] vs [PAPER B]."*
+:::
+
+## Evaluation Criteria
+
+-   **Data Extraction Precision**: 100% exact match on sample sizes ($N$), effect sizes, and statistical confidence values.
+-   **Design Classification**: Accurate categorization of research methodologies (experimental vs observational vs quasi-experimental).
+
+# Task 3: Tensions & Paradoxes Identification
+
+## Description
+
+Assess whether the LLM agent can identify subtle empirical contradictions, trade-offs, or paradoxes across different studies.
+
+## Prompt Template
+
+::: callout-note
+### Prompt
+
+"Analyze the empirical tension between [PAPER A] and [PAPER B]: [PAPER A] demonstrates [FINDING X], while [PAPER B] demonstrates [CONTRADICTORY/TRADE-OFF FINDING Y]. Explain the theoretical mechanisms driving this paradox and under what conditions both findings can co-exist."
+:::
+
+## Evaluation Criteria
+
+-   **Trade-Off Recognition**: Identifies real empirical tensions without defaulting to false resolutions.
+-   **Boundary Condition Analysis**: Isolates moderating variables (e.g., population differences, time horizons, measurement metrics).
+
+# LLM Performance Audit Matrix
+
+## LLM Performance Audit Matrix
+
+| Dimension | Target Metric | Scoring Focus |
+|---|---|---|
+| **Parameter Accuracy** | 100% | Exact match of sample sizes ($N$), metrics, and $p$-values |
+| **Synthesis Index** | High | Thematic cross-referencing vs sequential paper repetition |
+| **Nuance Score** | High | Recognition of empirical paradoxes without hallucinating explanations |

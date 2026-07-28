@@ -1,0 +1,180 @@
+---
+title: "Breaking Down the Literature Review"
+subtitle: "What to offload to an LLM, what to keep for yourself<br>Last updated: 29 July 2026"
+author: "Francesco Bailo"
+format:
+  revealjs:
+     # can set self-contained to false if not uploading to Canvas
+     # true makes the HTML files pretty big
+    self-contained: true
+    fig-format: retina
+    toc: true
+    toc-depth: 1
+    toc-title: "In this lecture"
+    theme: [default, "template/assets/sydney.scss"]
+    code-line-numbers: false
+    slide-number: c
+    scrollable: false
+    pdf-max-pages-per-slide: 1
+    history: false # don't add each slide to browser history
+bibliography: template/assets/pres_bib.bib
+csl: template/assets/apa-old-doi-prefix.csl
+execute:
+  echo: true
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The University of Sydney is located on the land of the Gadigal people of the Eora Nation. I pay my respects to their Elders, past and present.
+
+# Introduction
+
+## Why break it into tasks at all
+
+- "Doing a literature review" isn't one task — it's a chain of quite different activities, mechanical and creative in different proportions
+- Treating it as one blob is exactly how you end up either over-trusting an LLM (letting it "do the review") or under-using it (only ever asking for a summary)
+- Today: split it into discrete tasks, and for each one ask two questions — what can an LLM genuinely take off your hands, and what stays yours no matter what
+
+## The tasks
+
+1. Problem formulation
+2. Literature search
+3. Screening for inclusion
+4. Quality assessment
+5. Data extraction
+6. Data analysis & interpretation (synthesis)
+
+...plus one more: connecting ideas across papers
+
+# The Six Tasks
+
+## 1. Problem formulation
+
+**What it is:** clarifying the research question, checking whether the gap you want to fill is real and still open.
+
+**With an LLM:**
+
+- **Offload:** brainstorming angles on a question, drafting candidate framings, summarizing what's already been reviewed on adjacent topics
+- **Retain:** the actual judgment that a gap is real, non-trivial, and worth a paper
+
+## 2. Literature search
+
+**What it is:** building the sample — database queries, citation chasing, snowballing.
+
+**With an LLM:**
+
+- **Offload:** generating search-term variants, translating a query across database syntaxes
+- **Retain:** running the actual search against real databases. An LLM's own "memory" of the literature is not a search index — it will confidently invent plausible-sounding citations that don't exist. Trust it here *less* than you'd trust a dumb keyword search, not more.
+
+::: callout-tip
+### Worth watching
+
+[Google Scholar Labs](https://blog.google/products-and-platforms/products/education/google-scholar-labs/) (launched Nov 2025, still experimental) — takes a full research question, breaks it into sub-topics and relationships, searches Scholar's real index for each, then surfaces papers with a note on how each one answers your actual question. Probably a preview of where academic search engines are heading generally: natural-language question in, synthesis across real results out — not an LLM guessing from memory.
+:::
+
+::: notes
+Try it now: search Scholar Labs with your own research question and download 5 papers that look relevant — this is the set you'll use for the rest of today's exercises.
+:::
+
+## 3. Screening for inclusion
+
+**What it is:** first pass (titles/abstracts) → second pass (full text) to decide what stays in the review.
+
+**With an LLM:**
+
+- **Offload:** applying a written inclusion/exclusion rule consistently across a large first-pass batch
+- **Retain:** borderline calls, and — critically — **spot-check a sample of what it excluded, not just what it kept.** Silent false negatives are invisible unless you go looking for them.
+
+## 4. Quality assessment
+
+**What it is:** checking primary studies for methodological flaws, bias, rigor.
+
+**With an LLM:**
+
+- **Offload:** pulling out what a paper *reports* about its own method (sample size, design, stated limitations)
+- **Retain:** the actual appraisal of whether that method was any good. Reporting quality and methodological quality are different things — an LLM summarizing what's on the page can't tell you whether the page is telling the truth.
+
+## 5. Data extraction
+
+**What it is:** pulling specific fragments — findings, variables, quotes, numbers — into a structured record.
+
+**With an LLM:**
+
+- **Offload:** free-text extraction into a schema, at speed, across dozens of papers — this is the step where LLMs are most straightforwardly useful
+- **Retain:** verification against the source. This is exactly the "audit one note against the PDF" habit — extraction is fast and confident-sounding whether or not it's accurate.
+
+## 6. Data analysis & interpretation
+
+**What it is:** synthesizing across the whole sample — descriptive summary, theory-building, or theory-testing depending on the review type.
+
+**With an LLM:**
+
+- **Offload:** descriptive rollups — "what methods do these 30 papers use," "how many report X"
+- **Retain:** the actual theoretical contribution — the argument for *why* something matters. No track record yet of an LLM producing that convincingly on its own.
+
+# Note-Taking as Distillation
+
+## Note taking as distillation
+
+- A note is not "proof you read the paper" — it's a **smaller object built to be fed back into something else later**
+- Doesn't matter who writes it: you, the LLM, or a co-written pass. What matters is that it's short, atomic, and shaped consistently across papers
+- A full paper is expensive context. A well-distilled note is cheap — that's precisely what lets you load *many* papers' notes into one context window at once, instead of one paper at a time
+- Distillation isn't a side effect of note-writing — it's the reason the note exists
+- Good practice: **mark provenance inside the note itself** — which parts you wrote, which parts the model produced, and when (e.g. *"synthesis generated by [model], [date]"*). Once several papers, notes, and synthesis passes stack up, that line is the only thing that tells you later whose judgment you're actually looking at
+
+## This is the Zettelkasten move
+
+[Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten) ("slip-box"): Niklas Luhmann's note-taking method, one card per idea.
+
+- Each note is short, self-contained, written in your own words — not a copy of the source
+- The value was never in any single card — it was in how many cards you could hold in view **and connect** at once
+- Same logic here: your schema-driven notes are the cards. Connecting ideas across papers is the connecting move Luhmann did by hand, now done by loading many small cards into one context window
+
+## Keep a map of the collection, not just the cards
+
+- Luhmann's slip-box also had an index and "structure notes" — not new content, just a map of how the collection fit together, so he could find his way back in as it grew
+- Same idea here: keep a `MAP.md` — one file, separate from any paper's note, that snapshots the review as a whole: which papers are covered, what themes are emerging, what's still missing relative to your question
+- Don't write it once — regenerate it as notes accumulate: ask the LLM to read everything in `notes/` and refresh the map
+- It's still an LLM output built on your notes — treat it as a claim to check, not a finished deliverable
+
+## What to retain isn't just the note
+
+There's a chain of things worth keeping beyond any single note, each more persistent than the last:
+
+- **The note** — one paper, checked against its source
+- **`SCHEMA.md` / `AGENTS.md`** — per-project instructions; they teach the LLM how to distill *every future paper in this review*
+- **`SOUL.md`** — a level up again: not project-specific at all, it's the persona and default behavior that follows the LLM across *every* project you ever open with it, not just this one
+
+If any of these three drift or are wrong, everything built downstream inherits that silently. Retaining is as much about maintaining all three layers as it is about checking any single note.
+
+## Single-shot vs. interactive extraction
+
+- Single-shot — "read this, write the note following the schema" — scales across many papers fast, but the reasoning is invisible until you audit the finished note
+- Interactive alternative — read alongside the LLM, ask it clarifying questions as you go, record the Q&A into the note itself. Slower, but verification happens *during* extraction, not only after
+- A reasonable split: **interactive reading for the handful of papers your argument actually depends on; single-shot + spot-check for the rest** — the same judgment you'd already apply to close-reading vs. skimming, just made explicit
+
+# Connecting Across Papers
+
+## Connecting ideas across papers
+
+- This one doesn't get talked about as its own task, but it's arguably where a general-purpose LLM changes the picture most
+- Instead of summarizing each paper in isolation, ask it to explicitly connect claims, methods, or findings **between specific papers**
+- e.g. *"Does paper B's finding support, complicate, or contradict paper A's central claim? Point to the specific passage in each."*
+
+## Making paper-connection actually trustworthy
+
+The risk: an LLM asked to "connect ideas" will produce something that sounds insightful whether or not it's grounded.
+
+The fix — constrain it to material you've already verified:
+
+```
+Using only notes/paper-a.md and notes/paper-b.md, compare how each
+paper answers [your research question]. Don't bring in anything
+outside these two files.
+```
+
+Synthesis built on **checked, extracted notes** — not on the model's open-ended sense of what these papers probably said.
+
+## Reference
+
+The six-task breakdown (1–6) draws on: Wagner, G., Lukyanenko, R., & Paré, G. (2021). Artificial intelligence and the conduct of literature reviews. *Journal of Information Technology, 37*(2), 209–226. https://doi.org/10.1177/02683962211048201
