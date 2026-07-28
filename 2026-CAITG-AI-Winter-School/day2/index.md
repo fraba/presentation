@@ -14,6 +14,8 @@ Each activity builds on the one before it — don't skip the first one just beca
 
 I have created some synthetic papers using an LLM. You can download them [here](https://github.com/fraba/presentation/tree/master/2026-CAITG-AI-Winter-School/day2/synth-papers).
 
+You can download all papers at once following this [link](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Ffraba%2Fpresentation%2Ftree%2Fmaster%2F2026-CAITG-AI-Winter-School%2Fday2%2Fsynth-papers).
+
 
 ## Part 1 — Intro lecture
 
