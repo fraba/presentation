@@ -46,6 +46,12 @@ I would like to acknowledge the Traditional Owners of Australia and recognise th
 
 ...plus one more: connecting ideas across papers
 
+## A caveat before we start
+
+This is not about how you do your lit review. There is no one way to do it — every research question, every approach requires a different lit review.
+
+This is more about how to **think** about your lit review once you can offload some of the work to an LLM or an LLM agent.
+
 # The Six Tasks
 
 ## 1. Problem formulation
