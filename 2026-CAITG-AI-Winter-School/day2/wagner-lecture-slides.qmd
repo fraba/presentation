@@ -183,4 +183,4 @@ Synthesis built on **checked, extracted notes** — not on the model's open-ende
 
 ## Reference
 
-The six-task breakdown (1–6) draws on: Wagner, G., Lukyanenko, R., & Paré, G. (2021). Artificial intelligence and the conduct of literature reviews. *Journal of Information Technology, 37*(2), 209–226. [https://doi.org/10.1177/02683962211048201](doi.org/10.1177/02683962211048201)
+The six-task breakdown (1–6) draws on: Wagner, G., Lukyanenko, R., & Paré, G. (2021). Artificial intelligence and the conduct of literature reviews. *Journal of Information Technology, 37*(2), 209–226. [doi.org/10.1177/02683962211048201](https://doi.org/10.1177/02683962211048201)
