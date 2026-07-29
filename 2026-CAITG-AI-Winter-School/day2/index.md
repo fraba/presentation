@@ -74,6 +74,6 @@ More on Projects, available models, agent modes, and slash commands.
 
 The third and most deliberate activity: a structured, traceable extraction process using a custom skill and your own note-extraction schema, connected to a cloud model via OpenRouter.
 
-**[Full walkthrough](https://fraba.github.io/presentation/2026-CAITG-AI-Winter-School/day2/)**
+**[Full walkthrough](https://fraba.github.io/presentation/2026-CAITG-AI-Winter-School/day2/using-hermes.md)**
 
 That guide covers connecting to a model, creating your project folder, shaping the agent's behavior, and building notes that stay tied to your actual research question.
