@@ -1,5 +1,5 @@
 ---
-title: "Universal LLM Peer Review Workshop"
+title: "Antigravity (or LM Studio) Workshop"
 subtitle: "Task Framework<br>Last updated: 29 July 2026"
 author: "Francesco Bailo"
 format:
@@ -102,12 +102,3 @@ Assess whether the LLM agent can identify subtle empirical contradictions, trade
 -   **Trade-Off Recognition**: Identifies real empirical tensions without defaulting to false resolutions.
 -   **Boundary Condition Analysis**: Isolates moderating variables (e.g., population differences, time horizons, measurement metrics).
 
-# LLM Performance Audit Matrix
-
-## LLM Performance Audit Matrix
-
-| Dimension | Target Metric | Scoring Focus |
-|---|---|---|
-| **Parameter Accuracy** | 100% | Exact match of sample sizes ($N$), metrics, and $p$-values |
-| **Synthesis Index** | High | Thematic cross-referencing vs sequential paper repetition |
-| **Nuance Score** | High | Recognition of empirical paradoxes without hallucinating explanations |
