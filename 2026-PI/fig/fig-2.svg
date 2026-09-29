@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <style>
+      .process-box { fill: #e8f4f8; stroke: #2c5f7c; stroke-width: 2.5; }
+      .data-box { fill: #fff9e6; stroke: #d4a017; stroke-width: 2.5; }
+      .output-box { fill: #e6f5e6; stroke: #2d7a3d; stroke-width: 3; }
+      .text-title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1a1a1a; }
+      .text-detail { font-family: Arial, sans-serif; font-size: 14px; fill: #333333; }
+      .text-small { font-family: Arial, sans-serif; font-size: 12px; fill: #555555; }
+      .arrow { stroke: #2c5f7c; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead); }
+      .section-label { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #2c5f7c; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2c5f7c" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" class="text-title" font-size="22">Data Collection and Processing Pipeline</text>
+
+  <!-- Stage 1: Spatial Sampling -->
+  <text x="50" y="75" class="section-label">1. SPATIAL SAMPLING</text>
+  <rect x="50" y="85" width="280" height="90" rx="8" class="process-box"/>
+  <text x="190" y="110" text-anchor="middle" class="text-title">Mexico Territory Grid</text>
+  <text x="190" y="135" text-anchor="middle" class="text-detail">14,266 grid cells (10km × 10km)</text>
+  <text x="190" y="155" text-anchor="middle" class="text-small">&gt;100 inhabitants per cell</text>
+
+  <!-- Arrow -->
+  <path d="M 190 175 L 190 210" class="arrow"/>
+
+  <!-- Stage 2: YouTube API -->
+  <text x="50" y="230" class="section-label">2. DATA COLLECTION</text>
+  <rect x="50" y="240" width="280" height="90" rx="8" class="process-box"/>
+  <text x="190" y="265" text-anchor="middle" class="text-title">YouTube API Search</text>
+  <text x="190" y="290" text-anchor="middle" class="text-detail">Radius: 7,070m from grid centroids</text>
+  <text x="190" y="310" text-anchor="middle" class="text-small">Jan 2020 - June 2024</text>
+
+  <!-- Arrow -->
+  <path d="M 190 330 L 190 365" class="arrow"/>
+
+  <!-- Stage 3: Videos & Comments -->
+  <rect x="50" y="375" width="280" height="90" rx="8" class="data-box"/>
+  <text x="190" y="400" text-anchor="middle" class="text-title">Geolocated Content</text>
+  <text x="190" y="425" text-anchor="middle" class="text-detail">1.2M unique videos</text>
+  <text x="190" y="445" text-anchor="middle" class="text-detail">14.8M comments (508,942 videos)</text>
+
+  <!-- Arrow to right column -->
+  <path d="M 330 420 L 390 420" class="arrow"/>
+
+  <!-- Stage 4: NLP Processing -->
+  <text x="410" y="75" class="section-label">3. TEXT PROCESSING</text>
+  <rect x="410" y="85" width="330" height="90" rx="8" class="process-box"/>
+  <text x="575" y="110" text-anchor="middle" class="text-title">Lemmatization</text>
+  <text x="575" y="135" text-anchor="middle" class="text-detail">SpaCy Spanish Model</text>
+  <text x="575" y="155" text-anchor="middle" class="text-small">Normalize word forms for matching</text>
+
+  <!-- Arrow -->
+  <path d="M 575 175 L 575 210" class="arrow"/>
+
+  <!-- Stage 5: Dictionary Matching -->
+  <text x="410" y="230" class="section-label">4. VIOLENCE DETECTION</text>
+  <rect x="410" y="240" width="330" height="110" rx="8" class="process-box"/>
+  <text x="575" y="265" text-anchor="middle" class="text-title">Dictionary-Based Scoring</text>
+  <text x="575" y="290" text-anchor="middle" class="text-detail">118 violence-related terms</text>
+  <text x="575" y="310" text-anchor="middle" class="text-small">Seed words (weight=1.0): violencia, asesinato...</text>
+  <text x="575" y="330" text-anchor="middle" class="text-small">WordNet expansion (weights=0.5, 0.25)</text>
+
+  <!-- Arrow -->
+  <path d="M 575 350 L 575 385" class="arrow"/>
+
+  <!-- Stage 6: Scored Comments -->
+  <rect x="410" y="395" width="330" height="70" rx="8" class="data-box"/>
+  <text x="575" y="420" text-anchor="middle" class="text-title">Scored Comments</text>
+  <text x="575" y="445" text-anchor="middle" class="text-detail">7.6% with positive violence scores</text>
+
+  <!-- Arrow to right column -->
+  <path d="M 740 430 L 800 430" class="arrow"/>
+
+  <!-- Stage 7: Spatial Aggregation -->
+  <text x="820" y="75" class="section-label">5. SPATIAL AGGREGATION</text>
+  <rect x="820" y="85" width="330" height="100" rx="8" class="process-box"/>
+  <text x="985" y="110" text-anchor="middle" class="text-title">Inverse Distance Weighting</text>
+  <text x="985" y="135" text-anchor="middle" class="text-detail">Weight ∝ 1/distance²</text>
+  <text x="985" y="155" text-anchor="middle" class="text-small">Comments influence nearby grid cells</text>
+  <text x="985" y="175" text-anchor="middle" class="text-small">~50km resolution (PRIO-GRID)</text>
+
+  <!-- Arrow -->
+  <path d="M 985 185 L 985 220" class="arrow"/>
+
+  <!-- Stage 8: Temporal Aggregation -->
+  <text x="820" y="240" class="section-label">6. TEMPORAL AGGREGATION</text>
+  <rect x="820" y="250" width="330" height="90" rx="8" class="process-box"/>
+  <text x="985" y="275" text-anchor="middle" class="text-title">Monthly Averages</text>
+  <text x="985" y="300" text-anchor="middle" class="text-detail">Grid-month panel data</text>
+  <text x="985" y="320" text-anchor="middle" class="text-small">54 months × grid cells</text>
+
+  <!-- Arrow -->
+  <path d="M 985 340 L 985 375" class="arrow"/>
+
+  <!-- Final Output -->
+  <text x="820" y="395" class="section-label">OUTPUT</text>
+  <rect x="820" y="405" width="330" height="100" rx="8" class="output-box"/>
+  <text x="985" y="435" text-anchor="middle" class="text-title" font-size="20">Violence Perception Index (VPI)</text>
+  <text x="985" y="465" text-anchor="middle" class="text-detail">Spatiotemporal measure of</text>
+  <text x="985" y="485" text-anchor="middle" class="text-detail">violence-related discourse intensity</text>
+
+  <!-- Additional Info Box -->
+  <rect x="50" y="540" width="1100" height="220" rx="8" fill="#f9f9f9" stroke="#999" stroke-width="1.5"/>
+  <text x="600" y="570" text-anchor="middle" class="text-title" font-size="18">Key Methodological Features</text>
+
+  <!-- Three columns of features -->
+  <text x="100" y="605" class="text-detail" font-weight="bold">Data Coverage:</text>
+  <text x="100" y="630" class="text-small">• 99.8% population coverage</text>
+  <text x="100" y="650" class="text-small">• 45.6% of grid cells excluded</text>
+  <text x="100" y="670" class="text-small">  (low population/no videos)</text>
+  <text x="100" y="690" class="text-small">• Strong correlation with</text>
+  <text x="100" y="710" class="text-small">  population density</text>
+  <text x="100" y="730" class="text-small">• Aligned with Mexican sleep</text>
+  <text x="100" y="750" class="text-small">  patterns</text>
+
+  <text x="450" y="605" class="text-detail" font-weight="bold">Validation:</text>
+  <text x="450" y="630" class="text-small">• Cohen's κ: 0.52-0.62 with LLMs</text>
+  <text x="450" y="650" class="text-small">• Spearman ρ: 0.61-0.68</text>
+  <text x="450" y="670" class="text-small">• Strong correlation with ACLED</text>
+  <text x="450" y="690" class="text-small">  (R² = 0.974)</text>
+  <text x="450" y="710" class="text-small">• Strong correlation with</text>
+  <text x="450" y="730" class="text-small">  official homicides</text>
+  <text x="450" y="750" class="text-small">  (R² = 0.974)</text>
+
+  <text x="800" y="605" class="text-detail" font-weight="bold">Spatial Patterns:</text>
+  <text x="800" y="630" class="text-small">• 97.6% between-grid variance</text>
+  <text x="800" y="650" class="text-small">• 2.7% within-grid variance</text>
+  <text x="800" y="670" class="text-small">• Captures localized/regional</text>
+  <text x="800" y="690" class="text-small">  dynamics</text>
+  <text x="800" y="710" class="text-small">• Geographic heterogeneity:</text>
+  <text x="800" y="730" class="text-small">  urban (ACLED) vs.</text>
+  <text x="800" y="750" class="text-small">  marginalized (homicides)</text>
+</svg>
